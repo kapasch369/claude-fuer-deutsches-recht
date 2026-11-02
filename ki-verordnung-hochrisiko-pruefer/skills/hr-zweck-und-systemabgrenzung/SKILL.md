@@ -29,6 +29,18 @@ Stelle Anbieterangaben aus Vertrieb und Anleitung dem nachgewiesenen Einsatz geg
 
 Wenn die HR-Leitung eine Rangliste übernimmt, beschreibe wann und wie, statt nur „menschliche Kontrolle vorhanden“ zu notieren. Bei widersprüchlichen Belegen zitiere beide Fundstellen und formuliere die entscheidende Nachfrage. Lege zugleich den bereits belastbaren Teil des bestellten Dokuments vor. Ein nachgereichtes Protokoll verändert gezielt Systembeschreibung und Folgerungen; die Aufnahme beginnt nicht erneut.
 
+### 3.4 Mehrere Branchen ohne falsche Übertragung
+
+Bei einem Justiz- oder Produktfall dieselbe Methode der Systemabgrenzung verwenden, aber den fachlichen Befund an den allgemeinen Einstufungsskill übergeben. Eine Systembeschreibung nennt dort etwa Paginierung, Vollständigkeitsprüfung, Bewertung von Zeugenaussagen und Entscheidungsentwurf jeweils mit Versionsdatum. Für ein Medizinprodukt stehen Bildverarbeitung, Alarmweg, Rückfallmodus und Ausfallfolge im Vordergrund. Ein HR-Funktionsbegriff ist kein Ersatz für den anderen Tatbestand.
+
+Den kleinsten noch sinnvoll prüfbaren Funktionsumfang begründen. Eine technisch deaktivierte Option lässt sich anders behandeln als eine standardmäßig sichtbare Schaltfläche, die nur durch eine Richtlinie untersagt wird. Geteilte Modelle oder identische Oberflächen beweisen keine einheitliche Zweckbestimmung; umgekehrt erzeugt eine Aufteilung auf Unteragenten nicht beliebig viele harmlose Einzelfunktionen. Eine Vertragsklausel darf die tatsächlich vorgesehene Integration nicht verdecken.
+
+### 3.5 Entscheidungseinfluss mit Gegenprobe
+
+Ermitteln Sie, ob ein Score nur angezeigt wird oder den erreichbaren Bewerberbestand und die Entscheidungsgründe maßgeblich prägt. Für Artikel 22 DSGVO trägt EuGH C-634/21, Rn. 43–50 und 60–64, die Betrachtung arbeitsteiliger Entscheidungen; daraus folgt keine automatische Hochrisikoeinstufung. Ein Test mit vollständiger Originalsichtung und eigenständigen Gründen ist anders zu würdigen als die Bestätigung einer verborgenen Vorauswahl. Die technische Gesamtfunktion dennoch getrennt nach Artikel 6 und Profiling beurteilen.
+
+Die [verifizierten Rechtsprechungsanker](../../references/rechtsprechung-und-argumentation.md) enthalten Volltext, Randnummern und Anwendungsgrenzen; die [Testanker](../../references/testanker.md) geben konkrete Gegenproben vor.
+
 ## 4 Quellenpflicht
 
 Prüfe Artikel 3 Nummern 1, 3, 4 und 12 sowie Artikel 6 und 25 anhand der [amtlichen Quellen mit Rechtsstand](../../references/rechtsstand-und-quellen.md). Beachte die [Zitierweise](../../references/zitierweise.md). Kennzeichne eigene Schlussfolgerungen aus einem Log als Auslegung, nicht als amtliche Feststellung. Die zeitliche Anwendung ist eine separate Frage.

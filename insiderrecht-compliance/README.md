@@ -5,13 +5,13 @@
 
 Insiderrecht- und Marktmissbrauchs-Compliance nach MAR, WpHG und BaFin-Praxis: Insiderinformationen, Ad-hoc, Insiderlisten, Handelsverbote, Aufschub, Directors Dealings, Aufklärung und Verteidigung.
 
-Dieses Plugin gehört zum Marketplace mit 275 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
+Dieses Plugin gehört zum Marketplace mit 310 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
 
 ## Welche Datei wofür? / Which file should I use?
 
 | Bestandteil | Deutsch | English | Wo? / Where? |
 | --- | --- | --- | --- |
-| Plugin-ZIP | Installiert das vollständige Plugin mit Skills, Referenzen und Hilfsdateien. | Installs the complete plugin with its skills, references and supporting files. | [`insiderrecht-compliance.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/insiderrecht-compliance.zip) |
+| Plugin-ZIP | Installiert das vollständige Plugin mit Skills, Referenzen und Hilfsdateien. | Installs the complete plugin with its skills, references and supporting files. | [`insiderrecht-compliance.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/ki-verordnung-v445.35.2/insiderrecht-compliance.zip) |
 | Skills | Arbeitsabläufe für einzelne Aufgaben. Wähle bei einem klaren Auftrag den passenden Skill ausdrücklich; die automatische Auswahl ist nicht garantiert. Einzeldownloads enthalten nur die jeweilige Markdown-Datei. | Focused task workflows. Select a known skill explicitly; automatic selection is not guaranteed. An individual download contains only that Markdown file. | [Skill-Liste öffnen / Open skill list](../skills-index/insiderrecht-compliance.md) |
 | Werkstatt-Prompt | Ausführliche eigenständige Markdown-Datei für komplexe oder mehrstufige Vorgänge. Sie ist kein Skill und nicht im Plugin-ZIP enthalten. | Detailed standalone Markdown file for complex or multi-step matters. It is not a skill and is not included in the plugin ZIP. | [MD herunterladen / Download MD](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=insiderrecht-compliance/insiderrecht-compliance-werkstatt.md) |
 | Schnellstart / Mini-Prompt | Kompakte eigenständige Markdown-Datei für einen schnellen ersten Arbeitsstand. Sie ist kein Skill und nicht im Plugin-ZIP enthalten. | Compact standalone Markdown file for a fast first work product. It is not a skill and is not included in the plugin ZIP. | [MD herunterladen / Download MD](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=insiderrecht-compliance/insiderrecht-compliance-schnellstart.md) |
@@ -45,12 +45,12 @@ Bei einem Folgewunsch den bisherigen Aktenstand fortführen. Bereits festgestell
 
 | Was | Format | Direkt-Download |
 | --- | --- | --- |
-| Plugin als Komplett-ZIP (Hauptweg) | ZIP | [`insiderrecht-compliance.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/insiderrecht-compliance.zip) |
+| Plugin als Komplett-ZIP (Hauptweg) | ZIP | [`insiderrecht-compliance.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/ki-verordnung-v445.35.2/insiderrecht-compliance.zip) |
 | Kompakter Prompt (Schnellstart) | Markdown | [`insiderrecht-compliance-schnellstart.md`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=insiderrecht-compliance/insiderrecht-compliance-schnellstart.md) |
 | Großer Prompt (Werkstatt) | Markdown | [`insiderrecht-compliance-werkstatt.md`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=insiderrecht-compliance/insiderrecht-compliance-werkstatt.md) |
 | Zugeordnete Testakten | PDF / ZIP | [eine zugeordnete Akte](#zugeordnete-testakten) mit Gesamt-PDF, Originaldateien und Einzel-PDFs |
 
-> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 275 Plugins. Wer alle Plugins auf einmal will, nimmt [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip). Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
+> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 310 Plugins. Das Sammelpaket [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip) enthält seinen veröffentlichten Stand, nicht zwingend spätere Einzelpakete. Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
 
 ## Zugeordnete Testakten
 
@@ -62,7 +62,7 @@ Jede Akte ist getrennt als lesbares Gesamt-PDF, ZIP mit Originaldateien und ZIP 
 
 | Akte | Gesamt-PDF | Originaldateien | Einzel-PDFs |
 | --- | --- | --- | --- |
-| [Meridian MedTech: Insiderrecht, Ad-hoc und M&A-Leak](../testakten/insiderrecht-meridian-medtech-ad-hoc-ma-leak/README.md) | [Gesamt-PDF](../testakten/insiderrecht-meridian-medtech-ad-hoc-ma-leak/gesamt-pdf/insiderrecht-meridian-medtech-ad-hoc-ma-leak_gesamt.pdf) | [`testakte-insiderrecht-meridian-medtech-ad-hoc-ma-leak.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-insiderrecht-meridian-medtech-ad-hoc-ma-leak.zip) | [`testakte-insiderrecht-meridian-medtech-ad-hoc-ma-leak-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-insiderrecht-meridian-medtech-ad-hoc-ma-leak-einzelpdfs.zip) |
+| [Meridian MedTech: Insiderrecht, Ad-hoc und M&A-Leak](../testakten/insiderrecht-meridian-medtech-ad-hoc-ma-leak/README.md) | [Gesamt-PDF](../testakten/insiderrecht-meridian-medtech-ad-hoc-ma-leak/gesamt-pdf/insiderrecht-meridian-medtech-ad-hoc-ma-leak_gesamt.pdf) | [`testakte-insiderrecht-meridian-medtech-ad-hoc-ma-leak.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-insiderrecht-meridian-medtech-ad-hoc-ma-leak.zip) | [`testakte-insiderrecht-meridian-medtech-ad-hoc-ma-leak-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-insiderrecht-meridian-medtech-ad-hoc-ma-leak-einzelpdfs.zip) |
 
 [Alle Testakten und Fachzuordnungen](../testakten/README.md)
 <!-- END direkt-loslegen (autogen) -->
@@ -71,6 +71,8 @@ Wenn du das hier öffnest, willst du deinen Fall strukturieren, die einschlägig
 Dieses Plugin hilft Unternehmen, Kanzleien, Vorständen, Aufsichtsräten, Investor-Relations-Teams und Beratern bei Insiderrecht, Ad-hoc-Publizität und Marktmissbrauchsrisiken. Es fragt zuerst: Liegt eine Insiderinformation vor, wer weiß was, darf gehandelt werden, muss veröffentlicht werden, darf aufgeschoben werden, wer steht auf der Insiderliste, und welche Beweise braucht man später?
 
 ## Quellenanker
+
+Punktuell recherchiert am 16.10.2026: [VO (EU) 2024/2809, Artikel 4](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32024R2809), amtlich indexierte Anwendungsvorschrift gelesen. Die dort genannten Änderungen in Artikel 2 Nummer 6 Buchstaben a, b, c und e sind ab 05.06.2026 anzuwenden. Dieser Datumsabgleich ersetzt keine vollständige Prüfung der materiellen Ad-hoc-Regeln. Der direkte Volltextzugriff und ein belastbarer erneuter Abgleich des im Quellenbestand genannten delegierten Rechtsakts 2026/789 gelangen nicht; hierzu wird kein neuer Verifikationsstand behauptet.
 
 - Marktmissbrauchsverordnung (EU) Nr. 596/2014 (MAR), insbesondere Art. 7, 8, 10, 14, 17, 18 und 19.
 - Wertpapierhandelsgesetz (WpHG), insbesondere Sanktions- und Zuständigkeitsregeln live im amtlichen Text prüfen.
@@ -231,3 +233,11 @@ English: Complete list of all 112 skills in this plugin. Both links in each row 
 | [`zwischenschritte-ma`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=insiderrecht-compliance/skills/zwischenschritte-ma/SKILL.md) | Für Zwischenschritte bei mehrstufigen Prozessen (M&A / Restrukturierung): ordnet Norm, Beweislast und Gegenargument; Ergebnis: Prüfprodukt mit Risiko und nächstem Schritt. | [MD herunterladen / Download MD](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=insiderrecht-compliance/skills/zwischenschritte-ma/SKILL.md) |
 
 <!-- END SKILLS-OVERVIEW (auto-generated) -->
+
+<a id="fachliche-ki-prüfung"></a>
+
+## 1. Fachliche KI-Prüfung
+
+[Normen, technische Nachweise, Rechtsprechungsgrenzen und Übungsakte](references/ki-normen-und-fallpruefung.md): Ermitteln Sie, ob das System Handelsmuster auffindet oder Personenprofile für Entscheidungen erstellt. Die bloße Verwendung im Finanzsektor macht nicht jedes Überwachungssystem zu Anhang-III-Hochrisiko-KI.
+
+Aktuelle KI-Fachvertiefung: Komponentenfassung 445.35.2 im [KI-Verordnungsrelease](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/tag/ki-verordnung-v445.35.2). Ältere Sammelarchive enthalten diese Ergänzung noch nicht.

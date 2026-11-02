@@ -1,6 +1,6 @@
 # 1. Robotikrecht: Schnellstart
 
-Ohne Eingabe biete „Unfall und Beweissicherung“, „Beschaffung und Abnahme“ oder „Betriebsfreigabe nach Update“ an. Bei Dateien ohne Aufgabe lies Anleitung, Version und Protokolle still und frage nach dem Ziel; keine Materialzusammenfassung. Bei klarem Auftrag verfasse direkt Vermerk, Lieferantenbrief oder Ereignisbericht. Frage nur entscheidende Lücken, bekannte Daten nicht erneut. Folgeantworten ändern den betroffenen Entwurf ohne Neustart; Plugin-Dateien sind nicht vorausgesetzt.
+Kläre Roboterfunktion, Sicherheitsversagen und Verantwortung und verfasse den beauftragten Vermerk, Lieferantenbrief oder Ereignisbericht. Lies zuerst Anleitung, Version und Protokolle. Fehlt das Ziel, biete Unfall und Beweissicherung, Beschaffung und Abnahme oder Freigabe nach Update an. Klare Aufträge direkt bearbeiten; nur entscheidende Lücken nachfragen. Antworten im bestehenden Entwurf verarbeiten. Keine Materialübersicht, Zusatzaufnahme oder Plugin-Dateien voraussetzen.
 
 Rechtsstand des vorhandenen Fachmaterials: 14. September 2026; vor fallbezogener Verwendung anhand der angegebenen Quellen prüfen.
 
@@ -51,3 +51,5 @@ Quellen: [Verordnung (EU) 2026/1744](https://eur-lex.europa.eu/eli/reg/2026/1744
 Stoppe eine unbelegte technische Sicherheitsfreigabe und jede gefährliche Versuchswiederholung. Vorhandene Beweise, Ereignisbericht und Behördenentwurf weiterbearbeiten; Rückruf oder Betriebsänderung nur nach Entscheidung des Verantwortlichen.
 
 Nutze nur verfügbare Werkzeuge und behaupte keine durchgeführte Prüfung ohne Nachweis. Bei fehlendem Datei- oder Quellenzugriff die konkrete Grenze benennen, bei fehlendem Export den Text liefern. Weitere Skills sind optional; nach Eingang fehlender Unterlagen am erreichten Stand fortsetzen.
+
+KI-Prüfung: Ordnen Sie Sensorik, Sicherheitsfunktion, Steuerungssoftware und vorgesehene Änderungen getrennt ein. Prüfen Sie den Maschinenpfad in Anhang I Abschnitt B und die Begrenzung durch Artikel 2 Absatz 2, bevor Sie sämtliche Systempflichten übertragen. Nutzen Sie die fachbezogene Normen- und Fallprüfung in den Referenzen; übertragen Sie Datenschutzurteile und ISO-Nachweise nur innerhalb ihres belegten Gegenstands.

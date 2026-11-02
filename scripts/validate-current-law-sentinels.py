@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import re
+import hashlib
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -15,6 +16,32 @@ REPO = Path(__file__).resolve().parent.parent
 class Sentinel:
     label: str
     pattern: re.Pattern[str]
+
+
+# Dieser historische Eintrag dokumentiert ausdrücklich die Entfernung des
+# unverifizierten Ankers. Nur die vollständige Zeile, Datei und genau dieser
+# Sentinel sind ausgenommen; operative Wiederverwendungen bleiben gesperrt.
+REVIEWED_CORRECTION_ENTRIES = {
+    "docs/experimentell/vorlagensammlung-recht/CHANGELOG.md": {
+        "nicht amtlich auffindbarer Entscheidungsanker OLG Karlsruhe 7 U 173/25": {
+            "5e5087b07ebf8fa2b8060afb9534a7a5b84a6f5157416b365f3b3218bffdd39f",
+        },
+    },
+}
+
+
+def actionable_sentinel_match(sentinel: Sentinel, text: str, relative_path: str) -> re.Match[str] | None:
+    reviewed = REVIEWED_CORRECTION_ENTRIES.get(relative_path, {}).get(sentinel.label, set())
+    if not reviewed:
+        return sentinel.pattern.search(text)
+    for match in sentinel.pattern.finditer(text):
+        start = text.rfind("\n", 0, match.start()) + 1
+        end = text.find("\n", match.end())
+        entry = text[start:end if end != -1 else len(text)]
+        digest = hashlib.sha256(" ".join(entry.split()).encode("utf-8")).hexdigest()
+        if digest not in reviewed:
+            return match
+    return None
 
 
 SENTINELS = (
@@ -75,6 +102,14 @@ SENTINELS = (
         re.compile(
             r"(?:07[.]11[.]2023.{0,100}C-307/22|"
             r"C-307/22.{0,100}07[.]11[.]2023)",
+            re.IGNORECASE,
+        ),
+    ),
+    Sentinel(
+        "falsches Datum zum BVerwG-Anker 4 CN 4.19",
+        re.compile(
+            r"(?:14[.]10[.]2020[^\n]{0,80}4\s+CN\s+4[./]19|"
+            r"4\s+CN\s+4[./]19[^\n]{0,80}14[.]10[.]2020)",
             re.IGNORECASE,
         ),
     ),
@@ -1680,6 +1715,7 @@ SENTINEL_HINTS = (
     ("normenradar:",),
     ("ix r 28/14",),
     ("c-307/22",),
+    ("14.10.2020",),
     ("agbg",),
     ("b 12 ba 3/23",),
     ("ix zr 211/02",),
@@ -1910,6 +1946,18 @@ SENTINELS += (
         "falsch zugeordneter Vorsteueranker V R 20/11",
         re.compile(r"V\s+R\s+20/11.{0,100}Vorsteuerabzug\s+verlangt", re.IGNORECASE),
     ),
+    Sentinel(
+        "nicht existente Regressnorm 199 SGB X",
+        re.compile(r"(?:Paragraf(?:en)?|§§?)\s*(?:116\s*[,;/]?\s*)?199\s+SGB\s+X\b", re.IGNORECASE),
+    ),
+    Sentinel(
+        "pauschale Kostenpflicht für Patientenaktenkopien",
+        re.compile(r"Kopien\s+auf\s+Kosten\s+des\s+Patienten", re.IGNORECASE),
+    ),
+    Sentinel(
+        "Landgericht als Restrukturierungsgericht bezeichnet",
+        re.compile(r"\bLG\s*\(StaRUG-Gerichte\)", re.IGNORECASE),
+    ),
 )
 SENTINEL_HINTS += (
     ("49a",),
@@ -1917,6 +1965,63 @@ SENTINEL_HINTS += (
     ("rabatt",),
     ("153a",),
     ("v r 20/11",),
+    ("199",),
+    ("kopien",),
+    ("starug-gerichte",),
+)
+
+
+# Eng begrenzte Rückfallkontrollen aus unabhängig geprüften Fehlerhinweisen.
+# Altjahresangaben bleiben zulässig; die Muster ersetzen keine Rechtsprüfung.
+SENTINELS += (
+    Sentinel(
+        "Geschenke an Nichtarbeitnehmer mit unmarkierter Altgrenze",
+        re.compile(
+            r"^(?![^\n]*(?:Altjahr|Altgrenze|bis\s+2023|vor\s+(?:dem\s+)?(?:01[.]01[.]2024|2024)))"
+            r"[^\n]*Geschenke[^\n]{0,100}(?:Freigrenze|Grenze|bis)\s*:?\s*35\s*(?:Euro|EUR|€)",
+            re.IGNORECASE | re.MULTILINE,
+        ),
+    ),
+    Sentinel(
+        "nicht vorhandener Absatz bei Arbeitgeber-Reisekostenbefreiung",
+        re.compile(r"(?:Paragraf|§)\s*3\s+Abs(?:atz|[.])?\s*1\s+(?:Nr[.]?|Nummer)\s*16\s+EStG", re.IGNORECASE),
+    ),
+    Sentinel(
+        "unmarkierte aktuelle Lizenzschranke nach 4j EStG",
+        re.compile(
+            r"^(?![^\n]*(?:\ba[.]?\s*F[.]?|Altjahr|VZ\s*2024|weggefallen|aufgehoben|abgeschafft|letztmals))"
+            r"[^\n]*(?:Paragraf|§)\s*4j\s+EStG[^\n]{0,100}Lizenzschranke",
+            re.IGNORECASE | re.MULTILINE,
+        ),
+    ),
+    Sentinel(
+        "Drei-Jahres-Laufzeit der 50c-Freistellung",
+        re.compile(
+            r"^(?=[^\n]*(?:50c|BZSt))(?![^\n]*(?:48b|44a|Altstand|bis\s+2024|früher|fünf|5\s+Jahre))"
+            r"[^\n]*Freistellungsbescheinigung[^\n]{0,100}(?:drei|3)\s+Jahre",
+            re.IGNORECASE | re.MULTILINE,
+        ),
+    ),
+    Sentinel(
+        "falsche aktuelle DAC8-Gesetzesabkürzung",
+        re.compile(r"\bKryptoStG\b"),
+    ),
+    Sentinel(
+        "Cloud-Wechselrecht in Artikel 17 Data Act",
+        re.compile(
+            r"(?:Data\s+Act\s+(?:VO\s*2023/2854\s*)?(?:Art[.]?|Artikel)\s*17\s*[:(–—-]\s*Wechselrecht|"
+            r"Wechselrecht\s*(?:Cloud\s*)?\(\s*(?:Art[.]?|Artikel)\s*17\s+Data\s+Act)",
+            re.IGNORECASE,
+        ),
+    ),
+)
+SENTINEL_HINTS += (
+    ("geschenke",),
+    ("estg",),
+    ("4j",),
+    ("freistellungsbescheinigung",),
+    ("kryptostg",),
+    ("wechselrecht",),
 )
 
 if len(SENTINEL_HINTS) != len(SENTINELS):
@@ -2029,7 +2134,7 @@ def main() -> int:
         for sentinel, hints in zip(SENTINELS, SENTINEL_HINTS, strict=True):
             if not any(hint in folded for hint in hints):
                 continue
-            match = sentinel.pattern.search(text)
+            match = actionable_sentinel_match(sentinel, text, relative.as_posix())
             if not match:
                 continue
             line = text.count("\n", 0, match.start()) + 1

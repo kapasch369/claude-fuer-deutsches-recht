@@ -5,13 +5,13 @@
 
 Private-Equity-Praxis-Plugin für deutsche Kanzleien, Investoren, Fonds, Family Offices und Unternehmen: Fund Formation, KAGB/AIF, ELTIF, Deal Execution, Private Credit, Schuldschein, LMA, NPL, Portfolio, Exit und Distressed.
 
-Dieses Plugin gehört zum Marketplace mit 275 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
+Dieses Plugin gehört zum Marketplace mit 310 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
 
 ## Welche Datei wofür? / Which file should I use?
 
 | Bestandteil | Deutsch | English | Wo? / Where? |
 | --- | --- | --- | --- |
-| Plugin-ZIP | Installiert das vollständige Plugin mit Skills, Referenzen und Hilfsdateien. | Installs the complete plugin with its skills, references and supporting files. | [`private-equity-praxis.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/private-equity-praxis.zip) |
+| Plugin-ZIP | Installiert das vollständige Plugin mit Skills, Referenzen und Hilfsdateien. | Installs the complete plugin with its skills, references and supporting files. | [`private-equity-praxis.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/ki-verordnung-v445.35.2/private-equity-praxis.zip) |
 | Skills | Arbeitsabläufe für einzelne Aufgaben. Wähle bei einem klaren Auftrag den passenden Skill ausdrücklich; die automatische Auswahl ist nicht garantiert. Einzeldownloads enthalten nur die jeweilige Markdown-Datei. | Focused task workflows. Select a known skill explicitly; automatic selection is not guaranteed. An individual download contains only that Markdown file. | [Skill-Liste öffnen / Open skill list](../skills-index/private-equity-praxis.md) |
 | Werkstatt-Prompt | Ausführliche eigenständige Markdown-Datei für komplexe oder mehrstufige Vorgänge. Sie ist kein Skill und nicht im Plugin-ZIP enthalten. | Detailed standalone Markdown file for complex or multi-step matters. It is not a skill and is not included in the plugin ZIP. | [MD herunterladen / Download MD](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=private-equity-praxis/private-equity-praxis-werkstatt.md) |
 | Schnellstart / Mini-Prompt | Kompakte eigenständige Markdown-Datei für einen schnellen ersten Arbeitsstand. Sie ist kein Skill und nicht im Plugin-ZIP enthalten. | Compact standalone Markdown file for a fast first work product. It is not a skill and is not included in the plugin ZIP. | [MD herunterladen / Download MD](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=private-equity-praxis/private-equity-praxis-schnellstart.md) |
@@ -45,12 +45,12 @@ Bei einem Folgewunsch den bisherigen Aktenstand fortführen. Bereits festgestell
 
 | Was | Format | Direkt-Download |
 | --- | --- | --- |
-| Plugin als Komplett-ZIP (Hauptweg) | ZIP | [`private-equity-praxis.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/private-equity-praxis.zip) |
+| Plugin als Komplett-ZIP (Hauptweg) | ZIP | [`private-equity-praxis.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/ki-verordnung-v445.35.2/private-equity-praxis.zip) |
 | Kompakter Prompt (Schnellstart) | Markdown | [`private-equity-praxis-schnellstart.md`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=private-equity-praxis/private-equity-praxis-schnellstart.md) |
 | Großer Prompt (Werkstatt) | Markdown | [`private-equity-praxis-werkstatt.md`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=private-equity-praxis/private-equity-praxis-werkstatt.md) |
 | Zugeordnete Testakten | PDF / ZIP | [2 zugeordnete Akten](#zugeordnete-testakten) mit Gesamt-PDF, Originaldateien und Einzel-PDFs |
 
-> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 275 Plugins. Wer alle Plugins auf einmal will, nimmt [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip). Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
+> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 310 Plugins. Das Sammelpaket [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip) enthält seinen veröffentlichten Stand, nicht zwingend spätere Einzelpakete. Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
 
 ## Zugeordnete Testakten
 
@@ -62,8 +62,8 @@ Jede Akte ist getrennt als lesbares Gesamt-PDF, ZIP mit Originaldateien und ZIP 
 
 | Akte | Gesamt-PDF | Originaldateien | Einzel-PDFs |
 | --- | --- | --- | --- |
-| [Projekt Nachtfalter — Private Equity Buyout, Schuldschein und NPL-Portfolio](../testakten/private-equity-buyout-schuldschein-npl-heidelberg/README.md) | [Gesamt-PDF](../testakten/private-equity-buyout-schuldschein-npl-heidelberg/gesamt-pdf/private-equity-buyout-schuldschein-npl-heidelberg_gesamt.pdf) | [`testakte-private-equity-buyout-schuldschein-npl-heidelberg.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-private-equity-buyout-schuldschein-npl-heidelberg.zip) | [`testakte-private-equity-buyout-schuldschein-npl-heidelberg-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-private-equity-buyout-schuldschein-npl-heidelberg-einzelpdfs.zip) |
-| [Nebelstern Ventures - Berliner VC-Pipeline, Wandeldarlehen und Follow-on-Chaos](../testakten/venture-capital-geber-nebelstern-portfolio-berlin/README.md) | [Gesamt-PDF](../testakten/venture-capital-geber-nebelstern-portfolio-berlin/gesamt-pdf/venture-capital-geber-nebelstern-portfolio-berlin_gesamt.pdf) | [`testakte-venture-capital-geber-nebelstern-portfolio-berlin.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-venture-capital-geber-nebelstern-portfolio-berlin.zip) | [`testakte-venture-capital-geber-nebelstern-portfolio-berlin-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-venture-capital-geber-nebelstern-portfolio-berlin-einzelpdfs.zip) |
+| [Projekt Nachtfalter — Private Equity Buyout, Schuldschein und NPL-Portfolio](../testakten/private-equity-buyout-schuldschein-npl-heidelberg/README.md) | [Gesamt-PDF](../testakten/private-equity-buyout-schuldschein-npl-heidelberg/gesamt-pdf/private-equity-buyout-schuldschein-npl-heidelberg_gesamt.pdf) | [`testakte-private-equity-buyout-schuldschein-npl-heidelberg.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-private-equity-buyout-schuldschein-npl-heidelberg.zip) | [`testakte-private-equity-buyout-schuldschein-npl-heidelberg-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-private-equity-buyout-schuldschein-npl-heidelberg-einzelpdfs.zip) |
+| [Nebelstern Ventures - Berliner VC-Pipeline, Wandeldarlehen und Follow-on-Chaos](../testakten/venture-capital-geber-nebelstern-portfolio-berlin/README.md) | [Gesamt-PDF](../testakten/venture-capital-geber-nebelstern-portfolio-berlin/gesamt-pdf/venture-capital-geber-nebelstern-portfolio-berlin_gesamt.pdf) | [`testakte-venture-capital-geber-nebelstern-portfolio-berlin.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-venture-capital-geber-nebelstern-portfolio-berlin.zip) | [`testakte-venture-capital-geber-nebelstern-portfolio-berlin-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-venture-capital-geber-nebelstern-portfolio-berlin-einzelpdfs.zip) |
 
 [Alle Testakten und Fachzuordnungen](../testakten/README.md)
 <!-- END direkt-loslegen (autogen) -->
@@ -75,7 +75,7 @@ Es ist ausdrücklich anfängerfreundlich, aber nicht weichgespült: Der Einstieg
 
 ## Starten
 
-Am besten mit `allgemein` oder `pe-001-kaltstart-deal-und-investor-routing` beginnen. Wenn nur ein Teaser, Term Sheet, Datenraum-Index, Cap Table, LMA Facility Agreement, Schuldschein, Side Letter, SPA-Markup oder NPL-Portfolio hochgeladen wird, behandelt das Plugin den Upload als Arbeitsauftrag und schlägt den schnellsten passenden Pfad vor.
+Bei offener Aufgabenstellung hilft `kaltstart-deal-und-investor-routing`. Ein klarer Auftrag mit Teaser, Term Sheet, Datenraum-Index, Cap Table, Finanzierungsvertrag, Side Letter, SPA-Markup oder NPL-Portfolio führt unmittelbar in den passenden Fachschritt. Zuerst das Material auswerten, nur entscheidende Lücken klären und das verlangte Arbeitsergebnis erstellen. Antworten und Nachträge werden im laufenden Vorgang weiterverarbeitet; ein neues Erstinterview ist dafür nicht nötig.
 
 ## Leitplanken
 
@@ -229,3 +229,11 @@ English: Complete list of all 109 skills in this plugin. Both links in each row 
 | [`warranty-claims-und-notices`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=private-equity-praxis/skills/warranty-claims-und-notices/SKILL.md) | Für Warranty Claims und Notices: ordnet Norm, Beweislast und Gegenargument; Ergebnis: Prüfprodukt mit Risiko und nächstem Schritt. | [MD herunterladen / Download MD](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=private-equity-praxis/skills/warranty-claims-und-notices/SKILL.md) |
 
 <!-- END SKILLS-OVERVIEW (auto-generated) -->
+
+<a id="fachliche-ki-prüfung"></a>
+
+## 1. Fachliche KI-Prüfung
+
+[Normen, technische Nachweise, Rechtsprechungsgrenzen und Übungsakte](references/ki-normen-und-fallpruefung.md): Prüfen Sie Minderheitsbeteiligung, tatsächliche Betriebssteuerung und spätere Produktänderungen separat. Die Beteiligungsstruktur allein bestimmt weder die Anbieterrolle noch eine Konformitätsvermutung.
+
+Aktuelle KI-Fachvertiefung: Komponentenfassung 445.35.2 im [KI-Verordnungsrelease](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/tag/ki-verordnung-v445.35.2). Ältere Sammelarchive enthalten diese Ergänzung noch nicht.

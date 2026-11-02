@@ -1,8 +1,8 @@
 # 1. Datenschutz-Sanktionsverfahren: Schnellstart
 
-Prüfe den vorgeworfenen Verarbeitungsvorgang, die Verantwortlichenrolle und den Verschuldensnachweis; greife die Geldbuße oder Anordnung mit dem dafür vorgesehenen Rechtsbehelf an, soweit beauftragt. Lies zuerst Behördenschreiben, Zustellnachweis, bisherige Antworten und vorwurfsbezogene Unterlagen.
+Verfasse den bestellten Rechtsbehelf oder Verteidigungsvermerk aus Bescheid, Zustellnachweis und Vorwurfsbelegen. Artikel 58 und 83 DSGVO betreffen unterschiedliche Maßnahmen. Zur Unternehmensgeldbuße: EuGH, Urteil vom 05.12.2023, C-807/21, Deutsche Wohnen, Rn. 60 und 68 bis 78. Eine natürliche Person muss nicht zuvor identifiziert sein; Vorsatz oder Fahrlässigkeit bleiben nötig. Kein Maßstab für jede Anordnung oder zivilrechtlichen Schaden.
 
-Ohne Fall biete Bußgeldeinspruch, Abhilfeanordnung oder Pannenmeldung mit Verteidigung an. Dateien ohne Aufgabe still lesen und passend auswählen lassen; klare Aufgaben direkt bearbeiten. „Logs zeigen keinen Download“ ändert den Befund erst nach Prüfung der Protokollgrenzen. „Auch Löschungsanordnung beigefügt“ verlangt einen getrennten Rechtsbehelfsweg. Entwurf gezielt ändern, Bekanntes nicht erneut erheben; keine Verarbeitungshistorie voranstellen. Spezialmaterialien sind optional.
+Ohne Auftrag kläre Bußgeldeinspruch, Abhilfeanordnung oder Pannenmeldung mit Verteidigung; sonst direkt bearbeiten. „Logs zeigen keinen Download“ erst nach Prüfung der Protokollgrenzen übernehmen. Eine zusätzliche Löschungsanordnung braucht einen eigenen Rechtsbehelfsweg. Nach Antworten den Entwurf ändern, Bekanntes nicht erneut erheben. Spezialmaterialien sind optional.
 
 ## 1.1 Drei Verfahren auseinanderhalten
 
@@ -34,7 +34,7 @@ Bei einem Vorwurf gegen einen früheren Verarbeitungsvorgang damalige Norm und z
 
 ## 1.5 Zuständigkeit und Bemessung
 
-KI-MIG: Bundesnetzagentur als Auffang-Systemaufsicht; Paragraf 2 enthält insbesondere Ausnahmen für Produktaufsicht, bestimmte Finanzaufsicht, öffentliche Stellen der Länder und Medien sowie die unabhängige Kammer. Die konkrete Nutzung zuordnen, keine Übernahme sämtlicher Datenschutzverfahren behaupten. Parallele Verfahren, Empfänger und Fristen einzeln führen; eine Meldung an eine Stelle ersetzt die andere nicht.
+KI-MIG: Bundesnetzagentur als Auffang-Systemaufsicht; Ausnahmen nach Paragraf 2 für Produkt-, Finanz-, Länder- und Medienaufsicht sowie unabhängige Kammer konkret prüfen. Datenschutzverfahren bleiben getrennt. Meldungen ersetzen einander nicht. Pseudonymisierung empfängerbezogen prüfen; Bias-Test ist keine allgemeine Datenerlaubnis.
 
 Bei Artikel 83 Absatz 2 Dauer, Schwere, Betroffenenumfang, Folgen, Abhilfe, Kooperation, frühere Verstöße und wirtschaftliche Grundlagen belegen. Höchstbetrag und konkrete Bemessung trennen. Nicht jede freiwillige Kooperation als uneingeschränkt günstiges Schuldeingeständnis formulieren.
 

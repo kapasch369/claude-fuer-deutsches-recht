@@ -2,6 +2,8 @@
 
 Ordne die tatsächlich eingesetzte Funktion einem Verbot, einer Hochrisikokategorie oder einer Transparenzpflicht zu und bestimme den verantwortlichen Akteur und Geltungsbeginn. Prüfe Zweckbeschreibung, Systemversion und Entscheidungswirkung anhand der vorhandenen Akte. Verfasse dazu das beauftragte Einordnungsmemo, den Umsetzungsplan, Vertrag oder die Behördenantwort.
 
+Artikel 5, 6 und 50 KI-Verordnung betreffen unterschiedliche Pflichten. EuGH, Urteil vom 07.12.2023, Az. C-634/21, SCHUFA Holding, betrifft dagegen Artikel 22 DSGVO: Bei maßgeblichem Scoreeinfluss echte menschliche Entscheidungsmöglichkeiten prüfen. Der unten belegte Anker ist keine Entscheidung zur KI-Risikoklasse und kein Verbot jeder Empfehlung; beide Rechtsregime getrennt anwenden.
+
 Ohne Eingabe biete „Systemrolle und Risikopfad bestimmen“, „synthetische Veröffentlichung kennzeichnen“ oder „Anbieterunterlagen prüfen“ an. Lies Dateien ohne Aufgabe still und kläre nur das Ziel, kein Systemdossier zum Start. Bei klarem Auftrag direkt zur bestellten Einordnung oder Klausel. Antwort „eigenes Branding“ ändert die Rollenprüfung; ein belegtes Vermarktungsdatum ändert nur die zugehörige Übergangsprüfung. Bekannte Fakten nicht erneut abfragen; keine lokalen Skills voraussetzen.
 
 ## 1.1. Systemangaben klären und weiterarbeiten
@@ -15,17 +17,17 @@ Ohne Eingabe biete „Systemrolle und Risikopfad bestimmen“, „synthetische V
 
 Prüfe Artikel 2 und 3 der Verordnung (EU) 2024/1689. Unterscheide Anbieter, Betreiber, Einführer, Händler, Bevollmächtigten und Produkthersteller. Eigenes Branding, eine wesentliche Änderung oder neue Zweckbestimmung können Artikel 25 auslösen. Ein Modell mit allgemeinem Verwendungszweck und ein darauf beruhendes System sind getrennte Prüfgegenstände; ein Chatbot ist nicht allein wegen seiner Benutzeroberfläche ein GPAI-Modell.
 
-Prüfe zunächst den konkreten Verbotstatbestand des Artikels 5 einschließlich seiner Ausnahmen. Ordne danach Artikel 6 Absatz 1 mit Produktregime oder Absatz 2 mit genauem Anhang-III-Eintrag zu. Bei Absatz 3 die Ausnahme begründen; Profiling sperrt die dortige Entlastung. Transparenzpflichten nach Artikel 50 nicht von einer Hochrisikoeinstufung abhängig machen.
+Prüfe zunächst den konkreten Verbotstatbestand des Artikels 5 einschließlich seiner Ausnahmen. Ordne danach Artikel 6 Absatz 1 mit Produktregime oder Absatz 2 mit genauem Anhang-III-Eintrag zu. Bei Absatz 3 die konkrete Fallgruppe, fehlendes erhebliches Risiko und Entscheidungswirkung begründen; Profiling eines erfassten Anhang-III-Systems sperrt die Entlastung. Buchstabe c setzt die gesetzliche Begrenzung auf Ersetzung oder Beeinflussung ohne angemessene menschliche Überprüfung voraus, nicht ein absolutes Verbot jeder überprüften Qualitätskontrolle. Artikel 6 Absatz 4 verlangt weiterhin Dokumentation und Registrierung nach Artikel 49 Absatz 2. Transparenzpflichten nach Artikel 50 nicht von einer Hochrisikoeinstufung abhängig machen.
 
 Ein mögliches Verbot oder fehlender Konformitätsnachweis verhindert eine unbegründete Freigabe, nicht die Untersuchung, Nachforderung oder einen rechtzeitigen Antwortentwurf. Bei einem Vorfall Sachverhalt, zuständige Stelle, Meldepflicht und Frist vorrangig prüfen; keine automatische Abschaltung, Meldung oder Registrierung veranlassen.
 
-## 1.3. Omnibus-Prüfung mit Stand 10. September 2026
+## 1.3. Omnibus-Prüfung mit amtlichem Abgleich vom 9. Oktober 2026
 
 ### 1.3.1. Normfassung und Systempfad
 
-Verwende die Verordnung (EU) 2024/1689 in der Fassung der seit 27. Juli 2026 geltenden Verordnung (EU) 2026/1744. Ordne jedes Ergebnis einer konkreten Funktion, Rolle, Norm und einem Datum zu. Artikel 113 verschiebt Kapitel III Abschnitte 1 bis 3 außer Artikel 6 Absatz 5: Anhang III ab 2. Dezember 2027, Anhang I ab 2. August 2028. Es sind feste Daten, keine durch Bereitschaftsbeschluss vorziehbaren Höchstfristen. Artikel 111 Absatz 2 für Bestand und erhebliche Konzeptionsänderung gesondert prüfen; Behördeneinsatz bis 2. August 2030 betrifft Anbieter und Betreiber. GPAI bleibt getrennt, einschließlich Artikel 111 Absatz 3 für vor dem 2. August 2025 vermarktete Modelle.
+Verwende die Verordnung (EU) 2024/1689 in der Fassung der seit 27. Juli 2026 geltenden Verordnung (EU) 2026/1744. Ordne jedes Ergebnis einer konkreten Funktion, Rolle, Norm und einem Datum zu. Artikel 113 verschiebt Kapitel III Abschnitte 1 bis 3 außer Artikel 6 Absatz 5: Anhang III ab 2. Dezember 2027, Anhang I ab 2. August 2028. Es sind feste Daten, keine durch Bereitschaftsbeschluss vorziehbaren Höchstfristen. Artikel 111 Absatz 2 für Bestand und erhebliche Konzeptionsänderung gesondert prüfen; Behördeneinsatz bis 2. August 2030 betrifft Anbieter und Betreiber. GPAI bleibt getrennt, einschließlich Artikel 111 Absatz 3 für vor dem 2. August 2025 vermarktete Modelle. Artikel 43 und 49 stehen in anderen Abschnitten des Kapitels III, Artikel 73 in Kapitel IX. Der Aufschub greift nicht pauschal für diese Normen; deren Verbindung mit Artikel 6, Altbestand und tatsächlichem Bereitstellungszeitpunkt begründet prüfen. Keine unbesehene Aussage, bereits 2026 gälten alle Hochrisikopflichten oder sämtliche Register- und Vorfallpflichten warteten bis 2027.
 
-Artikel 6 Absätze 1a bis 1c präzisieren den Sicherheitsbezug. Reine nicht sicherheitsbezogene Komfortfunktionen genügen nicht; gesundheits- oder sicherheitsgefährdender Ausfall kann die Einstufung tragen. Drittprüfung allein wegen anderer Risiken reicht nicht. Maschinen stehen nun in Anhang I Abschnitt B; Artikel 2 Absatz 2 und Maschinenrecht zuerst prüfen. Artikel 43 Absatz 3 neuer Fassung belässt bei Abschnitt-A-Produkten die produktrechtlich verfügbare Verfahrenswahl. Bei Anhang III Nummer 1 Voraussetzungen für Anhang VI oder VII prüfen, bei Nummern 2 bis 8 grundsätzlich interne Kontrolle. Keine pauschale Drittprüfung.
+Artikel 6 Absätze 1a bis 1c präzisieren den Sicherheitsbezug. Die deutsche Berichtigung vom 29. September 2026 ersetzt in Absatz 1b „Unbeschadet“ durch „Ungeachtet“: Sicherheitsgefährdender Ausfall bleibt gerade trotz Absatz 1a maßgeblich. Reine nicht sicherheitsbezogene Komfortfunktionen genügen nicht; gesundheits- oder sicherheitsgefährdender Ausfall kann die Einstufung tragen. Drittprüfung allein wegen anderer Risiken reicht nicht. Maschinen stehen nun in Anhang I Abschnitt B; Artikel 2 Absatz 2 und Maschinenrecht zuerst prüfen. Artikel 43 Absatz 3 neuer Fassung belässt bei Abschnitt-A-Produkten die produktrechtlich verfügbare Verfahrenswahl. Bei Anhang III Nummer 1 Voraussetzungen für Anhang VI oder VII prüfen, bei Nummern 2 bis 8 grundsätzlich interne Kontrolle. Keine pauschale Drittprüfung.
 
 ### 1.3.2. Kompetenzförderung und sensible Daten
 
@@ -43,9 +45,9 @@ Artikel 50 gilt grundsätzlich seit 2. August 2026. Artikel 111 Absatz 4 gewähr
 
 KI-MIG vom 22. Juli 2026 gilt seit 29. Juli 2026. Bundesnetzagentur als Auffangbehörde nach Paragraf 2 Absatz 1, nicht als ausschließliche Aufsicht: Produktaufsicht Absatz 2, Finanzaufsicht Absätze 3 und 4, unabhängige Kammer Absatz 5 und Paragraf 4, Länderstellen Absatz 6 sowie Medienregel Absatz 8 prüfen. Zentrale Beschwerdestelle und tatsächliche Sachzuständigkeit nicht gleichsetzen. EU-Sonderaufsicht und Datenschutzaufsicht abgrenzen.
 
-COM(2025) 837, Verfahren 2025/0360(COD), ist dagegen noch Vorschlag. Keine 96-Stunden-Meldefrist oder allgemeine datenschutzrechtliche Trainingserlaubnis vorwegnehmen. Normfassung, Adressat, Datum und Nachweise im bestellten Dokument berücksichtigen; eine Pflichtenmatrix nur ergänzen, wenn sie dem Auftrag dient. Bei Eilfällen schon belastbare Erstmeldung entwerfen; fehlende Forensik nicht als pauschalen Stillstand behandeln.
+COM(2025) 837, Verfahren 2025/0360(COD), ist dagegen noch Vorschlag. Keine 96-Stunden-Meldefrist oder allgemeine datenschutzrechtliche Trainingserlaubnis vorwegnehmen. Normfassung, Adressat, Datum und Nachweise im bestellten Dokument berücksichtigen; eine Pflichtenmatrix nur ergänzen, wenn sie dem Auftrag dient. Bei Eilfällen schon belastbare Erstmeldung entwerfen; fehlende Forensik nicht als pauschalen Stillstand behandeln. Artikel 73 verlangt je Tatbestand unverzügliche Meldung mit einer Höchstfrist von 15, zwei oder zehn Tagen, keine allgemeine 72-Stunden-Frist. Der Betreiber informiert bei schwerwiegendem Vorfall nach Artikel 26 Absatz 5 unverzüglich zuerst den Anbieter, anschließend Einführer oder Händler und zuständige Marktüberwachungsbehörden. Bei Nichterreichbarkeit gilt Artikel 73 entsprechend.
 
-Quellen: [Änderungsverordnung](https://eur-lex.europa.eu/eli/reg/2026/1744/oj?locale=de), [KI-MIG](https://www.gesetze-im-internet.de/ki-mig/BJNR0DF0B0026.html), [Datenschutz-Reformverfahren](https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025%2F0360%28COD%29). Bestehende Datenschutzentscheidungen belegen nur ihren eigenen Gegenstand, nicht die Auslegung neuer Omnibus-Normen.
+Quellen: [konsolidierte Fassung](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727), [deutsche Berichtigung](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32026R1744R(01)), [Änderungsverordnung](https://eur-lex.europa.eu/eli/reg/2026/1744/oj?locale=de), [KI-MIG](https://www.gesetze-im-internet.de/ki-mig/BJNR0DF0B0026.html), [Datenschutz-Reformverfahren](https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025%2F0360%28COD%29). Bestehende Datenschutzentscheidungen belegen nur ihren eigenen Gegenstand, nicht die Auslegung neuer Omnibus-Normen.
 
 ### 1.3.5. Finale Artikel-50-Leitlinien im konkreten Auftrag
 
@@ -73,7 +75,19 @@ Unterscheide harmonisierte Normen nach Artikel 40, gemeinsame Spezifikationen na
 
 Beim beauftragten Umsetzungsplan führe vom passenden Verfahren nach Artikel 43 über die EU-Konformitätserklärung nach Artikel 47 zur CE-Kennzeichnung nach Artikel 48, zur einschlägigen Registrierung und zur Marktbeobachtung. Nicht jeden Auftrag zu einer vollständigen Markteinführungsplanung erweitern.
 
-### 1.4.1. Registrierung
+### 1.4.1. Drei unterschiedliche Prüfprodukte
+
+Artikel 9 verlangt systembezogenes Risikomanagement über den Lebenszyklus: Ursache, Gefährdung, betroffene Personen, Maßnahme, Test und Restrisiko. Artikel 17 verlangt das Qualitätsmanagement des Hochrisikoanbieters, einschließlich Entwicklung, Nachweisen, Verantwortlichkeiten und des Artikel-9-Prozesses. Artikel 27 betrifft die Folgen für Grundrechte bei bestimmten Betreibern, nicht das allgemeine Management des Anbieters. Einrichtungen des öffentlichen Rechts, private Erbringer öffentlicher Dienstleistungen und Betreiber von Anhang III Nummer 5 Buchstaben b und c prüfen; Nummer 2 ist ausgenommen. Die private Arbeitgeberrolle allein erzeugt keine FRIA-Pflicht.
+
+Frage bei „Wir haben bereits ein Risk Framework“ nach genau dem vorhandenen Produkt und seiner Systemfassung. Übernimm passende Nachweise, benenne fehlende Anforderungen und arbeite das benötigte Dokument aus. Ein einziges Risikoregister, eine allgemeine Policy oder die Datenschutz-Folgenabschätzung ersetzt diese drei unterschiedlichen Prüfungen nicht. Menschliche Aufsicht nach Artikel 14 mit tatsächlicher Zuweisung nach Artikel 26 Absatz 2 verbinden, statt allein ein Organigramm zu verlangen.
+
+### 1.4.2. Standards und Bescheinigungen auf ihren Inhalt begrenzen
+
+ISO 31000, ISO/IEC 42001 und ISO/IEC 23894 können bei passendem Inhalt Orientierung liefern. Keine ungelesenen Standardabschnitte zitieren. Artikel 40 setzt für die Konformitätsvermutung eine veröffentlichte Amtsblattfundstelle voraus und wirkt nur für die abgedeckten Anforderungen. Ausgabe, Einschränkungen, Zertifikatsumfang, geprüfte Systemfassung und verbleibende Lücken feststellen. Managementzertifikat, gesetzliche Konformitätsbewertung, EU-Konformitätserklärung und CE-Kennzeichnung sind unterschiedliche Nachweise.
+
+Die Auswahl nach Artikel 43 nicht aus einem Zertifikatsnamen ableiten. Erst Systempfad, dann Verfahrensvoraussetzungen, anschließend konkrete Evidenz. Eine fehlende ISO-Zertifizierung sperrt nicht automatisch das gesetzliche interne Kontrollverfahren; ein vorhandenes Zertifikat ersetzt keine nicht geprüfte Systemeigenschaft. Das Ergebnis muss die tatsächliche Lücke und deren notwendigen Nachweis benennen.
+
+### 1.4.3. Registrierung
 
 Prüfe Artikel 49 und 71 am konkreten Anhangseintrag. Artikel 49 Absätze 1 und 3 nehmen Anhang III Nummer 2 von der dortigen EU-Registrierung aus; Absatz 5 betrifft dessen nationale Registrierung. Absatz 2 erfasst die dort bezeichneten Systeme bei Berufung auf Artikel 6 Absatz 3.
 
@@ -115,13 +129,13 @@ Kläre zunächst, ob Artikel 27 eine Grundrechte-Folgenabschätzung verlangt. Is
 
 ### 1.5.5. GPAI und erzeugte Rechtstexte
 
-Bei GPAI Artikeln 51 bis 56 entsprechend Modellrolle, systemischem Risiko, Dokumentationspflichten und einschlägigem Verhaltenskodex nachgehen. Modellunterlagen vom Nachweis für das konkrete nachgelagerte System trennen.
+Bei GPAI Artikeln 51 bis 56 entsprechend Modellrolle, systemischem Risiko, Dokumentationspflichten und einschlägigem Verhaltenskodex nachgehen. Modellunterlagen vom Nachweis für das konkrete nachgelagerte System trennen. Nach den nicht verbindlichen GPAI-Leitlinien von 2025, Randnummern 62 bis 65, ist ein Nachtrainingsaufwand von mehr als einem Drittel des ursprünglichen Trainings ein indikatives Kriterium für eine erhebliche Änderung der Modellfähigkeiten und eine nachgelagerte Modellanbieterrolle. Die tatsächlichen Voraussetzungen, Ausgangsgröße und gegebenenfalls die Ersatzannahme bei nicht ermittelbarem Aufwand prüfen. Unter einem Drittel liegt keine gesetzliche Freistellung: Artikel 25, die Systemzweckbestimmung, Artikel 6 und Artikel 50 bleiben gesondert. Ebenso die widerlegbare Vermutung systemischen Risikos bei mehr als 10^25 Trainings-Gleitkommaoperationen nach Artikel 51 Absatz 2 von diesem Leitlinienkriterium trennen.
 
 Bei erzeugten Schriftsätzen Fallidentität, Tatsachen, Anlagen, Behörde, Streitgegenstand und Fundstellen gegen die Akte prüfen. Paragraf 138 ZPO sowie Paragrafen 130 und 130a ZPO betreffen den Zivilprozess; StPO, OWiG, VwGO, SGG und FGO gesondert zuordnen. Einen entdeckten fremden Textbaustein berichtigen und seine Folge für Antrag und Begründung prüfen, nicht nur einen allgemeinen Warnvermerk ausgeben.
 
 ## 1.6. Rechtsprechung und Nachweise
 
-Der Scoringanker in Abschnitt 1.5.2 betrifft die daneben geltende Datenschutzprüfung. Zusätzliche Rechtsprechung zur Entscheidungslogik, Polizeidatenanalyse oder zu neuen KI-Vorschriften nur nach Prüfung von amtlichem Volltext, tragender Aussage und konkreter Übertragbarkeit aufnehmen. Fehlende Rechtsprechung zu einer neuen Vorschrift offenlassen, nicht durch allgemeine Grundrechtszitate ersetzen.
+Der Scoringanker in Abschnitt 1.5.3 betrifft die daneben geltende Datenschutzprüfung. Zusätzliche Rechtsprechung zur Entscheidungslogik, Polizeidatenanalyse oder zu neuen KI-Vorschriften nur nach Prüfung von amtlichem Volltext, tragender Aussage und konkreter Übertragbarkeit aufnehmen. Fehlende Rechtsprechung zu einer neuen Vorschrift offenlassen, nicht durch allgemeine Grundrechtszitate ersetzen.
 
 Benötigte Normfassungen und Entscheidungen amtlich belegen. Nicht überprüfte Literaturfundstellen nicht ergänzen. Interne Abrufvermerke gehören in eine Arbeitsnotiz, nicht in den Mandantenbrief.
 
@@ -164,3 +178,9 @@ Antwortet der Anbieter mit Unterlagen zu einer anderen Version, kennzeichne die 
 Ein fertiges Einordnungsmemo beantwortet den Auftrag mit Tatsachenbezug, Gegenargument, Normfassung und Datum. Eine offene Versionsfrage kann eine bedingte Empfehlung rechtfertigen, nicht eine behauptete Konformität. Registrierung, CE-Kennzeichnung, Veröffentlichung und Behördenversand sind keine bloßen Folgeschritte, die ohne gesonderten Auftrag ausgeführt werden. Bei nicht erreichbarem Änderungsakt bleibt die frühere Quellenprüfung als solche erkennbar; keine neue Vollverifikation vorspiegeln.
 
 Die neue Zweckbeschreibung ändert das bestehende Einordnungsmemo, beispielsweise `einordnung.md`, samt davon abhängiger Vertragsregel. Eine Antwort zum Vermarktungsdatum ändert dagegen nur den betroffenen Zeitpfad und Veröffentlichungshinweis. Keine zusätzlichen Pflichtdateien erzeugen; ohne Schreibzugriff die vollständige Ersatzfassung liefern.
+
+## 1.10. Tatbestandsbezogene Gegenprüfung
+
+Zweckbestimmung aus Anleitung, Werbung und technischer Dokumentation zusammenführen (Artikel 3 Nummer 12). Vorhersehbarer Fehlgebrauch gehört in Artikel 9/14; er ist nicht allein eine neue Risikoklasse. Planmäßige Umwidmung zum Hochrisikoeinsatz gesondert nach Artikel 25 Absatz 1 Buchstabe c prüfen, auch ohne Nachtraining. Artikel 10 Absatz 6 lässt bei Systementwicklung ohne Modelltraining Testdatenpflichten bestehen; bloß fehlendes eigenes Nachtraining eines Integrators belegt die Ausnahme nicht. Artikel 3 Nummer 1 erfasst auch geeignete wissensgestützte Ableitung; starre menschliche Rechenregeln und fehlende nachträgliche Anpassung getrennt beurteilen.
+
+[Fünf begründete Fall- und Gegenvarianten](references/testanker.md) verbinden die Prüfung mit konkreten Arbeitsprodukten.

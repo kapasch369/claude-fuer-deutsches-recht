@@ -41,13 +41,14 @@
   ],
   "mini_review": {
     "verdict": "revised",
-    "reason": "Der Mini fragt nach wirksamen menschlichen Eingriffsmöglichkeiten und Ausnahmen des Artikels 22 DSGVO statt bloßen Bestätigungsklicks. Individueller Text- und Quellenreview, kein Live-Modelltest. Individueller Workflow-Durchgang am 23.09.2026: Fehlende Übersteuerungsbefugnis -> Aufsichtsregel und bedingter Beschluss; bestätigte Sperre bei offener Menge -> Maßnahmen-/Mengenstatus der Erstmeldung ändern. Ergänzung 2. Oktober 2026: Verantwortung, gesetzliche Rollen und Versicherung bei autonomen Außenhandlungen getrennt; pauschale Vorfallfristen und Haftungsautomatismen entfernt. Redaktionelle Prüfung, kein Live-Modelltest.",
+    "reason": "Der Mini fragt nach wirksamen menschlichen Eingriffsmöglichkeiten und Ausnahmen des Artikels 22 DSGVO statt bloßen Bestätigungsklicks. Individueller Text- und Quellenreview, kein Live-Modelltest. Individueller Workflow-Durchgang am 23.09.2026: Fehlende Übersteuerungsbefugnis -> Aufsichtsregel und bedingter Beschluss; bestätigte Sperre bei offener Menge -> Maßnahmen-/Mengenstatus der Erstmeldung ändern. Ergänzung 2. Oktober 2026: Verantwortung, gesetzliche Rollen und Versicherung bei autonomen Außenhandlungen getrennt; pauschale Vorfallfristen und Haftungsautomatismen entfernt. Redaktionelle Prüfung, kein Live-Modelltest. Redaktionelle Einstiegslektüre am 16.10.2026: Menschliche Entscheidungsmöglichkeiten früh von Freigabeklick und KI-Risikoklasse getrennt.",
     "changes": [
       "C-634/21 an maßgeblichen Entscheidungseinfluss geknüpft.",
       "Neue KI-VO-Regeln nicht als Gegenstand des älteren DSGVO-Urteils dargestellt.",
-      "Vier eigenständige Eingabemodi und fachbezogene Antwortfortsetzung ergänzt."
+      "Vier eigenständige Eingabemodi und fachbezogene Antwortfortsetzung ergänzt.",
+      "Redaktion 16.10.2026: Menschliche Entscheidungsmöglichkeiten früh von Freigabeklick und KI-Risikoklasse getrennt. Keine neue fachliche Vollprüfung und kein Live-Modelltest."
     ],
-    "sha256": "2597cfb1cf8c1bb45cd2376d05e977576d529c0a7b70b6032a70b54c79288617"
+    "sha256": "25792b693201ad972865568f8550754959829039c2c556bfdae30e8d2a0049cd"
   },
   "selection": {
     "positive": [
@@ -131,13 +132,14 @@
   ],
   "workshop_review": {
     "verdict": "revised",
-    "reason": "Die Werkstatt verbindet SCHUFA mit Scoreeinsatz, Entscheidungspraxis und nachvollziehbaren Freigabebedingungen; KI-VO-Risikoklasse bleibt gesondert. Die bezeichneten Anker wurden am amtlichen Entscheidungstext geprüft; keine pauschale Vollverifikation aller Nebenmaterien. Individueller Workflow-Durchgang am 23.09.2026: Tatsächliche Entscheidungspunkte, drei unterschiedliche Aufsichtslücken, Chronologie ohne Auditstillstand und versions-/datenbezogene Beschlussfassung. Ergänzung 2. Oktober 2026: Verantwortung, gesetzliche Rollen und Versicherung bei autonomen Außenhandlungen getrennt; pauschale Vorfallfristen und Haftungsautomatismen entfernt. Redaktionelle Prüfung, kein Live-Modelltest.",
+    "reason": "Die Werkstatt verbindet SCHUFA mit Scoreeinsatz, Entscheidungspraxis und nachvollziehbaren Freigabebedingungen; KI-VO-Risikoklasse bleibt gesondert. Die bezeichneten Anker wurden am amtlichen Entscheidungstext geprüft; keine pauschale Vollverifikation aller Nebenmaterien. Individueller Workflow-Durchgang am 23.09.2026: Tatsächliche Entscheidungspunkte, drei unterschiedliche Aufsichtslücken, Chronologie ohne Auditstillstand und versions-/datenbezogene Beschlussfassung. Ergänzung 2. Oktober 2026: Verantwortung, gesetzliche Rollen und Versicherung bei autonomen Außenhandlungen getrennt; pauschale Vorfallfristen und Haftungsautomatismen entfernt. Redaktionelle Prüfung, kein Live-Modelltest. Redaktionelle Einstiegslektüre am 16.10.2026: Menschliche Entscheidungsmöglichkeiten früh von Freigabeklick und KI-Risikoklasse getrennt.",
     "changes": [
       "C-634/21 an maßgeblichen Entscheidungseinfluss geknüpft.",
       "Neue KI-VO-Regeln nicht als Gegenstand des älteren DSGVO-Urteils dargestellt.",
-      "Tatsächliche Entscheidungspunkte, drei unterschiedliche Aufsichtslücken, Chronologie ohne Auditstillstand und versions-/datenbezogene Beschlussfassung."
+      "Tatsächliche Entscheidungspunkte, drei unterschiedliche Aufsichtslücken, Chronologie ohne Auditstillstand und versions-/datenbezogene Beschlussfassung.",
+      "Redaktion 16.10.2026: Menschliche Entscheidungsmöglichkeiten früh von Freigabeklick und KI-Risikoklasse getrennt. Keine neue fachliche Vollprüfung und kein Live-Modelltest."
     ],
-    "sha256": "fd29e85a5e2f6b918d7f008b0007dbbad8593a2cef712773c5378ce69498d057"
+    "sha256": "90e4255e580c4bd0b24a664a131182e76df3be5e05822c036d4e172bff86da46"
   },
   "prompt_editorial_review": {
     "date": "2026-09-22",
@@ -179,5 +181,12 @@
     "continuation": "Fehlende Übersteuerungsbefugnis -> freigabebeschluss.md und betroffene Aufsichtsregel; bestätigte Sperre bei offener Menge -> erstmeldung.md mit geändertem Maßnahmen-/Mengenstatus. Nur bestelltes Dokument fortsetzen.",
     "enrichment": "Tatsächliche Entscheidungspunkte, drei unterschiedliche Aufsichtslücken, Chronologie ohne Auditstillstand und versions-/datenbezogene Beschlussfassung.",
     "limits": "desk review; no live client execution"
+  },
+  "ki_normen_vertiefung": {
+    "date": "2026-10-09",
+    "method": "desk_review",
+    "reference": "ki-governance/references/ki-normen-und-fallpruefung.md",
+    "focus": "Verbinden Sie Systemrisiken, Anbieter-QMS, konkrete Betreiberverwendung und Vorfallbearbeitung über gemeinsame Versions- und Zweckangaben. Ein umfassendes Richtlinienpaket ohne ausgeführte Tests beantwortet die materiellen Systemanforderungen nicht.",
+    "limits": "Keine vollständige Prüfung nicht KI-bezogener Inhalte; kein Live-Client-Test."
   }
 }

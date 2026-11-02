@@ -5,13 +5,13 @@
 
 Spezialplugin für Vertretung und Verteidigung in datenschutzrechtlichen Sanktionsverfahren: DSGVO-Bußgeld, OWiG/StPO, Art.-58-Anordnung, Verwaltungsgericht, Aufsichtsbehördenkommunikation, EuGH/EDPB und Behördenstrategie.
 
-Dieses Plugin gehört zum Marketplace mit 275 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
+Dieses Plugin gehört zum Marketplace mit 310 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
 
 ## Welche Datei wofür? / Which file should I use?
 
 | Bestandteil | Deutsch | English | Wo? / Where? |
 | --- | --- | --- | --- |
-| Plugin-ZIP | Installiert das vollständige Plugin mit Skills, Referenzen und Hilfsdateien. | Installs the complete plugin with its skills, references and supporting files. | [`datenschutz-sanktionsverfahren-verteidigung.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/datenschutz-sanktionsverfahren-verteidigung.zip) |
+| Plugin-ZIP | Installiert das vollständige Plugin mit Skills, Referenzen und Hilfsdateien. | Installs the complete plugin with its skills, references and supporting files. | [`datenschutz-sanktionsverfahren-verteidigung.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/ki-verordnung-v445.35.2/datenschutz-sanktionsverfahren-verteidigung.zip) |
 | Skills | Arbeitsabläufe für einzelne Aufgaben. Wähle bei einem klaren Auftrag den passenden Skill ausdrücklich; die automatische Auswahl ist nicht garantiert. Einzeldownloads enthalten nur die jeweilige Markdown-Datei. | Focused task workflows. Select a known skill explicitly; automatic selection is not guaranteed. An individual download contains only that Markdown file. | [Skill-Liste öffnen / Open skill list](../skills-index/datenschutz-sanktionsverfahren-verteidigung.md) |
 | Werkstatt-Prompt | Ausführliche eigenständige Markdown-Datei für komplexe oder mehrstufige Vorgänge. Sie ist kein Skill und nicht im Plugin-ZIP enthalten. | Detailed standalone Markdown file for complex or multi-step matters. It is not a skill and is not included in the plugin ZIP. | [MD herunterladen / Download MD](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=datenschutz-sanktionsverfahren-verteidigung/datenschutz-sanktionsverfahren-verteidigung-werkstatt.md) |
 | Schnellstart / Mini-Prompt | Kompakte eigenständige Markdown-Datei für einen schnellen ersten Arbeitsstand. Sie ist kein Skill und nicht im Plugin-ZIP enthalten. | Compact standalone Markdown file for a fast first work product. It is not a skill and is not included in the plugin ZIP. | [MD herunterladen / Download MD](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=datenschutz-sanktionsverfahren-verteidigung/datenschutz-sanktionsverfahren-verteidigung-schnellstart.md) |
@@ -45,12 +45,12 @@ Bei einem Folgewunsch den bisherigen Aktenstand fortführen. Bereits festgestell
 
 | Was | Format | Direkt-Download |
 | --- | --- | --- |
-| Plugin als Komplett-ZIP (Hauptweg) | ZIP | [`datenschutz-sanktionsverfahren-verteidigung.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/datenschutz-sanktionsverfahren-verteidigung.zip) |
+| Plugin als Komplett-ZIP (Hauptweg) | ZIP | [`datenschutz-sanktionsverfahren-verteidigung.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/ki-verordnung-v445.35.2/datenschutz-sanktionsverfahren-verteidigung.zip) |
 | Kompakter Prompt (Schnellstart) | Markdown | [`datenschutz-sanktionsverfahren-verteidigung-schnellstart.md`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=datenschutz-sanktionsverfahren-verteidigung/datenschutz-sanktionsverfahren-verteidigung-schnellstart.md) |
 | Großer Prompt (Werkstatt) | Markdown | [`datenschutz-sanktionsverfahren-verteidigung-werkstatt.md`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=datenschutz-sanktionsverfahren-verteidigung/datenschutz-sanktionsverfahren-verteidigung-werkstatt.md) |
 | Zugeordnete Testakten | PDF / ZIP | [3 zugeordnete Akten](#zugeordnete-testakten) mit Gesamt-PDF, Originaldateien und Einzel-PDFs |
 
-> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 275 Plugins. Wer alle Plugins auf einmal will, nimmt [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip). Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
+> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 310 Plugins. Das Sammelpaket [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip) enthält seinen veröffentlichten Stand, nicht zwingend spätere Einzelpakete. Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
 
 ## Zugeordnete Testakten
 
@@ -62,9 +62,9 @@ Jede Akte ist getrennt als lesbares Gesamt-PDF, ZIP mit Originaldateien und ZIP 
 
 | Akte | Gesamt-PDF | Originaldateien | Einzel-PDFs |
 | --- | --- | --- | --- |
-| [Auskunft nach Artikel 15 DSGVO bei verstreuten Datenbeständen (Karlsruhe)](../testakten/datenschutz-auskunft-art-15-verstreute-datenbestaende-karlsruhe/README.md) | [Gesamt-PDF](../testakten/datenschutz-auskunft-art-15-verstreute-datenbestaende-karlsruhe/gesamt-pdf/datenschutz-auskunft-art-15-verstreute-datenbestaende-karlsruhe_gesamt.pdf) | [`testakte-datenschutz-auskunft-art-15-verstreute-datenbestaende-karlsruhe.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-datenschutz-auskunft-art-15-verstreute-datenbestaende-karlsruhe.zip) | [`testakte-datenschutz-auskunft-art-15-verstreute-datenbestaende-karlsruhe-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-datenschutz-auskunft-art-15-verstreute-datenbestaende-karlsruhe-einzelpdfs.zip) |
-| [Beschäftigten-Videoüberwachung und Kündigung (Gelsenkirchen)](../testakten/datenschutz-beschaeftigte-videoueberwachung-kuendigung-gelsenkirchen/README.md) | [Gesamt-PDF](../testakten/datenschutz-beschaeftigte-videoueberwachung-kuendigung-gelsenkirchen/gesamt-pdf/datenschutz-beschaeftigte-videoueberwachung-kuendigung-gelsenkirchen_gesamt.pdf) | [`testakte-datenschutz-beschaeftigte-videoueberwachung-kuendigung-gelsenkirchen.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-datenschutz-beschaeftigte-videoueberwachung-kuendigung-gelsenkirchen.zip) | [`testakte-datenschutz-beschaeftigte-videoueberwachung-kuendigung-gelsenkirchen-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-datenschutz-beschaeftigte-videoueberwachung-kuendigung-gelsenkirchen-einzelpdfs.zip) |
-| [Datenpanne und 72-Stunden-Meldung nach Ransomware (Osnabrück)](../testakten/datenschutz-datenpanne-72-stunden-meldung-ransomware-osnabrueck/README.md) | [Gesamt-PDF](../testakten/datenschutz-datenpanne-72-stunden-meldung-ransomware-osnabrueck/gesamt-pdf/datenschutz-datenpanne-72-stunden-meldung-ransomware-osnabrueck_gesamt.pdf) | [`testakte-datenschutz-datenpanne-72-stunden-meldung-ransomware-osnabrueck.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-datenschutz-datenpanne-72-stunden-meldung-ransomware-osnabrueck.zip) | [`testakte-datenschutz-datenpanne-72-stunden-meldung-ransomware-osnabrueck-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-datenschutz-datenpanne-72-stunden-meldung-ransomware-osnabrueck-einzelpdfs.zip) |
+| [Auskunft nach Artikel 15 DSGVO bei verstreuten Datenbeständen (Karlsruhe)](../testakten/datenschutz-auskunft-art-15-verstreute-datenbestaende-karlsruhe/README.md) | [Gesamt-PDF](../testakten/datenschutz-auskunft-art-15-verstreute-datenbestaende-karlsruhe/gesamt-pdf/datenschutz-auskunft-art-15-verstreute-datenbestaende-karlsruhe_gesamt.pdf) | [`testakte-datenschutz-auskunft-art-15-verstreute-datenbestaende-karlsruhe.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-datenschutz-auskunft-art-15-verstreute-datenbestaende-karlsruhe.zip) | [`testakte-datenschutz-auskunft-art-15-verstreute-datenbestaende-karlsruhe-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-datenschutz-auskunft-art-15-verstreute-datenbestaende-karlsruhe-einzelpdfs.zip) |
+| [Beschäftigten-Videoüberwachung und Kündigung (Gelsenkirchen)](../testakten/datenschutz-beschaeftigte-videoueberwachung-kuendigung-gelsenkirchen/README.md) | [Gesamt-PDF](../testakten/datenschutz-beschaeftigte-videoueberwachung-kuendigung-gelsenkirchen/gesamt-pdf/datenschutz-beschaeftigte-videoueberwachung-kuendigung-gelsenkirchen_gesamt.pdf) | [`testakte-datenschutz-beschaeftigte-videoueberwachung-kuendigung-gelsenkirchen.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-datenschutz-beschaeftigte-videoueberwachung-kuendigung-gelsenkirchen.zip) | [`testakte-datenschutz-beschaeftigte-videoueberwachung-kuendigung-gelsenkirchen-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-datenschutz-beschaeftigte-videoueberwachung-kuendigung-gelsenkirchen-einzelpdfs.zip) |
+| [Datenpanne und 72-Stunden-Meldung nach Ransomware (Osnabrück)](../testakten/datenschutz-datenpanne-72-stunden-meldung-ransomware-osnabrueck/README.md) | [Gesamt-PDF](../testakten/datenschutz-datenpanne-72-stunden-meldung-ransomware-osnabrueck/gesamt-pdf/datenschutz-datenpanne-72-stunden-meldung-ransomware-osnabrueck_gesamt.pdf) | [`testakte-datenschutz-datenpanne-72-stunden-meldung-ransomware-osnabrueck.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-datenschutz-datenpanne-72-stunden-meldung-ransomware-osnabrueck.zip) | [`testakte-datenschutz-datenpanne-72-stunden-meldung-ransomware-osnabrueck-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-datenschutz-datenpanne-72-stunden-meldung-ransomware-osnabrueck-einzelpdfs.zip) |
 
 [Alle Testakten und Fachzuordnungen](../testakten/README.md)
 <!-- END direkt-loslegen (autogen) -->
@@ -85,7 +85,7 @@ Dieses Plugin ist die Spezialwerkstatt für Mandate, in denen Datenschutzaufsich
 
 ## Der wichtigste erste Satz im Mandat
 
-Nicht sofort "kooperativ" alles erzählen. Erst verstehen, welche Spur läuft. Datenschutzrechtliche Mitwirkung, OWiG-Verteidigung und verwaltungsgerichtlicher Rechtsschutz haben unterschiedliche Regeln. Das Plugin fragt deshalb zuerst:
+Nicht sofort "kooperativ" alles erzählen. Erst verstehen, welche Spur läuft. Datenschutzrechtliche Mitwirkung, OWiG-Verteidigung und verwaltungsgerichtlicher Rechtsschutz haben unterschiedliche Regeln. Das Plugin liest deshalb zuerst die Behördenpost und vorhandene Akte. Nur soweit daraus noch nicht beantwortet und für den Auftrag entscheidend, klärt es:
 
 1. Liegt nur ein Auskunftsverlangen, eine Anhörung, ein Bußgeldbescheid oder eine Art.-58-Anordnung vor?
 2. Wer ist Adressat und welche Behörde ist zuständig: Landesaufsicht, BfDI, kirchliche Datenschutzaufsicht oder federführende EU-Aufsicht?
@@ -121,7 +121,7 @@ Keine BeckRS-, juris-, Kommentar- oder Aufsatz-Blindzitate. Normen und Rechtspre
 - Stellungnahme vor Bußgeldbescheid.
 - Art.-83-Bemessungsgegenrechnung nach EDPB 04/2022.
 - Verschuldens- und Organisationsmemo nach EuGH C-807/21/C-683/21.
-- Klage-/Eilantragsgerüst gegen Art.-58-Anordnung.
+- Ausformulierter Klage- oder Eilantragsentwurf gegen eine Art.-58-Anordnung, soweit beauftragt; offene Tatsachen und Belege bleiben kenntlich.
 - Terminsmappe für Hauptverhandlung im Bußgeldverfahren.
 - Management-Briefing für Vorstand/Geschäftsführung.
 - Schlussmemo mit Remediation, Wiedervorlagen und Lessons Learned.
@@ -276,3 +276,11 @@ English: Complete list of all 101 skills in this plugin. Both links in each row 
 | [`zwischenverfahren-69-owig`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=datenschutz-sanktionsverfahren-verteidigung/skills/zwischenverfahren-69-owig/SKILL.md) | Für Zwischenverfahren Paragraf 69 OWiG: ordnet Norm, Beweislast und Gegenargument; Ergebnis: Prüfprodukt mit Risiko und nächstem Schritt. Fachgebiet: Datenschutz-Sanktionsverfahren und Verteidigung. | [MD herunterladen / Download MD](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=datenschutz-sanktionsverfahren-verteidigung/skills/zwischenverfahren-69-owig/SKILL.md) |
 
 <!-- END SKILLS-OVERVIEW (auto-generated) -->
+
+<a id="fachliche-ki-prüfung"></a>
+
+## 1. Fachliche KI-Prüfung
+
+[Normen, technische Nachweise, Rechtsprechungsgrenzen und Übungsakte](references/ki-normen-und-fallpruefung.md): Trennen Sie die behauptete Datenpanne, die tatsächlichen Empfänger und einen möglichen KI-Systemvorfall. Weder die Speicherung pseudonymisierter Daten noch die Bezeichnung Bias-Test beantwortet Rechtmäßigkeit und Meldeweg allein.
+
+Aktuelle KI-Fachvertiefung: Komponentenfassung 445.35.2 im [KI-Verordnungsrelease](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/tag/ki-verordnung-v445.35.2). Ältere Sammelarchive enthalten diese Ergänzung noch nicht.

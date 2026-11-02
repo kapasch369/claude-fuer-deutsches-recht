@@ -7,6 +7,12 @@ bestehende alphabetische Komplettliste bleiben unverändert.
 
 from __future__ import annotations
 
+
+if __name__ == "__main__":
+    from generator_cli import parse_generator_cli
+
+    parse_generator_cli(__doc__)
+
 import json
 import re
 from pathlib import Path
@@ -121,6 +127,18 @@ EXACT_GROUPS: dict[str, str] = {
 }
 
 PLUGIN_GROUPS = {
+    "bauwirtschaft-rundum/bauwirtschaft-anfaenger": [
+        ("1. Auftrag und freigegebene Unterlagen", ["bauaufgabe-zum-arbeitsprodukt-fuehren", "projektunterlagen-und-quellen-sicher-einsetzen"]),
+        ("2. Begehung und Planungsabgleich", ["begehungsprotokoll-und-maengelliste-erstellen", "baubeschreibung-und-lv-abgleichen"]),
+        ("3. Vergabe, Bauablauf und Baugrund", ["leistungsbeschreibung-und-bieterfragen-bearbeiten", "behinderungsanzeige-aus-fakten-entwerfen", "baugrundgutachten-in-anforderungen-ueberfuehren"]),
+        ("4. Eigenen Arbeitsbaustein erproben", ["eigenen-bau-baustein-entwickeln-und-testen"]),
+    ],
+    "bauwirtschaft-rundum/bauwirtschaft-fortgeschrittene": [
+        ("1. Projektvorgang und Planänderungen", ["projektvorgang-steuern", "planlauf-aenderungen"]),
+        ("2. Bewerbung und Vergabe", ["vgv-bewerbung", "angebotspruefung"]),
+        ("3. Rechnung, Bauzeit und Nachtrag", ["rechnungspruefung", "bauzeit-claim", "nachtragspruefung"]),
+        ("4. Bürostandards kontrolliert einsetzen", ["buerostandards-testen"]),
+    ],
     "sektorenvergabe-workflow": [
         ("1. Hauptskill für den laufenden Auftrag", ["sektorenvergabe-steuern"]),
         ("2. Vergabeunterlagen in fünf Schritten", ["auftrag-und-sektorenbezug-klaeren", "reinigungsleistung-und-mengen-bestimmen", "eignung-wertung-und-vertrag-gestalten", "unterlagen-und-preisblatt-abgleichen", "bekanntmachung-und-fristen-vorbereiten"]),

@@ -1,6 +1,8 @@
 # 1. Datenschutzrecht: Verarbeitung, Betroffenenrechte und Vorfälle prüfen
 
-Kläre, wer welche personenbezogenen Daten zu welchem Zweck verarbeitet, ob dafür eine Rechtsgrundlage besteht und welche Auskunft, Löschung, Vertragsänderung oder Meldung geschuldet ist. Lies Antrag, Verarbeitungsverzeichnis, Verträge, Suchergebnisse und Vorfallsberichte zuerst. Verfasse das beauftragte Schreiben, die Vertragsfassung oder Folgenabschätzung vollständig; ein Einzelauftrag verlangt weder ein Komplettaudit noch eine ungefragte Behördenmeldung.
+Kläre anhand von Antrag, Verarbeitungsunterlagen und Vorfallsbericht, welche Auskunft, Löschung, Vertragsänderung oder Meldung geschuldet ist. Liefere das bestellte Schreiben, die Vertragsfassung oder Folgenabschätzung vollständig. Ein Einzelauftrag verlangt weder ein Komplettaudit noch eine ungefragte Behördenmeldung.
+
+Bei Datenkopien ist Artikel 15 Absätze 3 und 4 DSGVO der Ausgangspunkt. EuGH, Urteil vom 04.05.2023, C-487/21, CRIF, Rn. 28 bis 45, verlangt verständliche, originalgetreue Wiedergabe: Dokumentauszüge oder ganze Dokumente einbeziehen, soweit ihr Kontext für wirksame Rechteausübung unerlässlich ist. Daraus folgt kein allgemeiner Vollaktenanspruch; Rechte anderer konkret schützen. Vorfälle und Verträge nach ihren eigenen Voraussetzungen bearbeiten, nicht nach diesem Auskunftsmaßstab.
 
 ## 1.1. Verarbeitung und offene Tatsachen
 
@@ -25,6 +27,12 @@ Bei Auskunft gegen eine Finanzbehörde BFH, Urteil vom 30.06.2026, IX R 2/25, Gr
 Leite die Suche aus tatsächlichen Systemen und Zuständigkeiten ab. Fehlen CRM-Exporte oder Postfachtreffer, fordere genau diese mit Suchzeitraum an. Nach Eingang Datenkopie, Empfängerangaben und Antwort ergänzen. Eine interne Nachforderung kann lauten: „Bitte ergänzen Sie die zum Antrag gehörenden CRM-Daten und die dokumentierten Übermittlungen an externe Empfänger. Die bisherige Postfachsuche deckt diese Verarbeitung nicht ab.“ Keine ungeprüfte Vollständigkeitsbestätigung abgeben.
 
 Bei Artikeln 16 bis 19 und 21 Unrichtigkeit, Zweckfortfall, Aufbewahrung, Anspruchsverteidigung, Einschränkung und Widerspruch trennen. Löschung nicht trotz berechtigten Aufbewahrungsbedarfs versprechen. Empfängerinformation nach Artikel 19 und konkrete Ablehnungsgründe prüfen. Die Antwort verständlich mit passenden Rechtsschutzinformationen ausformulieren.
+
+### 1.2.1. Urteilsdatenbank und journalistischer Zweck
+
+Beruft sich eine personenbezogen durchsuchbare Urteilsdatenbank auf das Medienprivileg, prüfe Artikel 85 DSGVO vor einer pauschalen Ablehnung. [EuGH, Urteil vom 09.07.2026, Az. C-199/24, Legal Newsdesk Sweden](https://juris.curia.europa.eu/juris/document/document.jsf?docid=313495&doclang=DE), Rn. 61 bis 77: Redaktionelle Bearbeitung oder zumindest eine redaktionelle Linie, Tatsachenprüfung und berufsständische sowie ethische Regeln sind maßgeblich. Entgelt und Strafurteilsbezug allein schließen Journalismus nicht aus. Bloße Bereitstellung für jeden zahlenden Nutzer ist dagegen nicht schon journalistische Recherchehilfe; tatsächlichen Zweck, Zugang und redaktionelle Arbeit belegen lassen. Auch notwendige Recherche vor Veröffentlichung kann erfasst sein.
+
+Fehlen solche Belege, den Antrag nach den einschlägigen DSGVO-Regeln weiterprüfen, insbesondere Artikel 10 und 17 einschließlich Absatz 3 Buchstabe a; kein automatischer Löschungs- oder Geldanspruch. Bei belegtem journalistischem Zweck die konkrete nationale Ausnahme und deren Erforderlichkeit bestimmen, nicht das ganze Unternehmen freistellen. Artikel 77 bis 79 und 82 dürfen nach Rn. 45 bis 51 nicht durch bloße Verleumdungsbehelfe ersetzt werden. Nach Eingang der redaktionellen Nachweise genau die Ablehnungsbegründung oder den Abhilfeentwurf überarbeiten. Der schwedische Fall entscheidet weder über jedes deutsche Presseprivileg noch abschließend über den Individualanspruch.
 
 ## 1.3. AVV, Konzern und mehrere Beteiligte
 
@@ -125,3 +133,7 @@ Bei einem Cloud-Vertrag frage bei unklarer Verwendung der Kundendaten konkret: �
 Ordne jeder wesentlichen Vertragslücke eine ausformulierte Ersatzregelung und einen benötigten Nachweis zu. Bei Löschung gehören Produktivdaten, Sicherungen und dokumentierte Rückgabe auseinander; bei Unterauftragnehmern benannte Rechtsträger, Tätigkeiten und Änderungsverfahren. Eine behauptete EU-Speicherung beantwortet noch nicht den Fernzugriff aus einem Drittland. Nach einer Anbieterantwort gleichzeitig Vertrag, Anlagen und Transferbewertung berichtigen, damit der Haupttext keine weitergehende Zusage als die Anlage enthält.
 
 Die Freigabevorlage benennt konkret erfüllte und offene Voraussetzungen, Verantwortliche und Folgen für den vorgesehenen Start. Keine uneingeschränkte Freigabe bei ungeklärter eigener Datennutzung oder hohem Restrisiko. Die Entscheidung über Vertragsunterzeichnung, produktive Verarbeitung oder externe Meldung bleibt beim Auftraggeber; der vollständige Entwurf wird nicht bis zu dieser Freigabe zurückgehalten.
+
+KI-Prüfung: Bestimmen Sie Identifizierungsmittel je Datenempfänger und den Zweck jeder Verarbeitung. Eine Berufung auf diskriminierungsfreie Entwicklung begründet noch keine allgemeine Befugnis zur Nutzung sensibler Daten. Nutzen Sie die fachbezogene Normen- und Fallprüfung in den Referenzen; übertragen Sie Datenschutzurteile und ISO-Nachweise nur innerhalb ihres belegten Gegenstands.
+
+[Normen, technische Nachweise und begrenzte Rechtsprechungsargumente](references/ki-normen-und-fallpruefung.md).

@@ -5,13 +5,13 @@
 
 Artikel 50 KI-Verordnung praktisch prüfen: Rollen, Kanzleientwürfe, öffentliche Texte, redaktionelle Kontrolle, KI-Chat und Telefon, Deepfakes, technische Markierung und Biometrie. Mit verwendbaren Hinweisen, Anbieteranfragen und Freigabevermerken.
 
-Dieses Plugin gehört zum Marketplace mit 275 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
+Dieses Plugin gehört zum Marketplace mit 310 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
 
 ## Welche Datei wofür? / Which file should I use?
 
 | Bestandteil | Deutsch | English | Wo? / Where? |
 | --- | --- | --- | --- |
-| Plugin-ZIP | Installiert das vollständige Plugin mit Skills, Referenzen und Hilfsdateien. | Installs the complete plugin with its skills, references and supporting files. | [`ki-verordnung-transparenzpruefer.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/ki-verordnung-transparenzpruefer.zip) |
+| Plugin-ZIP | Installiert das vollständige Plugin mit Skills, Referenzen und Hilfsdateien. | Installs the complete plugin with its skills, references and supporting files. | [`ki-verordnung-transparenzpruefer.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/ki-verordnung-v445.35.2/ki-verordnung-transparenzpruefer.zip) |
 | Skills | Arbeitsabläufe für einzelne Aufgaben. Wähle bei einem klaren Auftrag den passenden Skill ausdrücklich; die automatische Auswahl ist nicht garantiert. Einzeldownloads enthalten nur die jeweilige Markdown-Datei. | Focused task workflows. Select a known skill explicitly; automatic selection is not guaranteed. An individual download contains only that Markdown file. | [Skill-Liste öffnen / Open skill list](../skills-index/ki-verordnung-transparenzpruefer.md) |
 | Werkstatt-Prompt | Ausführliche eigenständige Markdown-Datei für komplexe oder mehrstufige Vorgänge. Sie ist kein Skill und nicht im Plugin-ZIP enthalten. | Detailed standalone Markdown file for complex or multi-step matters. It is not a skill and is not included in the plugin ZIP. | [MD herunterladen / Download MD](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=ki-verordnung-transparenzpruefer/ki-verordnung-transparenzpruefer-werkstatt.md) |
 | Schnellstart / Mini-Prompt | Kompakte eigenständige Markdown-Datei für einen schnellen ersten Arbeitsstand. Sie ist kein Skill und nicht im Plugin-ZIP enthalten. | Compact standalone Markdown file for a fast first work product. It is not a skill and is not included in the plugin ZIP. | [MD herunterladen / Download MD](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=ki-verordnung-transparenzpruefer/ki-verordnung-transparenzpruefer-schnellstart.md) |
@@ -45,12 +45,12 @@ Bei einem Folgewunsch den bisherigen Aktenstand fortführen. Bereits festgestell
 
 | Was | Format | Direkt-Download |
 | --- | --- | --- |
-| Plugin als Komplett-ZIP (Hauptweg) | ZIP | [`ki-verordnung-transparenzpruefer.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/ki-verordnung-transparenzpruefer.zip) |
+| Plugin als Komplett-ZIP (Hauptweg) | ZIP | [`ki-verordnung-transparenzpruefer.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/ki-verordnung-v445.35.2/ki-verordnung-transparenzpruefer.zip) |
 | Kompakter Prompt (Schnellstart) | Markdown | [`ki-verordnung-transparenzpruefer-schnellstart.md`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=ki-verordnung-transparenzpruefer/ki-verordnung-transparenzpruefer-schnellstart.md) |
 | Großer Prompt (Werkstatt) | Markdown | [`ki-verordnung-transparenzpruefer-werkstatt.md`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=ki-verordnung-transparenzpruefer/ki-verordnung-transparenzpruefer-werkstatt.md) |
-| Zugeordnete Testakten | PDF / ZIP | [eine zugeordnete Akte](#zugeordnete-testakten) mit Gesamt-PDF, Originaldateien und Einzel-PDFs |
+| Zugeordnete Testakten | PDF / ZIP | [2 zugeordnete Akten](#zugeordnete-testakten) mit Gesamt-PDF, Originaldateien und Einzel-PDFs |
 
-> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 275 Plugins. Wer alle Plugins auf einmal will, nimmt [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip). Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
+> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 310 Plugins. Das Sammelpaket [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip) enthält seinen veröffentlichten Stand, nicht zwingend spätere Einzelpakete. Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
 
 ## Zugeordnete Testakten
 
@@ -62,11 +62,21 @@ Jede Akte ist getrennt als lesbares Gesamt-PDF, ZIP mit Originaldateien und ZIP 
 
 | Akte | Gesamt-PDF | Originaldateien | Einzel-PDFs |
 | --- | --- | --- | --- |
-| [digitale Systeme Kommunikation einer Mainzer Kanzlei](../testakten/ki-transparenz-kanzlei-kommunikation-mainz/README.md) | [Gesamt-PDF](../testakten/ki-transparenz-kanzlei-kommunikation-mainz/gesamt-pdf/ki-transparenz-kanzlei-kommunikation-mainz_gesamt.pdf) | [`testakte-ki-transparenz-kanzlei-kommunikation-mainz.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-ki-transparenz-kanzlei-kommunikation-mainz.zip) | [`testakte-ki-transparenz-kanzlei-kommunikation-mainz-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-ki-transparenz-kanzlei-kommunikation-mainz-einzelpdfs.zip) |
+| [digitale Systeme Kommunikation einer Mainzer Kanzlei](../testakten/ki-transparenz-kanzlei-kommunikation-mainz/README.md) | [Gesamt-PDF](../testakten/ki-transparenz-kanzlei-kommunikation-mainz/gesamt-pdf/ki-transparenz-kanzlei-kommunikation-mainz_gesamt.pdf) | [`testakte-ki-transparenz-kanzlei-kommunikation-mainz.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-ki-transparenz-kanzlei-kommunikation-mainz.zip) | [`testakte-ki-transparenz-kanzlei-kommunikation-mainz-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-ki-transparenz-kanzlei-kommunikation-mainz-einzelpdfs.zip) |
+| [1. Testakte Pegnesus Redaktion und drei Ausspielfassungen](../testakten/ki-transparenz-pegnesus-redaktion/README.md) | [Gesamt-PDF](../testakten/ki-transparenz-pegnesus-redaktion/gesamt-pdf/ki-transparenz-pegnesus-redaktion_gesamt.pdf) | [`testakte-ki-transparenz-pegnesus-redaktion.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/ki-verordnung-v445.35.2/testakte-ki-transparenz-pegnesus-redaktion.zip) | [`testakte-ki-transparenz-pegnesus-redaktion-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/ki-verordnung-v445.35.2/testakte-ki-transparenz-pegnesus-redaktion-einzelpdfs.zip) |
 
 [Alle Testakten und Fachzuordnungen](../testakten/README.md)
 <!-- END direkt-loslegen (autogen) -->
 
+<a id="fachstand-445351-vom-9-oktober-2026"></a>
+
+<a id="1-fachstand-445352-vom-9-oktober-2026"></a>
+
+## Fachstand 445.35.2 vom 9. Oktober 2026
+
+Die amtliche konsolidierte KI-Verordnung einschließlich Änderungsverordnung 2026/1744 und deutscher Berichtigung vom 29. September wurde für die beschriebenen Korrekturen geöffnet. [Rechtsstand und Quellen](references/rechtsstand-2026-10-09.md). Systemrisikomanagement nach Artikel 9, Anbieter-Qualitätsmanagement nach Artikel 17 und Grundrechte-Folgenabschätzung bestimmter Betreiber nach Artikel 27 sind getrennte Prüfungen. ISO-Zertifikat, Risikoregister und Nachtraining unter einem Drittel ersetzen keine konkrete Systemeinstufung oder Konformitätsprüfung.
+
+Der [Hauptproblem-Prompt](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=ki-verordnung-transparenzpruefer/ki-verordnung-transparenzpruefer-hauptproblem.md) führt vom konkreten Auftrag zum fertigen Dokument; [TXT](ki-verordnung-transparenzpruefer-hauptproblem.txt). Werkstatt und Mini sind zusätzlich als byteidentische TXT-Fassungen verfügbar. Bestehende Testakten bleiben erhalten. Historische Rechtsprechungsanker werden nicht als neu im Volltext verifiziert ausgegeben; diese Runde enthält keine behaupteten Live-Modelltests oder produktiven Behördenmeldungen.
 ## 1. Einstieg
 
 Dieses Plugin bearbeitet Artikel 50 für konkrete Kommunikation: Kanzleientwurf, öffentlicher Beitrag, KI-Empfang und künstlich veränderte Medien. Es beginnt im Projektordner und endet mit dem beauftragten Hinweis, Anbieteranschreiben oder begründeten Freigabevermerk. Es ist kein allgemeiner Hochrisiko-, Datenschutz- oder Berufsrechtsprüfer.
@@ -140,3 +150,17 @@ English: Complete list of all 8 skills in this plugin. Both links in each row do
 | [`transparenzfreigabe-dokumentieren`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=ki-verordnung-transparenzpruefer/skills/transparenzfreigabe-dokumentieren/SKILL.md) | Erstellt aus vorhandenen Prüfbefunden eine versions- und kanalbezogene Transparenzfreigabe mit konkreten Hinweistexten, Abnahme und Änderungsregeln. Nutzen vor Veröffentlichung oder Rollout, nicht als pauschale KI-Konformitätsbescheinigu... | [MD herunterladen / Download MD](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=ki-verordnung-transparenzpruefer/skills/transparenzfreigabe-dokumentieren/SKILL.md) |
 
 <!-- END SKILLS-OVERVIEW (auto-generated) -->
+
+Aktuelle KI-Fachvertiefung: Komponentenfassung 445.35.2 im [KI-Verordnungsrelease](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/tag/ki-verordnung-v445.35.2). Ältere Sammelarchive enthalten diese Ergänzung noch nicht.
+
+<a id="neue-vollständige-übungsakten"></a>
+
+## 5. Neue vollständige Übungsakten
+
+> Diese Testakte wurde mit KI generiert und ist ein Experiment. Benutzung auf eigene Verantwortung und eigene Gefahr.
+>
+> This test case file was generated with AI and is an experiment. Use at your own responsibility and risk.
+
+| Akte und Aufgabe | Originaldateien | Einzel-PDFs | Gesamt-PDF |
+| --- | --- | --- | --- |
+| [Pegnesus Redaktion](../testakten/ki-transparenz-pegnesus-redaktion/README.md): Text, Bild, Audio, Endfassung und Markierung. | [ZIP](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/ki-verordnung-v445.35.2/testakte-ki-transparenz-pegnesus-redaktion.zip) | [ZIP](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/ki-verordnung-v445.35.2/testakte-ki-transparenz-pegnesus-redaktion-einzelpdfs.zip) | [PDF](../testakten/ki-transparenz-pegnesus-redaktion/gesamt-pdf/ki-transparenz-pegnesus-redaktion_gesamt.pdf) |

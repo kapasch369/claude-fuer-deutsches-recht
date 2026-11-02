@@ -16,12 +16,19 @@ Idempotent: schreibt SKILLS.md neu. Liest Version aus marketplace.json.
 """
 from __future__ import annotations
 
+
+if __name__ == "__main__":
+    from generator_cli import parse_generator_cli
+
+    parse_generator_cli(__doc__)
+
+from release_routing import plugin_asset_url
 import json
 import re
 import sys
 from pathlib import Path
 
-from prompt_profiles import enabled, formats
+from prompt_profiles import enabled, formats, standalone_kinds
 from urllib.parse import quote
 
 from readme_display import display_prose
@@ -152,9 +159,11 @@ Stand: `{version}`.
 
 | Paket | Inhalt | Download |
 | --- | --- | --- |
-| **Alle Skills als Markdown** | `SKILL.md`-Dateien, zugehörige Markdown-Referenzen und Plugin-READMEs aller {total_plugins} Plugins; Werkstatt und Schnellstart bleiben einzelne Markdown-Direktdownloads | [`alle-skills-markdown.zip`]({alle_md}) |
-| **Alle Plugins (installierbar)** | Alle {total_plugins} Plugin-ZIPs in einem Archiv für kompatible Plugin-Oberflächen | [`alle-plugins-megazip.zip`]({megazip}) |
+| **Alle Skills als Markdown** | Skilltexte, Markdown-Referenzen und Plugin-READMEs des letzten Gesamtreleases; Werkstatt und Schnellstart bleiben Einzeldateien | [`alle-skills-markdown.zip`]({alle_md}) |
+| **Alle Plugins (installierbar)** | Plugin-ZIPs des letzten Gesamtreleases für kompatible Plugin-Oberflächen | [`alle-plugins-megazip.zip`]({megazip}) |
 | **Komplettpaket (alles)** | Plugins + Skill-Markdowns + Testakten + Übersichten | [`alles-komplettpaket.zip`]({komplett}) |
+
+Die Bestandszahlen oben beziehen sich auf den aktuellen Quellbestand. Neuere Komponentenreleases sind noch nicht in älteren Sammelarchiven enthalten; für sie die aktuellen Einzelpakete in der Plugin-Tabelle verwenden.
 
 Das Markdown-Paket enthält die Skilltexte und ihre Markdown-Referenzen, aber keine automatisch eingerichteten Werkzeuge oder Zugriffsrechte. Für den manuellen Einstieg sind Werkstatt oder Schnellstart meist einfacher. Links mit „MD herunterladen“ speichern die Datei über die Downloadseite; Übersichtslinks bleiben lesbare GitHub-Seiten. Das installierbare Plugin-ZIP ist ein anderes Paket.
 
@@ -206,10 +215,10 @@ def plugin_overview_table(plugins: list[tuple[str, list[str]]]) -> str:
         )
         for name, skills in items:
             source_rel = _source_rel_for(name)
-            zip_url = f"{GH_RELEASE}/{name}.zip"
+            zip_url = plugin_asset_url(name, root=REPO_ROOT)
             werkstatt_url = markdown_download_url(f"{source_rel}/{name}-werkstatt.md")
             schnellstart_url = markdown_download_url(f"{source_rel}/{name}-schnellstart.md")
-            workshop_download = " · ".join(f"[Werkstatt-{ext.upper()} herunterladen]({markdown_download_url(f'{source_rel}/{name}-werkstatt.{ext}')})" for ext in formats(name))
+            workshop_download = " · ".join(f"[Werkstatt-{ext.upper()} herunterladen]({markdown_download_url(f'{source_rel}/{name}-werkstatt.{ext}')})" for ext in formats(name)) if enabled(name, "werkstatt") else "Nicht vorgesehen"
             quickstart_download = " · ".join(f"[Schnellstart-{ext.upper()} herunterladen]({markdown_download_url(f'{source_rel}/{name}-schnellstart.{ext}')})" for ext in formats(name)) if enabled(name, "schnellstart") else "Nicht vorgesehen"
             detail = f"skills-index/{name}.md"
             lines.append(
@@ -231,7 +240,7 @@ def _source_rel_for(name: str) -> str:
 def plugin_detail_page(name: str, skills: list[str], version: str) -> str:
     _source_rel = _source_rel_for(name)
     skills_dir = REPO_ROOT / _source_rel / "skills"
-    plugin_zip = f"{GH_RELEASE}/{name}.zip"
+    plugin_zip = plugin_asset_url(name, root=REPO_ROOT)
     werkstatt_md = markdown_download_url(f"{_source_rel}/{name}-werkstatt.md")
     schnellstart_md = markdown_download_url(f"{_source_rel}/{name}-schnellstart.md")
     md_zip = f"{GH_RELEASE}/alle-skills-markdown.zip"
@@ -272,7 +281,16 @@ def plugin_detail_page(name: str, skills: list[str], version: str) -> str:
         "| Skill | Beschreibung | Markdown-Datei |",
         "| --- | --- | --- |",
     ]
-    if not enabled(name, "schnellstart"):
+    if not standalone_kinds(name):
+        start = lines.index("## So benutzt man einen Skill")
+        end = lines.index("## Skills in diesem Plugin")
+        lines[start:end] = [
+            "## App verwenden", "",
+            f"Die Skills begleiten die lokale App. Start, Voraussetzungen und Zugriffsgrenzen stehen in der [Plugin-README]({plugin_readme}). Ein einzelner Skill-Download enthält weder Server noch Abhängigkeiten.", "",
+        ]
+        lines = [line for line in lines if not line.startswith(("| **Großer Prompt", "| **Kleiner Prompt"))]
+        lines = [line.replace(" · [Testakten](../testakten/README.md)", "") for line in lines]
+    elif not enabled(name, "schnellstart"):
         lines = [line for line in lines if not line.startswith(("| **Kleiner Prompt", "- **Schnelltest mit einer Datei:"))]
         lines = [line.replace("Werkstatt und Schnellstart sind eigenständige Ein-Datei-Prompts", "Der Werkstatt-Prompt ist ein eigenständiger Ein-Datei-Prompt").replace("Workshop and quick-start files are separate standalone prompts.", "The workshop is a separate standalone prompt.") for line in lines]
         if len(skills) == 1:
@@ -280,7 +298,7 @@ def plugin_detail_page(name: str, skills: list[str], version: str) -> str:
                      if line.startswith("Diese alphabetische Liste zeigt alle Skills") else
                      "English: This plugin contains one directly installed skill. The workshop is a separate standalone download with identical Markdown and TXT content. Required references or tools must also be available when used manually."
                      if line.startswith("English: This index lists source skills") else line for line in lines]
-    if "txt" in formats(name):
+    if enabled(name, "werkstatt") and "txt" in formats(name):
         index = next(i for i, line in enumerate(lines) if line.startswith("| **Großer Prompt")) + 1
         txt_url = markdown_download_url(f"{_source_rel}/{name}-werkstatt.txt")
         lines.insert(index, f"| **Derselbe Werkstatt-Prompt als Text** | TXT | [`{name}-werkstatt.txt` herunterladen]({txt_url}) |")
@@ -289,7 +307,7 @@ def plugin_detail_page(name: str, skills: list[str], version: str) -> str:
             mini_index = next(i for i, line in enumerate(lines) if line.startswith("| **Kleiner Prompt (Schnellstart)**")) + 1
             lines.insert(mini_index, f"| **Derselbe Schnellstart-Prompt als Text** | TXT | [`{name}-schnellstart.txt` herunterladen]({mini_txt_url}) |")
     focus_file = REPO_ROOT / _source_rel / f"{name}-hauptproblem.md"
-    if focus_file.is_file():
+    if enabled(name, "hauptproblem") and focus_file.is_file():
         index = next(i for i, line in enumerate(lines) if line.startswith("| **Alle Skills als Markdown**"))
         for ext in formats(name):
             if focus_file.with_suffix("." + ext).is_file():
@@ -338,9 +356,9 @@ def main() -> int:
     plugins = collect_plugins()
     total_skills = sum(len(skills) for _, skills in plugins)
     total_plugins = len(plugins)
-    version = (
-        "v" + json.loads((REPO_ROOT / ".claude-plugin" / "marketplace.json").read_text())["version"]
-    )
+    catalog = json.loads((REPO_ROOT / ".claude-plugin" / "marketplace.json").read_text())
+    version = "v" + catalog["version"]
+    component_versions = {entry["name"]: "v" + entry["version"] for entry in catalog["plugins"]}
 
     # 1) Schlanke Hauptseite SKILLS.md
     main_text = (
@@ -354,12 +372,13 @@ def main() -> int:
     # 2) Detailseiten pro Plugin
     SKILLS_INDEX_DIR.mkdir(exist_ok=True)
     # Alte Detailseiten loeschen, falls Plugins entfernt wurden
-    current_names = {name for name, _ in plugins} | {"README"}
+    # Die veröffentlichte Weiterleitungsseite hält alte Direktlinks funktionsfähig.
+    current_names = {name for name, _ in plugins} | {"README", "si-native-kanzlei"}
     for old in SKILLS_INDEX_DIR.glob("*.md"):
         if old.stem not in current_names:
             old.unlink()
     for name, skills in plugins:
-        page = plugin_detail_page(name, skills, version)
+        page = plugin_detail_page(name, skills, component_versions[name])
         (SKILLS_INDEX_DIR / f"{name}.md").write_text(page.rstrip() + "\n", encoding="utf-8")
     # Index der Detailseiten
     idx = write_detail_index(plugins, version)

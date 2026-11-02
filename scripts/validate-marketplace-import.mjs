@@ -93,6 +93,86 @@ function checkSkillFile(file) {
 const marketplacePath = path.join(root, '.claude-plugin', 'marketplace.json');
 const marketplace = readJson(marketplacePath);
 if (!marketplace) process.exit(1);
+const scopedPath = path.join(root, 'scripts', 'scoped-release-assets.json');
+const scoped = fs.existsSync(scopedPath) ? readJson(scopedPath) : { schema_version: 1, assets: {} };
+if (!scoped || scoped.schema_version !== 1 || !scoped.assets || typeof scoped.assets !== 'object' || Array.isArray(scoped.assets)) {
+  errors.push('scripts/scoped-release-assets.json: ungültige Komponentenregistrierung');
+}
+
+function isRecord(value) {
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
+}
+
+// Ein Bundle-Tag darf nur mit einem erhaltenen Paketnachweis von der
+// tatsächlichen Pluginversion abweichen. Eine Tag-Ausnahme allein genügt nicht.
+function verifiedPackageVersions() {
+  const configPath = path.join(root, 'scripts', 'scoped-release-package-versions.json');
+  const verified = new Map();
+  if (!fs.existsSync(configPath)) return verified;
+  const config = readJson(configPath);
+  if (!isRecord(config) || config.schema_version !== 1 || !isRecord(config.assets)) {
+    errors.push(`${rel(configPath)}: ungültige Paketversionsregistrierung`);
+    return verified;
+  }
+  for (const [asset, entry] of Object.entries(config.assets)) {
+    const invalid = (reason) => errors.push(`${rel(configPath)}:${asset}: ${reason}`);
+    if (!/^[a-z0-9-]+\.zip$/.test(asset) || !isRecord(entry)
+        || typeof entry.tag !== 'string' || !/^[a-z0-9][a-z0-9.-]*$/.test(entry.tag)
+        || typeof entry.version !== 'string' || !/^\d+\.\d+\.\d+$/.test(entry.version)
+        || typeof entry.sha256 !== 'string' || !/^[0-9a-f]{64}$/.test(entry.sha256)) {
+      invalid('ungültiger Paketversionsnachweis');
+      continue;
+    }
+    if (scoped?.assets?.[asset] !== entry.tag) {
+      invalid('Paketversionsnachweis passt nicht zum Komponentenpin');
+      continue;
+    }
+    const evidenceRel = entry.evidence;
+    const parts = typeof evidenceRel === 'string' ? evidenceRel.split('/') : [];
+    if (typeof evidenceRel !== 'string' || evidenceRel.includes('\\')
+        || parts.length < 2 || parts[0] !== 'quality' || !evidenceRel.endsWith('.json')
+        || parts.some(part => !part || part === '.' || part === '..')) {
+      invalid('Nachweispfad muss unverändert unter quality/ liegen');
+      continue;
+    }
+    let evidencePath = root;
+    try {
+      for (const part of parts) {
+        evidencePath = path.join(evidencePath, part);
+        if (fs.lstatSync(evidencePath).isSymbolicLink()) throw new Error('Symlink im Nachweispfad');
+      }
+      if (!fs.statSync(evidencePath).isFile()) throw new Error('Nachweis ist keine Datei');
+    } catch (error) {
+      invalid(`Nachweispfad ist nicht lesbar oder enthält einen Symlink: ${error.message}`);
+      continue;
+    }
+    const evidence = readJson(evidencePath);
+    const name = asset.slice(0, -4);
+    if (!isRecord(evidence) || evidence.version !== entry.version || evidence.release !== entry.tag
+        || !isRecord(evidence.assets) || evidence.assets[asset] !== entry.sha256
+        || !Array.isArray(evidence.plugins)
+        || !evidence.plugins.some(plugin => isRecord(plugin) && plugin.name === name)) {
+      invalid('Paketversion, Release, Assethash oder Plugin fehlt im übereinstimmenden Nachweis');
+      continue;
+    }
+    verified.set(asset, entry);
+  }
+  return verified;
+}
+
+const packageVersions = verifiedPackageVersions();
+
+function registeredVersion(entry) {
+  if (entry.version === marketplace.version) return true;
+  const asset = `${entry.name}.zip`;
+  const tag = scoped?.assets?.[asset];
+  const packageVersion = packageVersions.get(asset);
+  return /^\d+\.\d+\.\d+$/.test(String(entry.version || ''))
+    && typeof tag === 'string'
+    && /^[a-z0-9][a-z0-9.-]*$/.test(tag)
+    && (tag.endsWith(`-v${entry.version}`)
+      || (packageVersion?.tag === tag && packageVersion.version === entry.version));
+}
 
 checkDescription('.claude-plugin/marketplace.json', marketplace.description, 300);
 if (!/^\d+\.\d+\.\d+$/.test(String(marketplace.version || ''))) {
@@ -119,7 +199,7 @@ for (const entry of marketplace.plugins || []) {
   }
   lastName = entry.name;
   checkDescription(`Marketplace:${entry.name}`, entry.description, 300);
-  if (entry.version !== marketplace.version) {
+  if (!registeredVersion(entry)) {
     errors.push(`Marketplace:${entry.name}: Version ${entry.version} passt nicht zu ${marketplace.version}`);
   }
   if (typeof entry.source !== 'string' || !entry.source.startsWith('./')) {
@@ -139,7 +219,7 @@ for (const entry of marketplace.plugins || []) {
   const manifest = readJson(manifestPath);
   if (!manifest) continue;
   if (manifest.name !== entry.name) errors.push(`${rel(manifestPath)}: name passt nicht zum Marketplace`);
-  if (manifest.version !== marketplace.version) errors.push(`${rel(manifestPath)}: Version passt nicht zum Marketplace`);
+  if (manifest.version !== entry.version) errors.push(`${rel(manifestPath)}: Version passt nicht zum Marketplace-Eintrag`);
   const codexManifestPath = path.join(pluginRoot, '.codex-plugin', 'plugin.json');
   if (fs.existsSync(codexManifestPath)) {
     const codexManifest = readJson(codexManifestPath);
@@ -149,7 +229,7 @@ for (const entry of marketplace.plugins || []) {
       if (codexManifest.name !== entry.name || codexManifest.name !== manifest.name) {
         errors.push(`${rel(codexManifestPath)}: name passt nicht zu Marketplace und Claude-Manifest`);
       }
-      if (codexManifest.version !== marketplace.version || codexManifest.version !== manifest.version) {
+      if (codexManifest.version !== entry.version || codexManifest.version !== manifest.version) {
         errors.push(`${rel(codexManifestPath)}: Version passt nicht zu Marketplace und Claude-Manifest`);
       }
     }
@@ -174,7 +254,7 @@ for (const entry of marketplace.plugins || []) {
   errors.push(...promptProfileErrors(pluginRoot, entry.name, root));
   const werkstatt = path.join(pluginRoot, `${entry.name}-werkstatt.md`);
   const schnellstart = path.join(pluginRoot, `${entry.name}-schnellstart.md`);
-  if (!fs.existsSync(werkstatt)) errors.push(`${entry.name}: Werkstatt-Markdown fehlt`);
+  if (promptEnabled(entry.name, "werkstatt") && !fs.existsSync(werkstatt)) errors.push(`${entry.name}: Werkstatt-Markdown fehlt`);
   if (promptEnabled(entry.name, "schnellstart") && !fs.existsSync(schnellstart)) errors.push(`${entry.name}: Schnellstart-Markdown fehlt`);
   if (fs.existsSync(schnellstart) && !miniWithinLimits(entry.name, fs.readFileSync(schnellstart))) {
     errors.push(`${rel(schnellstart)}: Schnellstart überschreitet Byte-/Zeichengrenze`);
@@ -214,14 +294,14 @@ for (const entry of marketplace.plugins || []) {
     readmeCount += 1;
     const text = readText(readme);
     const visibleVersion = text.match(/\*\*Version:\*\*\s*`?(\d+\.\d+\.\d+)`?/);
-    if (visibleVersion && visibleVersion[1] !== marketplace.version) {
-      errors.push(`${rel(readme)}: sichtbare Version ${visibleVersion[1]} passt nicht zu ${marketplace.version}`);
+    if (visibleVersion && visibleVersion[1] !== entry.version) {
+      errors.push(`${rel(readme)}: sichtbare Version ${visibleVersion[1]} passt nicht zu ${entry.version}`);
     }
     const sourceRel = String(entry.source || `./${entry.name}`).replace(/^\.\//, '');
     const downloadBase = 'https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=';
     const werkstattDownload = `${downloadBase}${sourceRel}/${entry.name}-werkstatt.md`;
     const schnellstartDownload = `${downloadBase}${sourceRel}/${entry.name}-schnellstart.md`;
-    if (!text.includes(werkstattDownload)) {
+    if (promptEnabled(entry.name, "werkstatt") && !text.includes(werkstattDownload)) {
       errors.push(`${rel(readme)}: Werkstatt-Direktdownload fehlt`);
     }
     if (promptEnabled(entry.name, "schnellstart") && !text.includes(schnellstartDownload)) {

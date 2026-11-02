@@ -5,7 +5,7 @@
 
 Freistehendes Verkehrs- und Infrastrukturrecht-Plugin für Verkehrsplanung, Planfeststellung, Straßenbahn, Ladeinfrastruktur, Parkraum und Verkehrswende.
 
-Dieses Plugin gehört zum Marketplace mit 275 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
+Dieses Plugin gehört zum Marketplace mit 310 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
 
 ## Welche Datei wofür? / Which file should I use?
 
@@ -50,7 +50,7 @@ Bei einem Folgewunsch den bisherigen Aktenstand fortführen. Bereits festgestell
 | Großer Prompt (Werkstatt) | Markdown | [`verkehr-infrastrukturrecht-werkstatt.md`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=verkehr-infrastrukturrecht/verkehr-infrastrukturrecht-werkstatt.md) |
 | Zugeordnete Testakten | PDF / ZIP | [4 zugeordnete Akten](#zugeordnete-testakten) mit Gesamt-PDF, Originaldateien und Einzel-PDFs |
 
-> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 275 Plugins. Wer alle Plugins auf einmal will, nimmt [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip). Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
+> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 310 Plugins. Das Sammelpaket [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip) enthält seinen veröffentlichten Stand, nicht zwingend spätere Einzelpakete. Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
 
 ## Zugeordnete Testakten
 
@@ -62,10 +62,10 @@ Jede Akte ist getrennt als lesbares Gesamt-PDF, ZIP mit Originaldateien und ZIP 
 
 | Akte | Gesamt-PDF | Originaldateien | Einzel-PDFs |
 | --- | --- | --- | --- |
-| [Märkische Reserve Süd — Batteriespeicher Brandenburg/Berlin](../testakten/batteriespeicher-brandenburg-berlin-resilienz/README.md) | [Gesamt-PDF](../testakten/batteriespeicher-brandenburg-berlin-resilienz/gesamt-pdf/batteriespeicher-brandenburg-berlin-resilienz_gesamt.pdf) | [`testakte-batteriespeicher-brandenburg-berlin-resilienz.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-batteriespeicher-brandenburg-berlin-resilienz.zip) | [`testakte-batteriespeicher-brandenburg-berlin-resilienz-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-batteriespeicher-brandenburg-berlin-resilienz-einzelpdfs.zip) |
-| [Der große Baufall - Talbrücke Fuchsbachtal und Tunnel Hirschleite](../testakten/baurecht-grosser-baufall-talbruecke-tunnel-a44/README.md) | [Gesamt-PDF](../testakten/baurecht-grosser-baufall-talbruecke-tunnel-a44/gesamt-pdf/baurecht-grosser-baufall-talbruecke-tunnel-a44_gesamt.pdf) | [`testakte-baurecht-grosser-baufall-talbruecke-tunnel-a44.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-baurecht-grosser-baufall-talbruecke-tunnel-a44.zip) | [`testakte-baurecht-grosser-baufall-talbruecke-tunnel-a44-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-baurecht-grosser-baufall-talbruecke-tunnel-a44-einzelpdfs.zip) |
-| [Projekt Isarlicht — Kernfusion und Transrapid am Starnberger See](../testakten/kernfusion-transrapid-starnberger-see/README.md) | [Gesamt-PDF](../testakten/kernfusion-transrapid-starnberger-see/gesamt-pdf/kernfusion-transrapid-starnberger-see_gesamt.pdf) | [`testakte-kernfusion-transrapid-starnberger-see.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-kernfusion-transrapid-starnberger-see.zip) | [`testakte-kernfusion-transrapid-starnberger-see-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-kernfusion-transrapid-starnberger-see-einzelpdfs.zip) |
-| [Akte Verkehrs- und Infrastrukturrecht: Straßenbahn Linie 7, Ladezonen und Schulwegsicherheit](../testakten/verkehr-infrastrukturrecht-strassenbahn-ladezonen/README.md) | [Gesamt-PDF](../testakten/verkehr-infrastrukturrecht-strassenbahn-ladezonen/gesamt-pdf/verkehr-infrastrukturrecht-strassenbahn-ladezonen_gesamt.pdf) | [`testakte-verkehr-infrastrukturrecht-strassenbahn-ladezonen.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-verkehr-infrastrukturrecht-strassenbahn-ladezonen.zip) | [`testakte-verkehr-infrastrukturrecht-strassenbahn-ladezonen-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-verkehr-infrastrukturrecht-strassenbahn-ladezonen-einzelpdfs.zip) |
+| [Märkische Reserve Süd — Batteriespeicher Brandenburg/Berlin](../testakten/batteriespeicher-brandenburg-berlin-resilienz/README.md) | [Gesamt-PDF](../testakten/batteriespeicher-brandenburg-berlin-resilienz/gesamt-pdf/batteriespeicher-brandenburg-berlin-resilienz_gesamt.pdf) | [`testakte-batteriespeicher-brandenburg-berlin-resilienz.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-batteriespeicher-brandenburg-berlin-resilienz.zip) | [`testakte-batteriespeicher-brandenburg-berlin-resilienz-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-batteriespeicher-brandenburg-berlin-resilienz-einzelpdfs.zip) |
+| [Der große Baufall - Talbrücke Fuchsbachtal und Tunnel Hirschleite](../testakten/baurecht-grosser-baufall-talbruecke-tunnel-a44/README.md) | [Gesamt-PDF](../testakten/baurecht-grosser-baufall-talbruecke-tunnel-a44/gesamt-pdf/baurecht-grosser-baufall-talbruecke-tunnel-a44_gesamt.pdf) | [`testakte-baurecht-grosser-baufall-talbruecke-tunnel-a44.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-baurecht-grosser-baufall-talbruecke-tunnel-a44.zip) | [`testakte-baurecht-grosser-baufall-talbruecke-tunnel-a44-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-baurecht-grosser-baufall-talbruecke-tunnel-a44-einzelpdfs.zip) |
+| [Projekt Isarlicht — Kernfusion und Transrapid am Starnberger See](../testakten/kernfusion-transrapid-starnberger-see/README.md) | [Gesamt-PDF](../testakten/kernfusion-transrapid-starnberger-see/gesamt-pdf/kernfusion-transrapid-starnberger-see_gesamt.pdf) | [`testakte-kernfusion-transrapid-starnberger-see.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-kernfusion-transrapid-starnberger-see.zip) | [`testakte-kernfusion-transrapid-starnberger-see-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-kernfusion-transrapid-starnberger-see-einzelpdfs.zip) |
+| [Akte Verkehrs- und Infrastrukturrecht: Straßenbahn Linie 7, Ladezonen und Schulwegsicherheit](../testakten/verkehr-infrastrukturrecht-strassenbahn-ladezonen/README.md) | [Gesamt-PDF](../testakten/verkehr-infrastrukturrecht-strassenbahn-ladezonen/gesamt-pdf/verkehr-infrastrukturrecht-strassenbahn-ladezonen_gesamt.pdf) | [`testakte-verkehr-infrastrukturrecht-strassenbahn-ladezonen.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-verkehr-infrastrukturrecht-strassenbahn-ladezonen.zip) | [`testakte-verkehr-infrastrukturrecht-strassenbahn-ladezonen-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-verkehr-infrastrukturrecht-strassenbahn-ladezonen-einzelpdfs.zip) |
 
 [Alle Testakten und Fachzuordnungen](../testakten/README.md)
 <!-- END direkt-loslegen (autogen) -->
@@ -73,19 +73,19 @@ Jede Akte ist getrennt als lesbares Gesamt-PDF, ZIP mit Originaldateien und ZIP 
 Wenn du das hier öffnest, willst du deinen Fall strukturieren, die einschlägigen Normen prüfen und ein verwertbares Arbeitsprodukt erhalten.
 Vollständiger Assistent für Verkehrsplanung, Infrastrukturprojekte, Elektromobilität, Straßenbahn, Sondernutzung, Parkraumbewirtschaftung, Liefer- und Ladezonen, Verkehrswende, Schulwegsicherheit, Fördermittel und Vergabe.
 
-Dieses Plugin ist **vollständig freistehend**. Es erwartet keine anderen Plugins, keine externen Agenten und keine besonderen Repo-Dateien außerhalb seines eigenen Ordners. Wenn ein Anschluss an Register, Behördenportale, E-Mail, beA, Datenraum, Bank, GIS, Tabellen oder Kanzleisoftware fehlt, arbeitet es mit manuellen Uploads oder mit einem gekennzeichneten Simulationsmodus.
+Das Plugin arbeitet mit bereitgestellten Planungs-, Genehmigungs- und Betriebsunterlagen ohne andere Plugins. Fehlt ein Portal- oder GIS-Zugang, verwendet es verfügbare Exporte und bezeichnet die verbleibende Lücke. Simulierte Daten sind nur für einen ausdrücklich bestellten Übungsfall bestimmt, nicht als Ersatz für Projektbelege.
 
 ## Schnellstart
 
 1. Plugin aktivieren oder die ZIP aus dem Release installieren.
-2. Eine neue Sache mit `verkehr-infrastrukturrecht-kommandocenter` starten.
+2. Eine neue Sache mit `mobilitaetsprojekt-intake` starten.
 3. Mandant, Ziel, Frist, Dokumente und gewünschtes Ergebnis nennen.
-4. Bei fehlenden Systemanschlüssen `Simulation` sagen; das Plugin erzeugt dann realistische Testdaten und erklärt, welche echte Schnittstelle später ersetzt werden müsste.
+4. Fehlende Unterlagen nachfordern und unabhängige Teile des beauftragten Antrags oder Gutachtens weiterbearbeiten. Antworten werden im bestehenden Entwurf berücksichtigt.
 5. Am Ende immer das Qualitätstor ausgeben lassen: offene Annahmen, Fristen, Rechenprüfung, Anlagen, Zuständigkeiten und nächste Schritte.
 
 ## Enthaltene Skills
 
-- `verkehr-infrastrukturrecht-kommandocenter` - Verkehrs- und Infrastruktur-Kommandocenter
+- `mobilitaetsprojekt-intake` - Einstieg in das Verkehrs- und Infrastrukturprojekt
 - `verkehr-infrastrukturrecht-verkehrsplanung` - Verkehrsplanung und Projektstrategie
 - `verkehr-infrastrukturrecht-planfeststellung` - Planfeststellung und Abwägung
 - `verkehr-infrastrukturrecht-strassenbahn` - Straßenbahn- und ÖPNV-Projekte

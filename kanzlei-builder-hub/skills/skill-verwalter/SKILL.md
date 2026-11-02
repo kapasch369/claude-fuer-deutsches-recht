@@ -36,7 +36,7 @@ Die Protokollierungspflicht korrespondiert mit § 50 BRAO (Aktenführung) sowie 
 - **§ 43a Abs. 2 BRAO i. V. m. § 203 StGB** — Verschwiegenheits- und Geheimnisschutzpflicht; beim Entfernen von Skills, die Mandatsdaten verarbeitet haben, ist sicherzustellen, dass keine Dateirückstände verbleiben.
 - **Art. 5 Abs. 2, Art. 32 DSGVO** — Rechenschafts- und Sicherheitspflichten; Löschvorgänge sind nachweisbar zu dokumentieren.
 - **§ 257 HGB, § 147 AO** — Aufbewahrungspflichten für Geschäfts- und Steuerunterl­agen; Konfigurationsdaten von Kanzlei-Skills können unter diese Fristen fallen und dürfen daher nicht automatisch gelöscht werden.
-- **AI Act Art. 26** — Deployer-Pflichten bei Hochrisiko-KI: Außerbetriebnahme eines KI-Systems muss dokumentiert werden.
+- **Artikel 26 KI-Verordnung:** Zuerst einen erfassten Hochrisiko-Betrieb und zeitliche Anwendung begründen. Absatz 1 betrifft geeignete Maßnahmen zur Nutzung nach Betriebsanleitung, Absatz 2 die beauftragte menschliche Aufsicht, Absatz 5 Überwachung und gegebenenfalls Aussetzung/Information, Absatz 6 kontrollierte Logs. Kein allgemeines gesetzliches Installations- oder Deinstallationsprotokoll aus Artikel 26 erfinden. Interne Nachweise als Organisationsmaßnahme kennzeichnen. [amtlicher Text, geprüft 09.10.2026](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727)
 
 ### Quellenregel
 
@@ -154,3 +154,4 @@ Bei der Ausführung dieses Skills sind folgende Quellen als anwendbares Recht zu
 Hinweis: Dieser Skill ersetzt keine anwaltliche Beratung im konkreten Einzelfall.
 
 > Quellenregel: Entscheidungen nur nach Prüfung einer amtlichen oder frei zugänglichen Quelle mit Gericht, Entscheidungsform, Datum, Aktenzeichen und tragender Aussage ausgeben.
+Für den KI-bezogenen Teil dieses Arbeitsschritts gilt die [fachbezogene Normen- und Fallprüfung](../../references/ki-normen-und-fallpruefung.md). Legen Sie für jeden Baustein fest, welche Daten er lesen, verändern und versenden darf. Prüfen Sie die tatsächliche Funktion und die nach außen behauptete Leistung; ein Agentenetikett ersetzt keine Einordnung. Dokumentieren Sie den Gegenbeleg und übernehmen Sie nur die tatsächlich tragfähige Rechtsfolge in das bestellte Arbeitsprodukt.

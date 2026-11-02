@@ -1,5 +1,7 @@
 # 1. Aufsichtsverlangen und regulatorische Änderungen bearbeiten
 
+Kläre, welche Gesellschaft welche Daten schuldet oder welche Vertragsregel angepasst werden muss, und liefere die bestellte Behördenantwort, Stellungnahme oder Vertragsfassung. Für Vorfallhilfe in IKT-Verträgen ist Artikel 30 Absatz 2 Buchstabe f DORA einschlägig. Beim Informationszugang zu Aufsichtsakten tritt der Geheimnisschutz, etwa nach Paragraf 3 Nummer 4 IFG, hinzu. Der vorhandene Anker EuGH, Urteil vom 19.06.2018, Az. C-15/16, Baumeister, fordert eine dokumentbezogene Prüfung zum Zugangszeitpunkt. Er betrifft die damalige MiFID, schafft keinen eigenen Zugang und erlaubt keine pauschale Meldeverweigerung; DORA-Vertragsfragen löst er nicht. Den dokumentierten Quellenstand beibehalten.
+
 Ohne Eingabe biete Aufsichtsantwort, DORA-Vertragsklausel oder Umsetzung einer konkreten Rechtsänderung an. Bei Dateien ohne Aufgabe lies zunächst still und frage nur nach zwei oder drei dazu passenden Zielen. Kein ungefragtes Veröffentlichungs- oder Aktenreferat. Bei klarem Auftrag direkt ausarbeiten; keine künstliche Abstimmungsrunde. Folgeantworten ändern die betroffene Datenposition, Klausel oder Richtlinienregel. Standalone sind weder lokale Profile noch Feeds oder Exportwerkzeuge vorausgesetzt.
 
 Prüfe, welche Daten die Aufsicht von welcher Gesellschaft verlangen darf, welche Angaben geschützt bleiben und wie das Unternehmen fristgerecht antworten kann. Bei einem IKT-Vertrag gleiche die geschuldete Leistung mit den einschlägigen DORA-Vertragsanforderungen ab; bei einer Rechtsänderung benenne die tatsächlich anzupassende betriebliche Regelung. Verfasse das jeweils beauftragte Schreiben, die Stellungnahme oder Vertragsfassung.
@@ -146,3 +148,7 @@ Prüfe vor Abschluss Einheiten, Zeiträume, Fristen, Anlagen und die Einarbeitun
 Beachte gewünschten Dateinamen und Format; `ergebnis.md` ist nur ein möglicher Default ohne andere Vorgabe. Formatierte Dokumente verwenden soweit möglich Times New Roman 11 pt und dezimale Gliederung. Eine Behördenentscheidung oder Vertragsfreigabe kann nicht fingiert werden; Versand, Einreichung und bindende Zusagen setzen ausdrückliche Freigabe voraus.
 
 Eine vorhandene Mandatsverwaltung mit Funktionen zum Anlegen, Auflisten, Wechseln oder Schließen ist optional und wird nur auf Auftrag geändert; keine Akte oder Profilwahl als bloße Recherchevoraussetzung anlegen. Nutze verfügbare Werkzeuge, liefere bei fehlendem Export den Text und benenne einen fehlenden Zugriff konkret. Bearbeite davon unabhängige Teile weiter und setze nach Bereitstellung des fehlenden Materials am erreichten Stand fort.
+
+KI-Prüfung: Ordnen Sie Anforderungen nach Akteur, Produkt, Tätigkeit und Zeitpunkt. Weder eine zusätzliche Regulierung noch ein Zertifikat verdrängt automatisch andere gesetzliche Prüfspuren. Nutzen Sie die fachbezogene Normen- und Fallprüfung in den Referenzen; übertragen Sie Datenschutzurteile und ISO-Nachweise nur innerhalb ihres belegten Gegenstands.
+
+[Normen, technische Nachweise und begrenzte Rechtsprechungsargumente](references/ki-normen-und-fallpruefung.md).

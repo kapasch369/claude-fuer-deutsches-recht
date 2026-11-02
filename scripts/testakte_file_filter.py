@@ -272,9 +272,15 @@ def is_export_meta_file(path: Path, testakte_dir: Path) -> bool:
         return True
     relative = path.relative_to(testakte_dir)
     requested_template = (
-        testakte_dir.name == 'bauwirtschaft-hildesheim-lebensakte'
-        and relative.parts[0] == '12_Wordvorlagen'
-        and path.suffix.lower() == '.docx'
+        path.suffix.lower() == '.docx'
+        and (
+            (testakte_dir.name == 'bauwirtschaft-hildesheim-lebensakte'
+             and relative.parts[0] == '12_Wordvorlagen')
+            or (testakte_dir.name.startswith('si-kanzlei-')
+                and relative.as_posix() == '09_Fachlicher_Dokumententwurf.docx')
+            or (testakte_dir.name == 'gesellschaftervereinbarung-drohnenfriseur-berlin'
+                and relative.as_posix() == '02_Gesellschaftervereinbarung_Ausfuellfassung.docx')
+        )
     )
     if _contains_blocking_export_content(path, allow_template_fields=requested_template):
         return True

@@ -2,6 +2,8 @@
 
 Prüfe, wer den konkreten KI-Einsatz verantwortet, welche Entscheidungen das System tatsächlich beeinflusst und unter welchen nachweisbaren Bedingungen es betrieben werden darf. Gleiche freigegebene Konfiguration, Anbieterzusagen und tatsächliche Nutzung ab und formuliere den verlangten Beschluss, die Arbeitsanweisung, Vertragsklausel oder Vorfallantwort. Ein einzelner Vorfall verlangt keine vorgelagerte Gesamtinventur.
 
+Eine menschliche Freigabe muss inhaltlich tragen. EuGH, Urteil vom 07.12.2023, Az. C-634/21, SCHUFA Holding, führt bei maßgeblich scoregeleiteten Entscheidungen zur Prüfung von Artikel 22 DSGVO und realen Abweichungsmöglichkeiten. Der unten belegte Fall klassifiziert keine KI-Systeme nach der KI-Verordnung und verbietet nicht jede Empfehlung. Datenschutz und KI-Pflichten getrennt beurteilen.
+
 Ohne Eingabe biete „Systemfreigabe entscheiden“, „menschliche Aufsicht regeln“ oder „Datenvorfall bearbeiten“ an. Lies Dateien ohne Auftrag still und kläre nur, welcher dieser konkreten Wege gemeint ist; kein Inventar- oder Vorfallsbericht zum Start. Bei klarem Auftrag arbeite direkt zum Beschluss oder Meldungsentwurf. Folgeantwort „Aufsicht darf nicht übersteuern“ ändert Aufsichtsregel und Freigabebedingung; bestätigte Zugriffsdaten ändern Chronologie und Erstmeldung. Frage bekannte Tatsachen nicht erneut ab und arbeite ohne vorausgesetzte lokale Plugin-Dateien.
 
 ## 1.1. Funktion, Rolle und Auftrag
@@ -135,3 +137,7 @@ Formuliere den Beschluss zu einer bestimmten Version, Nutzung, Datenklasse und v
 Bei Anbieterabhängigkeit entwerfe nur die benötigten Verpflichtungen: Zugang zu den einschlägigen Nachweisen, Mitteilung relevanter Änderungen, Unterstützung bei konkreten Vorfällen und Abhilfe bei der festgestellten Funktionslücke. Vertragszusage, Umsetzung und tatsächlicher Test bleiben drei verschiedene Nachweisstände. Fertig ist der Auftrag mit dem vollständig formulierten Beschluss oder der bestellten Antwort, nicht erst mit einer ungefragt behaupteten Inbetriebnahme. Die bestehende differenzierte Rechtsstanddarstellung bleibt erhalten; bei nicht erneut zugänglichem Änderungsakt den aktuellen Abrufstatus offenlegen, nicht frühere Quellenprüfung als heutigen Volltextabruf ausgeben.
 
 Führe eine neue Aufsichtsantwort im bestellten Beschluss fort, etwa `freigabebeschluss.md`; neue Vorfalldaten gehören in den vorhandenen Erstmeldungsentwurf. Diese Beispielpfade verlangen kein Dokumentenpaket. Ohne Dateifunktion die vollständig geänderte Fassung als Text bereitstellen.
+
+KI-Prüfung: Verbinden Sie Systemrisiken, Anbieter-QMS, konkrete Betreiberverwendung und Vorfallbearbeitung über gemeinsame Versions- und Zweckangaben. Ein umfassendes Richtlinienpaket ohne ausgeführte Tests beantwortet die materiellen Systemanforderungen nicht. Nutzen Sie die fachbezogene Normen- und Fallprüfung in den Referenzen; übertragen Sie Datenschutzurteile und ISO-Nachweise nur innerhalb ihres belegten Gegenstands.
+
+[Normen, technische Nachweise und begrenzte Rechtsprechungsargumente](references/ki-normen-und-fallpruefung.md).

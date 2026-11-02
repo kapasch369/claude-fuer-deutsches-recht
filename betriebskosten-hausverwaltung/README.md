@@ -5,7 +5,7 @@
 
 Betriebskosten für Mietshaus und vermietete Eigentumswohnung: zehn Skills von Belegen, Kostenabgrenzung und Heizkosten bis zur nachrechenbaren Abrechnung oder zum Antwortbrief.
 
-Dieses Plugin gehört zum Marketplace mit 275 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
+Dieses Plugin gehört zum Marketplace mit 310 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
 
 ## Welche Datei wofür? / Which file should I use?
 
@@ -50,7 +50,7 @@ Bei einem Folgewunsch den bisherigen Aktenstand fortführen. Bereits festgestell
 | Großer Prompt (Werkstatt) | Markdown | [`betriebskosten-hausverwaltung-werkstatt.md`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=betriebskosten-hausverwaltung/betriebskosten-hausverwaltung-werkstatt.md) |
 | Zugeordnete Testakten | PDF / ZIP | [2 zugeordnete Akten](#zugeordnete-testakten) mit Gesamt-PDF, Originaldateien und Einzel-PDFs |
 
-> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 275 Plugins. Wer alle Plugins auf einmal will, nimmt [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip). Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
+> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 310 Plugins. Das Sammelpaket [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip) enthält seinen veröffentlichten Stand, nicht zwingend spätere Einzelpakete. Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
 
 ## Zugeordnete Testakten
 
@@ -62,8 +62,8 @@ Jede Akte ist getrennt als lesbares Gesamt-PDF, ZIP mit Originaldateien und ZIP 
 
 | Akte | Gesamt-PDF | Originaldateien | Einzel-PDFs |
 | --- | --- | --- | --- |
-| [Betriebskosten 2025: Eigenverwaltung eines Berliner Mietshauses](../testakten/betriebskosten-2025-mietshaus-schoeneberg/README.md) | [Gesamt-PDF](../testakten/betriebskosten-2025-mietshaus-schoeneberg/gesamt-pdf/betriebskosten-2025-mietshaus-schoeneberg_gesamt.pdf) | [`testakte-betriebskosten-2025-mietshaus-schoeneberg.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-betriebskosten-2025-mietshaus-schoeneberg.zip) | [`testakte-betriebskosten-2025-mietshaus-schoeneberg-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-betriebskosten-2025-mietshaus-schoeneberg-einzelpdfs.zip) |
-| [Betriebskosten 2025: Vermietete Eigentumswohnung in Berlin-Schöneberg](../testakten/betriebskosten-2025-weg-schoeneberg/README.md) | [Gesamt-PDF](../testakten/betriebskosten-2025-weg-schoeneberg/gesamt-pdf/betriebskosten-2025-weg-schoeneberg_gesamt.pdf) | [`testakte-betriebskosten-2025-weg-schoeneberg.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-betriebskosten-2025-weg-schoeneberg.zip) | [`testakte-betriebskosten-2025-weg-schoeneberg-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-betriebskosten-2025-weg-schoeneberg-einzelpdfs.zip) |
+| [Betriebskosten 2025: Eigenverwaltung eines Berliner Mietshauses](../testakten/betriebskosten-2025-mietshaus-schoeneberg/README.md) | [Gesamt-PDF](../testakten/betriebskosten-2025-mietshaus-schoeneberg/gesamt-pdf/betriebskosten-2025-mietshaus-schoeneberg_gesamt.pdf) | [`testakte-betriebskosten-2025-mietshaus-schoeneberg.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-betriebskosten-2025-mietshaus-schoeneberg.zip) | [`testakte-betriebskosten-2025-mietshaus-schoeneberg-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-betriebskosten-2025-mietshaus-schoeneberg-einzelpdfs.zip) |
+| [Betriebskosten 2025: Vermietete Eigentumswohnung in Berlin-Schöneberg](../testakten/betriebskosten-2025-weg-schoeneberg/README.md) | [Gesamt-PDF](../testakten/betriebskosten-2025-weg-schoeneberg/gesamt-pdf/betriebskosten-2025-weg-schoeneberg_gesamt.pdf) | [`testakte-betriebskosten-2025-weg-schoeneberg.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-betriebskosten-2025-weg-schoeneberg.zip) | [`testakte-betriebskosten-2025-weg-schoeneberg-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-betriebskosten-2025-weg-schoeneberg-einzelpdfs.zip) |
 
 [Alle Testakten und Fachzuordnungen](../testakten/README.md)
 <!-- END direkt-loslegen (autogen) -->
@@ -124,6 +124,8 @@ Die Aktenseiten bieten die Übungsunterlagen als separate Downloads; Testakten w
 | Eigenes Mietshaus / Own Rental Building | [Betriebskosten 2025: Mietshaus Schöneberg](../testakten/betriebskosten-2025-mietshaus-schoeneberg/README.md) |
 
 ## 1.5. Fachliche Grenzen und Qualität
+
+Gezielter Normcheck am 16.10.2026: [Paragraf 556 BGB](https://www.gesetze-im-internet.de/bgb/__556.html), Absätze 3 und 4, gelesen. Abrechnungs- und Einwendungsfrist haben unterschiedliche Ausgangspunkte: Ende des Abrechnungszeitraums beziehungsweise Zugang der Abrechnung; die gesetzlichen Ausnahmen bleiben zu prüfen. Elektronische Belegbereitstellung ist zulässig. Das bestätigt die vorhandene Unterscheidung, ersetzt aber weder den historischen Rechtsabgleich für 2025 noch eine neue Prüfung der BGH-Anker.
 
 Die Quellenprüfung erfasst BGB 556, 556a und 560, BetrKV 1 und 2, HeizkostenV, die historische CO2-Kostenaufteilung, Berliner Grundsteuer 2025, Mieterstrom und den Arbeitskostenausweis nach Paragraf 35a EStG. Sechs amtliche BGH-Volltexte sind mit gelesenen Randnummern und Aussagegrenzen im [Quellenregister](references/betriebskosten-quellen.md) dokumentiert. Es wird kein Urteil aus 2026 behauptet.
 

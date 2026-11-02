@@ -8,10 +8,16 @@ Downloadspalten nicht durch Markdown-Tabellen-Umbauten verschieben.
 
 from __future__ import annotations
 
+
+if __name__ == "__main__":
+    from generator_cli import parse_generator_cli
+
+    parse_generator_cli(__doc__)
+
 import html
 import json
 from pathlib import Path
-from release_routing import RELEASE_BASE, case_asset_url, companion_cases, companion_tag
+from release_routing import RELEASE_BASE, case_asset_url, companion_case_groups, companion_cases, companion_tag, plugin_asset_url
 
 from prompt_profiles import enabled, formats
 from urllib.parse import quote
@@ -53,13 +59,15 @@ def companion_section(version: str) -> list[str]:
     slugs = companion_cases()
     if not slugs:
         return []
-    tag = companion_tag(version)
+    tags = [companion_tag(version, part) for part, _ in enumerate(companion_case_groups(slugs), 1)]
+    release_links = ", ".join(f"[`{tag}`]({RELEASE_BASE}/tag/{tag})" for tag in tags)
     lines = [
         "## Akten-Begleitrelease",
         "",
-        f"Die folgenden Akten-ZIPs liegen im versionsgleichen [Begleitrelease `{tag}`]({RELEASE_BASE}/tag/{tag}). "
+        f"Die Akten-ZIPs liegen grundsätzlich in den versionsgleichen Begleitreleases {release_links}. "
+        "Je Teil werden höchstens 499 Akten mit beiden ZIP-Varianten und einer eigenen Prüfsummenliste veröffentlicht. "
         "Die vollständigen Akten-Sammelpakete und `alles-komplettpaket.zip` bleiben im Hauptrelease. "
-        "Bestehende Downloads bleiben unverändert.",
+        "Ein ausdrücklich verlinktes Komponentenrelease kann eine neue Akte bereits vor dem nächsten vollständigen Release bereitstellen. Maßgeblich ist der jeweilige Downloadlink.",
         "",
         "| Akte | Originaldateien | Einzel-PDFs |",
         "| --- | --- | --- |",
@@ -72,7 +80,7 @@ def companion_section(version: str) -> list[str]:
         )
     lines.extend([
         "",
-        f"[SHA-256-Prüfsummen des Begleitreleases]({RELEASE_BASE}/download/{tag}/checksums-sha256.txt). "
+        "Prüfsummen: " + ", ".join(f"[SHA-256 `{tag}`]({RELEASE_BASE}/download/{tag}/checksums-sha256.txt)" for tag in tags) + ". "
         "Jede Prüfsummenliste gilt ausschließlich für die Dateien ihres eigenen Releases.",
         "",
     ])
@@ -93,11 +101,26 @@ def main() -> int:
         "[Repository-Start](README.md) · [Plugin-Katalog](README.md#was-ist-drin) · [Skill-Gesamtübersicht](SKILLS.md) · [Schwerpunkt-Prompts](SCHWERPUNKTE.md) · [HOAI-Phasen-Werkstätten](docs/bauwirtschaft-hoai-phasen.md) · [Qualitätslabor](QUALITY.md) · [Testakten](testakten/README.md) · [Aktueller Release](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest)",
         "",
         "## Sammel-Assets",
+        "",
+        "Die allgemeinen Sammelpakete v445.35.3 enthalten den geprüften Bestand vom 9. Oktober 2026 mit 297 Plugins. Spätere Komponenten ergänzen den Repository-Bestand, ohne diese unveränderten Archive nachträglich zu erweitern. Bei der [Rechtsabteilung Forderungsmanagement Immobilienunternehmen](./projekte/rechtsabteilung-forderungsmanagement-immobilienunternehmen/README.md) ist das installierbare Rollen-Plugin zusätzlich im Plugin-Sammelpaket enthalten. Der gesonderte Projektbestand mit seinen zusätzlichen Akten und der Vollkopie bleibt über die Projektübersicht zugänglich.",
+        "",
+        "[Due Diligence](./due-diligence/README.md), [GVB-Reinigungsvergabe](./gvb-reinigungsvergabe/README.md), [Verarbeitungsverzeichnis](./verarbeitungsverzeichnis/README.md), [Strafvollzug in der JVA](./strafvollzug-jva/README.md), [UN-Kaufrecht](./un-kaufrecht-cisg/README.md), [Untersuchungshaft](./untersuchungshaft/README.md), [EU-Sanktionsprüfer](./eu-sanktionspruefer/README.md) und [US-Sanktionsprüfer](./us-sanktionspruefer/README.md) haben eigene Komponentenreleases und fehlen in den unveränderten Sammelarchiven v445.35.3. Auch spätere Überarbeitungen bestehender Pakete können separat veröffentlicht sein. Die jeweilige Pluginseite führt zum zugeordneten Einzelpaket.",
+        "",
+        "[Phishing und Zahlungsdienste 445.35.4](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/tag/phishing-v445.35.4) enthält sieben fachlich betroffene Pluginpakete, ihre separaten Prompts und die Akte Rabenstein. Für diese Angebote führen die Einzelzeilen zum Komponentenstand; die allgemeinen Sammelarchive bleiben auf ihrem veröffentlichten Stand.",
+        "",
+        "Die drei Rollen-Plugins der [Vergaberecht-Werkstatt](./vergaberecht-werkstatt/README.md) gehören zum Plugin-Sammelpaket. Die sieben gesondert verwalteten Akten und die Projektkopie bleiben über das Komponentenrelease erreichbar. Die Plugin-Einzelzeilen unten behalten ihre ausdrücklich zugeordneten Komponentendownloads.",
+        "",
+        f"[Betreuungsrecht](./betreuungsrecht/README.md) enthält den Unterlagen-Auswerter, eine [eigenständige Unterlagen-Werkstatt]({DOWNLOAD_BASE}betreuungsrecht/betreuungsrecht-unterlagen-werkstatt.md), eine [Excel-Vorlage](./betreuungsrecht/templates/unterlagen-abrechnung.xlsx) und die Dreijahresakte Adelheid Pfister. Der damalige Pluginstand und die zentrale Akte sind in den Sammelarchiven v445.35.3 enthalten; das aktuelle Einzelpaket ist in der Pluginzeile verlinkt. Die Werkstatt bleibt ein eigenständiger Download.",
+        "[Gesellschafterstreit 445.34.2](./gesellschafterstreit/README.md) erweitert die Berliner Testakte um eine ausführliche Klage mit den Anlagen K1–K9 und einen Vergleichsnachtrag mit Vertragsentwurf und E-Mails. Plugin und Akten sind ab v445.35.3 auch in den allgemeinen Paketen enthalten.",
+        "[Geldwäschebeauftragter 445.34.0](./geldwaeschebeauftragter/README.md) ergänzt elf Skills, drei eigenständige Prompts und drei zentrale Akten für Unternehmen, Kanzlei und Notariat. Plugin und Akten gehören ab v445.35.3 zusätzlich zu den allgemeinen Sammelpaketen.",
+        "[KI-Verordnung 445.35.2](./ki-vo-ai-act-pruefer/README.md) aktualisiert den Hauptprüfer und vier Spezialwege für verbotene Praktiken, Hochrisiko, Register/Meldungen und Konformität. Die 80 betroffenen Plugins und die zentralen Fallakten sind ab v445.35.3 auch über die allgemeinen Sammlungen zugänglich.",
+        "",
+        "",
         "| Asset | Verwendung |",
         "| --- | --- |",
-        f"| [`marketplace.json`]({RELEASE}/marketplace.json) | Marketplace-Manifest für alle Plugins. |",
-        f"| [`alle-plugins-megazip.zip`]({RELEASE}/alle-plugins-megazip.zip) | Alle installierbaren Plugin-ZIPs plus `marketplace.json`. |",
-        f"| [`alle-skills-markdown.zip`]({RELEASE}/alle-skills-markdown.zip) | Alle Skills samt zugehörigen Markdown-Referenzen als Markdown-Bundles, zusätzlich pro Plugin einzeln im Komplettpaket. |",
+        f"| [`marketplace.json`]({RELEASE}/marketplace.json) | Marketplace-Manifest des Sammelreleases vom 9. Oktober 2026; den aktuellen Bestand zeigt die Repository-Datei `.claude-plugin/marketplace.json`. |",
+        f"| [`alle-plugins-megazip.zip`]({RELEASE}/alle-plugins-megazip.zip) | Die 297 installierbaren Plugin-ZIPs des Sammelreleases vom 9. Oktober 2026 plus dessen `marketplace.json`. |",
+        f"| [`alle-skills-markdown.zip`]({RELEASE}/alle-skills-markdown.zip) | Skills des Sammelstands vom 9. Oktober 2026 samt zugehörigen Markdown-Referenzen als Markdown-Bundles, zusätzlich pro Plugin einzeln im Komplettpaket. |",
         f"| [`alle-testakten.zip`]({RELEASE}/alle-testakten.zip) | Sammelpaket der zentralen Akten-ZIPs mit Originalformaten und zugehörigem Gesamt-PDF. Ausdrücklich strukturierte Projektakten behalten ihre Unterordner. |",
         f"| [`alle-testakten-einzelpdfs.zip`]({RELEASE}/alle-testakten-einzelpdfs.zip) | Sammelpaket der zentralen Einzel-PDF-ZIPs; jede auswertbare Unterlage liegt als eigene A4-PDF vor. Strukturierte Projektakten behalten ihre Unterordner. |",
         f"| [`alle-pluginlokalen-testakten.zip`]({RELEASE}/alle-pluginlokalen-testakten.zip) | Ergänzende Sammlung der Akten aus den `testakte/`-Ordnern einzelner Plugins in Originalformaten und mit zugehörigem Gesamt-PDF. |",
@@ -147,7 +170,7 @@ def main() -> int:
             focus_download = " · ".join(markdown_download(f"{rel}/{name}-hauptproblem.{ext}", f"{name}-hauptproblem.{ext}") for ext in formats(name) if (REPO / f"{rel}/{name}-hauptproblem.{ext}").is_file()) if (REPO / focus_path).is_file() else "Nicht vorgesehen"
             workshop_download = " · ".join(markdown_download(f"{rel}/{name}-werkstatt.{ext}", f"{name}-werkstatt.{ext}") for ext in formats(name)) if enabled(name, "werkstatt") else "Nicht vorgesehen"
             quickstart_download = " · ".join(markdown_download(f"{rel}/{name}-schnellstart.{ext}", f"{name}-schnellstart.{ext}") for ext in formats(name)) if enabled(name, "schnellstart") else "Nicht vorgesehen"
-            zip_url = f"{RELEASE}/{name}.zip"
+            zip_url = plugin_asset_url(name, root=REPO)
             navigation = f"[README]({rel}/README.md) · [Skills](skills-index/{name}.md)"
             lines.append(
                 "| "

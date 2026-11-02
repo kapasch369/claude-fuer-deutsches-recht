@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Offline regressions for routing, staging and two-release publication."""
+"""Offline regressions for routing, staging and ordered release publication."""
 
 from __future__ import annotations
 
@@ -139,11 +139,71 @@ class RepositoryRoutingTests(unittest.TestCase):
         for slug in expected:
             for suffix in ("", "-einzelpdfs"):
                 with self.subTest(slug=slug, suffix=suffix):
+                    scoped = json.loads((R.ROOT / "scripts/scoped-release-assets.json").read_text())["assets"]
+                    asset = f"testakte-{slug}{suffix}.zip"
+                    part = expected.index(slug) // 499 + 1
+                    tag = scoped.get(asset, TAG if part == 1 else f"akten-{part}-v{VERSION}")
                     self.assertEqual(R.case_asset_url(slug, suffix, version=VERSION),
-                                     f"{R.RELEASE_BASE}/download/{TAG}/testakte-{slug}{suffix}.zip")
+                                     f"{R.RELEASE_BASE}/download/{tag}/{asset}")
 
 
 class RoutingTests(Fixture):
+    def test_arbitrary_case_count_is_sorted_and_partitioned_in_intact_pairs(self):
+        slugs = tuple(f"case-{i:04}" for i in range(1200))
+        groups = R.companion_case_groups(tuple(reversed(slugs)))
+        self.assertEqual(tuple(map(len, groups)), (499, 499, 202))
+        self.assertEqual(tuple(slug for group in groups for slug in group), slugs)
+        self.assertEqual(R.companion_case_groups(()), ())
+        self.assertEqual(R.companion_case_groups(slugs[:499]), (slugs[:499],))
+        self.assertEqual(R.companion_case_groups(slugs[:500]), (slugs[:499], slugs[499:500]))
+        self.assertEqual([R.companion_tag(VERSION, part) for part in (1, 2, 3)],
+                         [TAG, f"akten-2-v{VERSION}", f"akten-3-v{VERSION}"])
+        self.assertEqual([R.companion_stage(part) for part in (1, 2, 3)],
+                         ["companion", "companion-2", "companion-3"])
+        for part in (0, -1, 1.5, True, "2"):
+            with self.subTest(part=part), self.assertRaises(ValueError):
+                R.companion_tag(VERSION, part)
+
+    def test_later_companion_links_and_single_asset_component_pin(self):
+        slugs = tuple(f"case-{i:04}" for i in range(500))
+        self.config.write_text(json.dumps({"schema_version": 1, "companion_case_slugs": list(reversed(slugs))}))
+        (self.root / "scripts").mkdir()
+        (self.root / "scripts/scoped-release-assets.json").write_text(json.dumps({
+            "schema_version": 1, "assets": {"testakte-case-0499.zip": "component-v777.2.9"},
+        }))
+        expected = (
+            ("case-0498", "", TAG),
+            ("case-0498", "-einzelpdfs", TAG),
+            ("case-0499", "", "component-v777.2.9"),
+            ("case-0499", "-einzelpdfs", f"akten-2-v{VERSION}"),
+        )
+        for slug, suffix, tag in expected:
+            asset = f"testakte-{slug}{suffix}.zip"
+            url = f"{R.RELEASE_BASE}/download/{tag}/{asset}"
+            self.assertEqual(R.case_asset_url(slug, suffix, root=self.root, config=self.config), url)
+            old = f"{R.RELEASE_BASE}/download/akten-v1.0.0/{asset}"
+            self.assertEqual(R.rewrite_case_asset_urls(old, root=self.root, config=self.config), url)
+
+    def test_component_version_requires_its_own_exact_asset_pin(self):
+        plugin = {"name": "fixture-plugin", "version": VERSION}
+        R.validate_plugin_version(plugin, VERSION, root=self.root)
+        plugin["version"] = "777.2.9"
+        config = self.root / "scripts/scoped-release-assets.json"
+        config.parent.mkdir(parents=True, exist_ok=True)
+        for assets, valid in (
+            ({}, False),
+            ({"other.zip": "component-v777.2.9"}, False),
+            ({"fixture-plugin.zip": "component-v777.2.8"}, False),
+            ({"fixture-plugin.zip": "component-v777.2.9"}, True),
+        ):
+            config.write_text(json.dumps({"schema_version": 1, "assets": assets}))
+            with self.subTest(assets=assets):
+                if valid:
+                    R.validate_plugin_version(plugin, VERSION, root=self.root)
+                else:
+                    with self.assertRaises(ValueError):
+                        R.validate_plugin_version(plugin, VERSION, root=self.root)
+
     def setUp(self):
         super().setUp()
         # Die Generatoren importieren eigene Aliase; die echten Helfer lesen die Fixture.
@@ -346,13 +406,19 @@ class StagingTests(Fixture):
         with self.assertRaisesRegex(ValueError, "GitHub limit"):
             expected_asset_metadata(self.dist)
 
-    def test_companion_limit_includes_own_checksum(self):
-        slugs = tuple(f"case-{i}" for i in range(500))
-        for name in R.companion_asset_names(slugs) | {"plugin.zip"}:
-            (self.dist / name).write_bytes(b"fixture")
-        with self.assertRaisesRegex(ValueError, "1001 assets"):
-            STAGE.stage_assets(self.dist, self.staging, slugs)
-        self.assertFalse(self.staging.exists())
+    def test_511_cases_split_with_checksums_and_complete_aggregates(self):
+        self.slugs = tuple(f"case-{i:04}" for i in range(511))
+        self.names = R.companion_asset_names(self.slugs)
+        self.build()
+        counts = STAGE.stage_assets(self.dist, self.staging, tuple(reversed(self.slugs)))
+        self.assertEqual(counts, {"main": 5, "companion": 999, "companion-2": 25})
+        for group, slugs in (("companion", self.slugs[:499]), ("companion-2", self.slugs[499:])):
+            self.assertEqual(set(expected_asset_metadata(self.staging / group)),
+                             R.companion_asset_names(slugs) | {"checksums-sha256.txt"})
+        for name in ("alle-testakten.zip", "alle-testakten-einzelpdfs.zip", "alles-komplettpaket.zip"):
+            self.assertEqual(sha256_file(self.staging / "main" / name), sha256_file(self.dist / name))
+            with zipfile.ZipFile(self.staging / "main" / name) as archive:
+                self.assertEqual(len(archive.namelist()), 1022 if name == "alles-komplettpaket.zip" else 511)
 
     def test_missing_pair_and_nested_or_existing_stage_fail_without_deletion(self):
         self.build()
@@ -422,6 +488,97 @@ class PublicationTests(Fixture):
     def publish(self, **kwargs):
         PUBLISH.publish(self.staging, f"v{VERSION}", "owner/repo", root=self.root, config=self.config, **kwargs)
 
+    def split_companions(self):
+        limit = patch.object(R, "MAX_RELEASE_ASSETS", 5)
+        limit.start()
+        self.addCleanup(limit.stop)
+        self.staging = self.root / "multi-staging"
+        self.assertEqual(STAGE.stage_assets(self.dist, self.staging, self.slugs),
+                         {"main": 5, "companion": 5, "companion-2": 5})
+
+    def test_all_companions_are_verified_then_published_before_main(self):
+        self.split_companions()
+        self.publish()
+        commands = [call.args[0] for call in self.execute.call_args_list]
+        tags = [f"v{VERSION}", TAG, f"akten-2-v{VERSION}"]
+        self.assertEqual([cmd[3] for cmd in commands[:3]], tags)
+        self.assertEqual([cmd[3] for cmd in commands[3:6]], tags)
+        self.assertEqual([cmd[3] for cmd in commands[6:]], tags[1:] + tags[:1])
+        for cmd in commands[:3]:
+            self.assertIn("--protect-published", cmd)
+            self.assertEqual("--require-existing" in cmd, cmd[3] != tags[0])
+        for cmd in commands[6:-1]:
+            self.assertIn("--latest=false", cmd)
+        self.assertIn("--latest=true", commands[-1])
+        for tag in tags[1:]:
+            self.assertEqual(self.gh.refs[tag], {"type": "commit", "sha": SHA})
+        self.assertNotIn("--force", sum(self.gh.commands + commands, []))
+        self.assertNotIn("DELETE", sum(self.gh.commands + commands, []))
+
+    def test_mismatching_later_tag_blocks_all_remote_writes(self):
+        self.split_companions()
+        later = f"akten-2-v{VERSION}"
+        self.gh.refs[later] = {"type": "commit", "sha": "d" * 40}
+        with self.assertRaisesRegex(ValueError, "not changed"):
+            self.publish()
+        self.assertFalse(any("POST" in cmd or "create" in cmd for cmd in self.gh.commands))
+        self.execute.assert_not_called()
+
+    def test_every_multi_release_failure_keeps_main_unpublished(self):
+        self.split_companions()
+        for failing in range(8):
+            self.execute.reset_mock()
+            count = 0
+            def fail(command):
+                nonlocal count
+                count += 1
+                if count == failing + 1:
+                    raise subprocess.CalledProcessError(1, command)
+            self.execute.side_effect = fail
+            with self.subTest(failing=failing), self.assertRaises(subprocess.CalledProcessError):
+                self.publish()
+            commands = [call.args[0] for call in self.execute.call_args_list]
+            self.assertFalse(any(cmd[:4] == ["gh", "release", "edit", f"v{VERSION}"] for cmd in commands))
+            if failing < 6:
+                self.assertFalse(any(cmd[:3] == ["gh", "release", "edit"] for cmd in commands))
+
+    def test_tag_moving_while_companions_publish_blocks_main(self):
+        self.split_companions()
+        def move(command):
+            if command[:4] == ["gh", "release", "edit", f"akten-2-v{VERSION}"]:
+                self.gh.refs[TAG] = {"type": "commit", "sha": "e" * 40}
+        self.execute.side_effect = move
+        with self.assertRaisesRegex(ValueError, "moved"):
+            self.publish()
+        self.assertEqual(self.execute.call_count, 8)
+
+    def test_wrong_or_missing_pair_in_later_stage_stops_before_remote_calls(self):
+        self.split_companions()
+        first = self.staging / "companion"
+        later = self.staging / "companion-2"
+        one = next(path for path in first.glob("*.zip"))
+        other = next(path for path in later.glob("*.zip"))
+        temporary = self.root / "swap.zip"
+        one.rename(temporary)
+        other.rename(first / other.name)
+        temporary.rename(later / one.name)
+        write_checksums(first)
+        write_checksums(later)
+        with self.assertRaisesRegex(ValueError, "configured release routes"):
+            self.publish()
+        self.assertEqual(self.gh.commands, [])
+        self.execute.assert_not_called()
+
+    def test_missing_or_unexpected_companion_stage_stops_before_remote_calls(self):
+        self.split_companions()
+        expected = self.staging / "companion-2"
+        unexpected = self.staging / "companion-3"
+        expected.rename(unexpected)
+        with self.assertRaisesRegex(ValueError, "configured release routes"):
+            self.publish()
+        self.assertEqual(self.gh.commands, [])
+        self.execute.assert_not_called()
+
     def test_annotated_parent_exact_sha_never_latest_and_publish_order(self):
         self.publish()
         create = next(cmd for cmd in self.gh.commands if cmd[:3] == ["gh", "release", "create"])
@@ -441,6 +598,7 @@ class PublicationTests(Fixture):
         self.assertEqual(commands[-2][3], TAG)
         self.assertIn("--latest=false", commands[-2])
         self.assertEqual(commands[-1][3], f"v{VERSION}")
+        self.assertIn("--latest=true", commands[-1])
         self.assertNotIn("--latest=false", commands[-1])
         self.assertNotIn("--force", sum(self.gh.commands + commands, []))
         self.assertNotIn("DELETE", sum(self.gh.commands + commands, []))
@@ -460,6 +618,102 @@ class PublicationTests(Fixture):
         with patch.object(PUBLISH, "run", side_effect=lost_response):
             self.publish()
         self.assertEqual(self.execute.call_count, 6)
+
+    def test_created_tag_waits_for_visibility_without_repeating_post(self):
+        for lost_response in (False, True):
+            with self.subTest(lost_response=lost_response):
+                self.gh = FakeGitHub()
+                created, hidden_reads = False, 0
+                def delayed(command):
+                    nonlocal created, hidden_reads
+                    result = self.gh.run(command)
+                    if "POST" in command:
+                        created = True
+                        return (subprocess.CompletedProcess(command, 1, "", "lost response")
+                                if lost_response else result)
+                    if created and command[:2] == ["gh", "api"] and "/git/ref/tags/" in command[2] and hidden_reads < 2:
+                        hidden_reads += 1
+                        return subprocess.CompletedProcess(command, 1, "", "gh: Not Found (HTTP 404)")
+                    return result
+                with patch.object(PUBLISH, "run", side_effect=delayed), patch("time.sleep") as sleep:
+                    PUBLISH.ensure_companion("owner/repo", TAG, f"v{VERSION}", SHA)
+                self.assertEqual(hidden_reads, 2)
+                self.assertEqual(sleep.call_count, 2)
+                self.assertTrue(all(0 < call.args[0] <= 60 for call in sleep.call_args_list))
+                self.assertEqual(sum("POST" in cmd for cmd in self.gh.commands), 1)
+                self.assertEqual(self.gh.refs[TAG], {"type": "commit", "sha": SHA})
+                self.assertTrue(self.gh.releases[TAG]["isDraft"])
+
+    def test_tag_creation_timeout_can_be_confirmed_without_repeating_post(self):
+        def timed_out(command):
+            result = self.gh.run(command)
+            if "POST" in command:
+                raise subprocess.TimeoutExpired(command, 300)
+            return result
+        with patch.object(PUBLISH, "run", side_effect=timed_out), patch("time.sleep") as sleep:
+            PUBLISH.ensure_companion("owner/repo", TAG, f"v{VERSION}", SHA)
+        self.assertEqual(sum("POST" in cmd for cmd in self.gh.commands), 1)
+        self.assertEqual(self.gh.refs[TAG]["sha"], SHA)
+        sleep.assert_not_called()
+
+    def test_created_tag_remaining_invisible_stops_after_five_reads(self):
+        created, reads = False, 0
+        def invisible(command):
+            nonlocal created, reads
+            result = self.gh.run(command)
+            if "POST" in command:
+                created = True
+            elif created and command[:2] == ["gh", "api"] and "/git/ref/tags/" in command[2]:
+                reads += 1
+                return subprocess.CompletedProcess(command, 1, "", "gh: Not Found (HTTP 404)")
+            return result
+        with patch.object(PUBLISH, "run", side_effect=invisible), patch("time.sleep") as sleep:
+            with self.assertRaisesRegex(RuntimeError, "after 5"):
+                PUBLISH.ensure_companion("owner/repo", TAG, f"v{VERSION}", SHA)
+        self.assertEqual(reads, 5)
+        self.assertEqual(sleep.call_count, 4)
+        self.assertFalse(self.gh.releases)
+        self.assertEqual(sum("POST" in cmd for cmd in self.gh.commands), 1)
+
+    def test_delayed_wrong_tag_commit_is_rejected_without_change(self):
+        created, reads = False, 0
+        def wrong_commit(command):
+            nonlocal created, reads
+            result = self.gh.run(command)
+            if "POST" in command:
+                created = True
+                self.gh.refs[TAG] = {"type": "commit", "sha": "d" * 40}
+            elif created and command[:2] == ["gh", "api"] and "/git/ref/tags/" in command[2]:
+                reads += 1
+                if reads == 1:
+                    return subprocess.CompletedProcess(command, 1, "", "gh: Not Found (HTTP 404)")
+            return result
+        with patch.object(PUBLISH, "run", side_effect=wrong_commit), patch("time.sleep") as sleep:
+            with self.assertRaisesRegex(ValueError, "not changed"):
+                PUBLISH.ensure_companion("owner/repo", TAG, f"v{VERSION}", SHA)
+        self.assertEqual(reads, 2)
+        sleep.assert_called_once()
+        self.assertEqual(self.gh.refs[TAG]["sha"], "d" * 40)
+        self.assertFalse(self.gh.releases)
+        self.assertEqual(sum("POST" in cmd for cmd in self.gh.commands), 1)
+        self.assertNotIn("DELETE", sum(self.gh.commands, []))
+        self.assertNotIn("--force", sum(self.gh.commands, []))
+
+    def test_post_creation_lookup_permission_error_is_not_visibility_retry(self):
+        created = False
+        def forbidden(command):
+            nonlocal created
+            result = self.gh.run(command)
+            if "POST" in command:
+                created = True
+            elif created and command[:2] == ["gh", "api"] and "/git/ref/tags/" in command[2]:
+                return subprocess.CompletedProcess(command, 1, "", "HTTP 403")
+            return result
+        with patch.object(PUBLISH, "run", side_effect=forbidden), patch("time.sleep") as sleep:
+            with self.assertRaisesRegex(RuntimeError, "HTTP 403"):
+                PUBLISH.ensure_companion("owner/repo", TAG, f"v{VERSION}", SHA)
+        sleep.assert_not_called()
+        self.assertFalse(self.gh.releases)
 
     def test_ensure_existing_companion_retry_does_not_change_latest(self):
         self.gh.refs[TAG] = {"type": "commit", "sha": SHA}
@@ -556,7 +810,7 @@ class PublicationTests(Fixture):
         self.assertEqual(len(commands), 3)
         self.assertNotIn("--protect-published", commands[0])
         self.assertNotIn("--require-existing", commands[0])
-        self.assertEqual(commands[-1], ["gh", "release", "edit", "v1.2.3", "--draft=false", "--repo", "owner/repo"])
+        self.assertEqual(commands[-1], ["gh", "release", "edit", "v1.2.3", "--draft=false", "--latest=true", "--repo", "owner/repo"])
 
     def test_uploader_protects_published_assets_and_requires_existing_companion(self):
         argv = ["upload", str(self.staging / "companion"), TAG, "--repo", "owner/repo", "--require-existing", "--protect-published"]
@@ -582,10 +836,33 @@ class WorkflowTests(unittest.TestCase):
         text = (SCRIPTS.parent / ".github/workflows/release-plugin-zips.yml").read_text()
         self.assertLess(text.index('test -s dist/alles-komplettpaket.zip'), text.index("scripts/stage-release-assets.py"))
         self.assertLess(text.index("scripts/stage-release-assets.py"), text.index("scripts/publish-release-assets.py"))
-        self.assertIn("ref: ${{ github.event.inputs.tag || github.ref }}", text)
-        self.assertIn("      - 'v*'", text)
+        self.assertIn("ref: ${{ github.ref }}", text)
+        resolve = text.index('scripts/prepare-complete-release.py resolve "$TAG"')
+        checkout = text.index('git checkout --detach "$SHA"')
+        create_tag = text.index('scripts/prepare-complete-release.py ensure-tag "$RELEASE_TAG"')
+        self.assertLess(resolve, checkout)
+        self.assertLess(checkout, text.index("scripts/validate-root-readme-overview.py"))
+        self.assertIn('--fallback-sha "$GITHUB_SHA"', text)
+        self.assertIn('--expected-sha "$BUILD_SHA"', text)
+        self.assertIn('BUILD_SHA: ${{ steps.release_target.outputs.sha }}', text)
+        self.assertLess(text.index("scripts/stage-release-assets.py"), create_tag)
+        self.assertLess(create_tag, text.index("scripts/publish-release-assets.py"))
+        self.assertNotIn("git tag ", text)
+        self.assertNotIn("git push ", text)
+        self.assertIn("      - 'v[0-9]*'", text)
+        self.assertNotIn("      - 'v*'", text)
         self.assertNotIn("      - 'akten-", text)
-        self.assertLess(text.index("scripts/generate-root-plugin-catalog.py"), text.index("scripts/validate-testakten-readme-downloads.py"))
+        packaging = text.index("      - name: ZIPs bauen")
+        for validator in ("validate-root-readme-overview.py", "validate-readme-navigation.py",
+                          "validate-testakten-readme-downloads.py"):
+            self.assertLess(text.index(f"scripts/{validator}"), packaging)
+        self.assertLess(text.index("git diff --exit-code"), packaging)
+        self.assertNotIn(":(exclude,glob)**/gesamt-pdf/*.pdf", text)
+        for generator in ("generate-root-plugin-catalog.py", "generate-asset-index.py",
+                          "generate-skills-md.py", "generate-werkstatt-und-schnellstart-prompts.py",
+                          "build-testakte-gesamt-pdf.py", "build-plugin-testakte-gesamt-pdfs.py",
+                          "inject-gesamt-pdf-section.py", "refine-speed-and-elegance.py"):
+            self.assertNotIn(f"scripts/{generator}", text)
 
 
 if __name__ == "__main__":

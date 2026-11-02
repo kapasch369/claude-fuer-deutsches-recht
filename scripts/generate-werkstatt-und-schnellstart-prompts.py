@@ -11,6 +11,12 @@ Plugin-Umgebung. Sie enthalten keine Skill-Verweise und keine ZIP-Verweise.
 
 from __future__ import annotations
 
+
+if __name__ == "__main__":
+    from generator_cli import parse_generator_cli
+
+    parse_generator_cli(__doc__)
+
 import json
 import re
 from functools import lru_cache
@@ -2952,6 +2958,15 @@ def clip_utf8(text: str, limit: int) -> str:
 
 def plugin_dirs() -> list[Path]:
     dirs = []
+    # Installierbare Plugins können in einer fachlichen Familie verschachtelt
+    # liegen. Maßgeblich ist derselbe Source-Pfad wie beim Marketplace-Import.
+    marketplace = json.loads((REPO / '.claude-plugin/marketplace.json').read_text(encoding='utf-8'))
+    for entry in marketplace['plugins']:
+        source = entry.get('source')
+        if isinstance(source, str) and source.startswith('./'):
+            directory = (REPO / source).resolve()
+            if directory.is_relative_to(REPO.resolve()) and (directory / '.claude-plugin/plugin.json').is_file():
+                dirs.append(directory)
     for plugin_json in REPO.glob("*/.claude-plugin/plugin.json"):
         dirs.append(plugin_json.parent.parent)
     for plugin_json in (REPO / "_GERICHTE_EXPERIMENTAL").glob("*/.claude-plugin/plugin.json"):
@@ -8028,6 +8043,9 @@ def main() -> int:
     for plugin_dir in dirs:
         mf = manifest(plugin_dir)
         slug = mf.get("name") or plugin_dir.name
+        if not standalone_kinds(slug):
+            skipped += 1
+            continue
         if hand_curated(slug):
             sync_text_copies(plugin_dir, slug)
         if has_individual_review(plugin_dir, slug) or hand_curated(slug):

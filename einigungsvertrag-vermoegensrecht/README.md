@@ -5,7 +5,7 @@
 
 Einigungsvertrag-Plugin für DDR/BRD-Übergangsrecht, Volksvermögen, Parteivermögen, Treuhand, Bodenreform, Mauergrundstücke, VermG und Restitution.
 
-Dieses Plugin gehört zum Marketplace mit 275 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
+Dieses Plugin gehört zum Marketplace mit 310 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
 
 ## Welche Datei wofür? / Which file should I use?
 
@@ -50,7 +50,7 @@ Bei einem Folgewunsch den bisherigen Aktenstand fortführen. Bereits festgestell
 | Großer Prompt (Werkstatt) | Markdown | [`einigungsvertrag-vermoegensrecht-werkstatt.md`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=einigungsvertrag-vermoegensrecht/einigungsvertrag-vermoegensrecht-werkstatt.md) |
 | Zugeordnete Testakten | PDF / ZIP | [eine zugeordnete Akte](#zugeordnete-testakten) mit Gesamt-PDF, Originaldateien und Einzel-PDFs |
 
-> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 275 Plugins. Wer alle Plugins auf einmal will, nimmt [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip). Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
+> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 310 Plugins. Das Sammelpaket [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip) enthält seinen veröffentlichten Stand, nicht zwingend spätere Einzelpakete. Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
 
 ## Zugeordnete Testakten
 
@@ -62,7 +62,7 @@ Jede Akte ist getrennt als lesbares Gesamt-PDF, ZIP mit Originaldateien und ZIP 
 
 | Akte | Gesamt-PDF | Originaldateien | Einzel-PDFs |
 | --- | --- | --- | --- |
-| [Einheitsvertragsakte Lindenau](../testakten/einigungsvertrag-treuhand-mauergrundstueck-lindenau/README.md) | [Gesamt-PDF](../testakten/einigungsvertrag-treuhand-mauergrundstueck-lindenau/gesamt-pdf/einigungsvertrag-treuhand-mauergrundstueck-lindenau_gesamt.pdf) | [`testakte-einigungsvertrag-treuhand-mauergrundstueck-lindenau.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-einigungsvertrag-treuhand-mauergrundstueck-lindenau.zip) | [`testakte-einigungsvertrag-treuhand-mauergrundstueck-lindenau-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-einigungsvertrag-treuhand-mauergrundstueck-lindenau-einzelpdfs.zip) |
+| [Einheitsvertragsakte Lindenau](../testakten/einigungsvertrag-treuhand-mauergrundstueck-lindenau/README.md) | [Gesamt-PDF](../testakten/einigungsvertrag-treuhand-mauergrundstueck-lindenau/gesamt-pdf/einigungsvertrag-treuhand-mauergrundstueck-lindenau_gesamt.pdf) | [`testakte-einigungsvertrag-treuhand-mauergrundstueck-lindenau.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-einigungsvertrag-treuhand-mauergrundstueck-lindenau.zip) | [`testakte-einigungsvertrag-treuhand-mauergrundstueck-lindenau-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-einigungsvertrag-treuhand-mauergrundstueck-lindenau-einzelpdfs.zip) |
 
 [Alle Testakten und Fachzuordnungen](../testakten/README.md)
 <!-- END direkt-loslegen (autogen) -->
@@ -72,7 +72,7 @@ Dieses Plugin ordnet die langen Schatten der deutschen Einheit: Einigungsvertrag
 
 ## Start
 
-Beginne mit `einigungsvertrag-vermoegensrecht-allgemein`. Das Plugin fragt zuerst nach Rolle, Ziel, Frist, Behörde/Gericht/Register, vorhandenen Unterlagen und gewünschtem Output. Danach schlägt es die passenden Spezialskills aus diesem Plugin vor.
+Vorhandene Bescheide, Grundbuchunterlagen und historische Belege werden zuerst gelesen. Der allgemeine Skill `einigungsvertrag-vermoegensrecht-allgemein` hilft bei offenem Bearbeitungsweg; ein klarer Auftrag führt direkt zur passenden Prüfung oder zum verlangten Schriftsatz. Nachgefragt werden nur entscheidende Lücken, etwa zu Objektidentität, Erwerbskette, Bekanntgabe oder Verfahrensziel. Neue Antworten ergänzen den laufenden Arbeitsstand, statt eine neue Aufnahme auszulösen.
 
 ## Arbeitsweise
 
@@ -85,7 +85,7 @@ Beginne mit `einigungsvertrag-vermoegensrecht-allgemein`. Das Plugin fragt zuers
 
 - Kaltstart-Interview und Aktenlandkarte
 - Behörden-, Gerichts- oder Gegneranschreiben
-- Widerspruchs-/Klage-/Eilantragsbausteine
+- Ausformulierter Widerspruchs-, Klage- oder Eilantragsentwurf nach Auftrag; einzelne Bausteine nur auf entsprechenden Wunsch
 - Kosten-, Fristen- und Zuständigkeitsmatrix
 - Dashboard/Tracker für laufende Vorgänge
 - Kurzfassung für Mandant, Vorstand, Verband, Redaktion oder Bürgerin

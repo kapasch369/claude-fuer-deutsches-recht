@@ -6,6 +6,7 @@ Alle Schreibversuche erfolgen in temporären Verzeichnissen.
 """
 
 import importlib.util
+import hashlib
 import io
 import json
 from contextlib import redirect_stdout
@@ -18,7 +19,7 @@ import unittest
 from unittest.mock import patch
 
 import quality_lab as lab
-from themen_profile import PROFILE_BY_KEY
+from themen_profile import PROFILE_BY_KEY, profile_for
 
 
 SCRIPTS = Path(__file__).resolve().parent
@@ -36,6 +37,89 @@ G = module("workflow_generator", "generate-werkstatt-und-schnellstart-prompts.py
 R = module("workflow_refiner", "refine-speed-and-elegance.py")
 A = module("workflow_routing_audit", "audit-prompt-profile-routing.py")
 S = module("workflow_law_sentinels", "validate-current-law-sentinels.py")
+
+
+class ReviewedPromptContextTests(unittest.TestCase):
+    def test_corrected_medical_and_restructuring_rules_cannot_regress(self):
+        cases = (
+            ('nicht existente Regressnorm', 'Paragraf 199 SGB X', 'Paragraf 199 BGB; Paragraf 116 SGB X'),
+            ('nicht existente Regressnorm', 'SGB X Paragrafen 116 199 SGB X', 'Paragraf 113 SGB X: Erstattungsansprüche'),
+            ('pauschale Kostenpflicht', 'Kopien auf Kosten des Patienten', 'Die erste Abschrift ist nach Paragraf 630g BGB unentgeltlich.'),
+            ('Landgericht als Restrukturierungsgericht', 'LG (StaRUG-Gerichte)', 'Amtsgericht nach Paragraf 34 StaRUG; Ansprüche nach Paragraf 71 Absatz 2 Nummer 6 GVG beim Landgericht.'),
+        )
+        for label, invalid, valid in cases:
+            sentinel = next(item for item in S.SENTINELS if label in item.label)
+            with self.subTest(label=label, invalid=invalid):
+                self.assertIsNotNone(sentinel.pattern.search(invalid))
+                self.assertIsNone(sentinel.pattern.search(valid))
+
+    def test_bverwg_date_correction_does_not_flag_the_verified_anchor(self):
+        sentinel = next(item for item in S.SENTINELS if '4 CN 4.19' in item.label)
+        for text in ('BVerwG 14.10.2020, 4 CN 4.19', '4 CN 4/19, Urteil vom 14.10.2020'):
+            self.assertIsNotNone(sentinel.pattern.search(text))
+        self.assertIsNone(sentinel.pattern.search('BVerwG, Urteil vom 27.08.2020, 4 CN 4.19'))
+        self.assertIsNone(sentinel.pattern.search('14.10.2020\nEine andere Entscheidung: 4 CN 4.19'))
+
+    def test_documented_removal_of_wrong_case_anchor_is_not_operative_guidance(self):
+        relative = 'docs/experimentell/vorlagensammlung-recht/CHANGELOG.md'
+        text = (SCRIPTS.parent / relative).read_text(encoding='utf-8')
+        sentinel = next(item for item in S.SENTINELS if '7 U 173/25' in item.label)
+        historical = next(line for line in text.splitlines() if '7 U 173/25' in line)
+        with patch.object(S, 'markdown_files', return_value=[SCRIPTS.parent / relative]), \
+                redirect_stdout(io.StringIO()):
+            self.assertEqual(S.main(), 0)
+        self.assertIsNone(S.actionable_sentinel_match(sentinel, historical, relative))
+        self.assertIsNotNone(S.actionable_sentinel_match(sentinel, historical, 'anderes-plugin/SKILL.md'))
+        self.assertIsNotNone(S.actionable_sentinel_match(sentinel, historical.replace('entfernt', 'bestätigt'), relative))
+        self.assertIsNotNone(S.actionable_sentinel_match(sentinel, text + '\n\nOLG Karlsruhe 7 U 173/25 trägt den Anspruch.\n', relative))
+
+    def test_existing_technical_contexts_are_bound_to_exact_paragraph_and_file(self):
+        for relative, reviewed in A.REVIEWED_BRAND_PARAGRAPHS.items():
+            text = (SCRIPTS.parent / relative).read_text(encoding="utf-8")
+            paragraphs = A.re.split(r"\n\s*\n", text)
+            branded = [p for p in paragraphs if any(brand in p for brand in A.PROMPT_BRANDS)]
+            observed = {hashlib.sha256(" ".join(p.split()).encode("utf-8")).hexdigest() for p in branded}
+            self.assertEqual(set(reviewed), observed, relative)
+            self.assertTrue(all(reviewed.values()))
+            self.assertEqual(A.prompt_anchor_problems(text, relative), [], relative)
+            for paragraph in branded:
+                with self.subTest(file=relative, paragraph=paragraph[:80]):
+                    self.assertTrue(A.prompt_anchor_problems(paragraph, "anderes-plugin/werkstatt.md"))
+                    self.assertTrue(A.prompt_anchor_problems(paragraph + " Claude ist die beste Wahl.", relative))
+                    self.assertEqual(A.prompt_anchor_problems(paragraph.replace(" ", "\n"), relative), [])
+
+    def test_generic_branding_remains_rejected_even_in_reviewed_file(self):
+        relative = next(iter(A.REVIEWED_BRAND_PARAGRAPHS))
+        for brand in A.PROMPT_BRANDS:
+            with self.subTest(brand=brand):
+                self.assertTrue(A.prompt_anchor_problems(f"Du bist der beste {brand}-Assistent.", relative))
+        text = (SCRIPTS.parent / relative).read_text(encoding="utf-8")
+        self.assertTrue(A.prompt_anchor_problems(text + "\n\nNutze nur Claude.\n", relative))
+
+    def test_reviewed_brand_context_never_exempts_wrong_legal_anchors(self):
+        relative = "fachgebiet/werkstatt.md"
+        text = "Claude: " + A.GLOBAL_PROMPT_FORBIDDEN[0]
+        digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
+        with patch.dict(A.REVIEWED_BRAND_PARAGRAPHS, {relative: {digest: "Technischer Kontext"}}):
+            problems = A.prompt_anchor_problems(text, relative)
+        self.assertEqual(len(problems), 1)
+        self.assertIn(A.GLOBAL_PROMPT_FORBIDDEN[0], problems[0])
+
+    def test_published_special_workshop_is_audited_without_allowing_arbitrary_extras(self):
+        directory = SCRIPTS.parent / "betreuungsrecht"
+        expected = A.expected_prompt_files("betreuungsrecht", directory)
+        self.assertIn(directory / "betreuungsrecht-unterlagen-werkstatt.md", expected.values())
+        self.assertNotIn(directory / "betreuungsrecht-beliebig-werkstatt.md", expected.values())
+        self.assertEqual(A.individual_workshop_structure_problems(expected["werkstatt-unterlagen"].read_text()), [])
+
+    def test_new_curated_plugins_have_specific_subject_routes(self):
+        for slug, key in {
+            "kanzlei-website-redaktion": "kanzleibetrieb",
+            "ki-verordnung-konformitaet": "technikregulierung",
+            "ki-verordnung-verbotene-praktiken": "technikregulierung",
+        }.items():
+            with self.subTest(plugin=slug):
+                self.assertEqual(profile_for(slug).key, key)
 
 
 class LosslessWorkshopTests(unittest.TestCase):
@@ -418,6 +502,10 @@ class WorkshopValidatorTests(unittest.TestCase):
             ("Ein Hauptproblem-Prompt mit höchstens 7500 Zeichen und Bytes.", True),
             ("Ein separater Markdown-Download mit hoechstens 7500 Zeichen und Bytes.", True),
             ("Ein Schnellstart-Prompt mit höchstens 7500 Zeichen.", True),
+            ("| Mini-Prompt | Kompakter eigenständiger erster Arbeitsgang, höchstens 7500 Zeichen und UTF-8-Bytes. | [MD](https://example.org/download.html?path=fachgebiet-schnellstart.md) |", True),
+            ("| Hauptproblem | Übergreifende Bearbeitung, höchstens 7500 Zeichen und UTF-8-Bytes. | [MD](https://example.org/download.html?path=fachgebiet-hauptproblem.md) |", True),
+            ("| Mini-Prompt | Antworte mit höchstens 7500 Zeichen und UTF-8-Bytes. | [MD](https://example.org/download.html?path=fachgebiet-schnellstart.md) |", False),
+            ("| Mini-Prompt | Dateiumfang, höchstens 7500 Zeichen und UTF-8-Bytes. | [MD](https://example.org/download.html?path=fachgebiet-schnellstart.md) | Antworte mit höchstens 7500 Zeichen.", False),
             ("Antworte mit höchstens 7500 Zeichen.", False),
             ("Ein Hauptproblem-Prompt verlangt eine Antwort mit höchstens 7500 Zeichen.", False),
             ("Ein Markdown-Prompt mit höchstens 7500 Zeichen. Antworte mit höchstens 7500 Zeichen.", False),

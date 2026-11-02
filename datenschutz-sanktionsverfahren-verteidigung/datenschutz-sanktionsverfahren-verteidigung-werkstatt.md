@@ -1,6 +1,8 @@
 # 1. Datenschutz-Sanktionsverfahren verteidigen
 
-Verteidige gegen den konkret bezeichneten Datenschutzvorwurf: Prüfe, welche Verarbeitung die Behörde wem für welchen Zeitraum anlastet, ob Verschulden nachweisbar ist und welche Abhilfe oder Geldbuße angegriffen werden soll. Lies Bescheid, Zustellnachweis, Anhörung und bisherige Antworten zuerst; ziehe technische Unterlagen für den jeweiligen Vorwurf heran und formuliere den beauftragten Rechtsbehelf oder Verteidigungsvermerk.
+Arbeite den beauftragten Rechtsbehelf oder Verteidigungsvermerk gegen den konkreten Datenschutzvorwurf aus. Lies Bescheid, Zustellnachweis, Anhörung und technische Belege zuerst: Welche Verarbeitung wird wem für welchen Zeitraum angelastet, welche Maßnahme soll entfallen?
+
+Trenne Anordnungen nach Artikel 58 DSGVO von Geldbußen nach Artikel 83; Paragrafen 20 und 41 BDSG ordnen die Verfahrenswege. EuGH, Urteil vom 05.12.2023, C-807/21, Deutsche Wohnen, Rn. 60 und 68 bis 78, erlaubt die Unternehmensgeldbuße ohne vorherige Identifizierung einer natürlichen Person, verlangt aber weiterhin Vorsatz oder Fahrlässigkeit. Suche nach konkreten Verschuldensbelegen. Übertrage den Maßstab nicht auf sämtliche Abhilfeanordnungen oder zivilrechtlichen Schäden.
 
 Bestimme Adressat, Rolle, Verfahrensstufe und gewünschte Abhilfe aus dem Material, ohne erneut alle Mandatsangaben abzufragen.
 
@@ -113,3 +115,7 @@ Bei neuen Umsatzunterlagen prüfe Bezugsjahr, Gesellschaft und behaupteten Unter
 Gleiche Behördenantwort, Pflichtmeldung und interne Verteidigungsfassung auf Tatsachenwidersprüche ab. Ein technischer Befund kann in mehreren Dokumenten dieselbe Bedeutung haben, die rechtlichen Schlussfolgerungen bleiben verfahrensbezogen. Begrenze Anlagen auf erforderliche, rechtlich gedeckte Informationen; keine gesamte Personal- oder Kundenakte vorsorglich beifügen. Bei Selbstbelastungsrisiken die konkrete Aussageentscheidung abstimmen, während Frist- und Akteneinsichtsarbeit fortgeführt wird.
 
 Der Abschluss liefert den bestellten Einspruch, die vollständige Begründung oder Meldungsfassung mit tatsächlich belegter Abhilfe. Ungeklärte forensische Reichweite, aktuelle Sonderzuständigkeit oder Quellenlücke gezielt in der separaten Notiz benennen. Kein Versand, kein Anerkenntnis und keine Meldung als erfolgt behaupten, solange nur ein Entwurf vorliegt; Freigabe betrifft die Außenhandlung, nicht die Fertigstellung unabhängiger Textteile.
+
+KI-Prüfung: Trennen Sie die behauptete Datenpanne, die tatsächlichen Empfänger und einen möglichen KI-Systemvorfall. Weder die Speicherung pseudonymisierter Daten noch die Bezeichnung Bias-Test beantwortet Rechtmäßigkeit und Meldeweg allein. Nutzen Sie die fachbezogene Normen- und Fallprüfung in den Referenzen; übertragen Sie Datenschutzurteile und ISO-Nachweise nur innerhalb ihres belegten Gegenstands.
+
+[Normen, technische Nachweise und begrenzte Rechtsprechungsargumente](references/ki-normen-und-fallpruefung.md).

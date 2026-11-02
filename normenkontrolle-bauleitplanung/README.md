@@ -5,7 +5,7 @@
 
 Freistehendes Plugin für die Prüfung und Anfechtung von Bebauungsplänen, Flächennutzungsplänen und örtlichen Bauvorschriften nach Paragraf 47 VwGO vor BayVGH und OVG. Mandatsperspektive Antragstellervertretung.
 
-Dieses Plugin gehört zum Marketplace mit 275 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
+Dieses Plugin gehört zum Marketplace mit 310 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
 
 ## Welche Datei wofür? / Which file should I use?
 
@@ -50,7 +50,7 @@ Bei einem Folgewunsch den bisherigen Aktenstand fortführen. Bereits festgestell
 | Großer Prompt (Werkstatt) | Markdown | [`normenkontrolle-bauleitplanung-werkstatt.md`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=normenkontrolle-bauleitplanung/normenkontrolle-bauleitplanung-werkstatt.md) |
 | Zugeordnete Testakten | PDF / ZIP | [2 zugeordnete Akten](#zugeordnete-testakten) mit Gesamt-PDF, Originaldateien und Einzel-PDFs |
 
-> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 275 Plugins. Wer alle Plugins auf einmal will, nimmt [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip). Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
+> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 310 Plugins. Das Sammelpaket [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip) enthält seinen veröffentlichten Stand, nicht zwingend spätere Einzelpakete. Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
 
 ## Zugeordnete Testakten
 
@@ -62,14 +62,15 @@ Jede Akte ist getrennt als lesbares Gesamt-PDF, ZIP mit Originaldateien und ZIP 
 
 | Akte | Gesamt-PDF | Originaldateien | Einzel-PDFs |
 | --- | --- | --- | --- |
-| [Akte — Bebauungsplan Augsburg-Bahnhofsareal](../testakten/bebauungsplan-augsburg-bahnhofsareal/README.md) | [Gesamt-PDF](../testakten/bebauungsplan-augsburg-bahnhofsareal/gesamt-pdf/bebauungsplan-augsburg-bahnhofsareal_gesamt.pdf) | [`testakte-bebauungsplan-augsburg-bahnhofsareal.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-bebauungsplan-augsburg-bahnhofsareal.zip) | [`testakte-bebauungsplan-augsburg-bahnhofsareal-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-bebauungsplan-augsburg-bahnhofsareal-einzelpdfs.zip) |
-| [Normenkontrolle B-Plan XV-43d „Spreepark Friedrichshain" — Bürgerinitiative Tannengarten gegen Land Berlin](../testakten/normenkontrolle-bplan-spreepark-friedrichshain-buergerinitiative-tannengarten/README.md) | [Gesamt-PDF](../testakten/normenkontrolle-bplan-spreepark-friedrichshain-buergerinitiative-tannengarten/gesamt-pdf/normenkontrolle-bplan-spreepark-friedrichshain-buergerinitiative-tannengarten_gesamt.pdf) | [`testakte-normenkontrolle-bplan-spreepark-friedrichshain-buergerinitiative-tannengarten.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-normenkontrolle-bplan-spreepark-friedrichshain-buergerinitiative-tannengarten.zip) | [`testakte-normenkontrolle-bplan-spreepark-friedrichshain-buergerinitiative-tannengarten-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-normenkontrolle-bplan-spreepark-friedrichshain-buergerinitiative-tannengarten-einzelpdfs.zip) |
+| [Akte — Bebauungsplan Augsburg-Bahnhofsareal](../testakten/bebauungsplan-augsburg-bahnhofsareal/README.md) | [Gesamt-PDF](../testakten/bebauungsplan-augsburg-bahnhofsareal/gesamt-pdf/bebauungsplan-augsburg-bahnhofsareal_gesamt.pdf) | [`testakte-bebauungsplan-augsburg-bahnhofsareal.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-bebauungsplan-augsburg-bahnhofsareal.zip) | [`testakte-bebauungsplan-augsburg-bahnhofsareal-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-bebauungsplan-augsburg-bahnhofsareal-einzelpdfs.zip) |
+| [Normenkontrolle B-Plan XV-43d „Spreepark Friedrichshain" — Bürgerinitiative Tannengarten gegen Land Berlin](../testakten/normenkontrolle-bplan-spreepark-friedrichshain-buergerinitiative-tannengarten/README.md) | [Gesamt-PDF](../testakten/normenkontrolle-bplan-spreepark-friedrichshain-buergerinitiative-tannengarten/gesamt-pdf/normenkontrolle-bplan-spreepark-friedrichshain-buergerinitiative-tannengarten_gesamt.pdf) | [`testakte-normenkontrolle-bplan-spreepark-friedrichshain-buergerinitiative-tannengarten.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-normenkontrolle-bplan-spreepark-friedrichshain-buergerinitiative-tannengarten.zip) | [`testakte-normenkontrolle-bplan-spreepark-friedrichshain-buergerinitiative-tannengarten-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-normenkontrolle-bplan-spreepark-friedrichshain-buergerinitiative-tannengarten-einzelpdfs.zip) |
 
 [Alle Testakten und Fachzuordnungen](../testakten/README.md)
 <!-- END direkt-loslegen (autogen) -->
 
-Wenn du das hier öffnest, willst du einen Bebauungsplan oder städtebaulichen Vertrag auf Festsetzungen und Fehler prüfen.
-Freistehendes Plugin für die Prüfung und gerichtliche Anfechtung von **Bebauungsplänen, Flächennutzungsplänen und örtlichen Bauvorschriften** im Normenkontrollverfahren nach § 47 VwGO vor dem **Bayerischen Verwaltungsgerichtshof (BayVGH)** und anderen Oberverwaltungsgerichten.
+Prüfe einen Bebauungsplan oder eine örtliche Bauvorschrift und arbeite den beauftragten Normenkontrollantrag, Eilantrag oder Prüfvermerk für das zuständige OVG beziehungsweise den VGH aus. Ausgangspunkt sind Planfassung, Bekanntmachung, Betroffenheit und vorhandene Verfahrensunterlagen; frage nur entscheidende Lücken nach.
+
+Ein Flächennutzungsplan ist grundsätzlich kein unmittelbarer Antragsgegenstand nach Paragraf 47 VwGO. Eine besondere Ausschlussentscheidung kann ausnahmsweise gesondert angreifbar sein; daraus folgt keine allgemeine Anfechtbarkeit sämtlicher FNP-Darstellungen. Auch ein städtebaulicher Vertrag wird nicht selbst zum Normenkontrollgegenstand.
 
 ## Installation
 
@@ -124,7 +125,7 @@ Phase D — Verfahren BayVGH/OVG
 | Slug | Beschreibung |
 |---|---|
 | `mandat-erstgespraech-normenkontrolle` | Erstgespräch, Mandantenbetroffenheit, Erfolgsaussichten-Prognose, Kosten |
-| `statthaftigkeit-47-vwgo` | Antragsgegenstand B-Plan/FNP/örtliche Bauvorschrift, Landesrecht im Rang unter Landesgesetz |
+| `statthaftigkeit-47-vwgo` | B-Plan und örtliche Bauvorschrift; FNP nur im begrenzten Ausnahmefall; sonstige untergesetzliche Normen nach Landesrecht |
 | `antragsbefugnis-eigentuemer-nachbar` | § 47 Abs. 2 VwGO Möglichkeitstheorie, Eigentum, abwägungserheblicher Belang, Verbandsklage |
 | `jahresfrist-47-abs-2-vwgo` | Fristlauf ab Bekanntmachung, Wiedereinsetzung, Heilung durch ergänzendes Verfahren |
 
@@ -166,6 +167,8 @@ Phase D — Verfahren BayVGH/OVG
 - `assets/templates/fehleraudit-checkliste.md` — Systematische Prüfreihenfolge formell vor materiell
 
 ## Bedienungshinweis
+
+Quellenabgleich vom 16.10.2026: [Paragraf 47 VwGO](https://www.gesetze-im-internet.de/vwgo/__47.html) und [BVerwG, Urteil vom 31.01.2013, 4 CN 1.12, Leitsätze und Randnummern 9 bis 10](https://www.bverwg.de/310113U4CN1.12.0) wurden im amtlichen Text gelesen. Die Entscheidung begrenzt den analogen Zugang auf die Ausschlusswirkung nach Paragraf 35 Absatz 3 Satz 3 BauGB, nicht auf alle Darstellungen innerhalb einer Konzentrationsfläche. Das ist kein allgemeiner Beleg für heutige Windenergieplanungen: Anwendbarkeit und Übergangsrecht sind für den konkreten Plan gesondert zu prüfen. Andere hier aufgeführte Entscheidungen wurden nicht neu vollverifiziert.
 
 Das Plugin ist freistehend nutzbar und benötigt keine anderen Plugins des Marketplaces. Für umweltrechtliche Querfragen (FFH, saP, UVP) kann das Plugin `umweltrecht` ergänzend geladen werden, für allgemeine Verwaltungsverfahrensfragen das Plugin `verwaltungsrecht`.
 

@@ -5,13 +5,13 @@
 
 Praxisplugin für Solo-Selbstständige in Deutschland: Start, Anmeldung, Steuern, Verträge, Rechnungen, Datenschutz, Statusfeststellung, KSK, Versicherungen, Zahlungsausfall, Krise, Wachstum und Alltag ohne juristische Überforderung.
 
-Dieses Plugin gehört zum Marketplace mit 275 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
+Dieses Plugin gehört zum Marketplace mit 310 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
 
 ## Welche Datei wofür? / Which file should I use?
 
 | Bestandteil | Deutsch | English | Wo? / Where? |
 | --- | --- | --- | --- |
-| Plugin-ZIP | Installiert das vollständige Plugin mit Skills, Referenzen und Hilfsdateien. | Installs the complete plugin with its skills, references and supporting files. | [`solo-selbststaendige-praxis.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/solo-selbststaendige-praxis.zip) |
+| Plugin-ZIP | Installiert das vollständige Plugin mit Skills, Referenzen und Hilfsdateien. | Installs the complete plugin with its skills, references and supporting files. | [`solo-selbststaendige-praxis.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/ki-verordnung-v445.35.2/solo-selbststaendige-praxis.zip) |
 | Skills | Arbeitsabläufe für einzelne Aufgaben. Wähle bei einem klaren Auftrag den passenden Skill ausdrücklich; die automatische Auswahl ist nicht garantiert. Einzeldownloads enthalten nur die jeweilige Markdown-Datei. | Focused task workflows. Select a known skill explicitly; automatic selection is not guaranteed. An individual download contains only that Markdown file. | [Skill-Liste öffnen / Open skill list](../skills-index/solo-selbststaendige-praxis.md) |
 | Werkstatt-Prompt | Ausführliche eigenständige Markdown-Datei für komplexe oder mehrstufige Vorgänge. Sie ist kein Skill und nicht im Plugin-ZIP enthalten. | Detailed standalone Markdown file for complex or multi-step matters. It is not a skill and is not included in the plugin ZIP. | [MD herunterladen / Download MD](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=solo-selbststaendige-praxis/solo-selbststaendige-praxis-werkstatt.md) |
 | Schnellstart / Mini-Prompt | Kompakte eigenständige Markdown-Datei für einen schnellen ersten Arbeitsstand. Sie ist kein Skill und nicht im Plugin-ZIP enthalten. | Compact standalone Markdown file for a fast first work product. It is not a skill and is not included in the plugin ZIP. | [MD herunterladen / Download MD](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=solo-selbststaendige-praxis/solo-selbststaendige-praxis-schnellstart.md) |
@@ -45,12 +45,12 @@ Bei einem Folgewunsch den bisherigen Aktenstand fortführen. Bereits festgestell
 
 | Was | Format | Direkt-Download |
 | --- | --- | --- |
-| Plugin als Komplett-ZIP (Hauptweg) | ZIP | [`solo-selbststaendige-praxis.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/solo-selbststaendige-praxis.zip) |
+| Plugin als Komplett-ZIP (Hauptweg) | ZIP | [`solo-selbststaendige-praxis.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/ki-verordnung-v445.35.2/solo-selbststaendige-praxis.zip) |
 | Kompakter Prompt (Schnellstart) | Markdown | [`solo-selbststaendige-praxis-schnellstart.md`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=solo-selbststaendige-praxis/solo-selbststaendige-praxis-schnellstart.md) |
 | Großer Prompt (Werkstatt) | Markdown | [`solo-selbststaendige-praxis-werkstatt.md`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=solo-selbststaendige-praxis/solo-selbststaendige-praxis-werkstatt.md) |
 | Zugeordnete Testakten | PDF / ZIP | [3 zugeordnete Akten](#zugeordnete-testakten) mit Gesamt-PDF, Originaldateien und Einzel-PDFs |
 
-> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 275 Plugins. Wer alle Plugins auf einmal will, nimmt [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip). Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
+> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 310 Plugins. Das Sammelpaket [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip) enthält seinen veröffentlichten Stand, nicht zwingend spätere Einzelpakete. Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
 
 ## Zugeordnete Testakten
 
@@ -62,9 +62,9 @@ Jede Akte ist getrennt als lesbares Gesamt-PDF, ZIP mit Originaldateien und ZIP 
 
 | Akte | Gesamt-PDF | Originaldateien | Einzel-PDFs |
 | --- | --- | --- | --- |
-| [Luise Falkenberg - Solo-Selbstständigkeit Designstudio Falkensee 2026](../testakten/solo-selbststaendige-designstudio-luise-falkensee-2026/README.md) | [Gesamt-PDF](../testakten/solo-selbststaendige-designstudio-luise-falkensee-2026/gesamt-pdf/solo-selbststaendige-designstudio-luise-falkensee-2026_gesamt.pdf) | [`testakte-solo-selbststaendige-designstudio-luise-falkensee-2026.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-solo-selbststaendige-designstudio-luise-falkensee-2026.zip) | [`testakte-solo-selbststaendige-designstudio-luise-falkensee-2026-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-solo-selbststaendige-designstudio-luise-falkensee-2026-einzelpdfs.zip) |
-| [Steuerrecht: Fahrradwerkstatt, Kassenführung und Privatnutzung in Erfurt](../testakten/steuer-fahrradwerkstatt-kasse-privatnutzung-erfurt/README.md) | [Gesamt-PDF](../testakten/steuer-fahrradwerkstatt-kasse-privatnutzung-erfurt/gesamt-pdf/steuer-fahrradwerkstatt-kasse-privatnutzung-erfurt_gesamt.pdf) | [`testakte-steuer-fahrradwerkstatt-kasse-privatnutzung-erfurt.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-steuer-fahrradwerkstatt-kasse-privatnutzung-erfurt.zip) | [`testakte-steuer-fahrradwerkstatt-kasse-privatnutzung-erfurt-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-steuer-fahrradwerkstatt-kasse-privatnutzung-erfurt-einzelpdfs.zip) |
-| [Steuerrecht: Ingenieurbüro zwischen Planung und Produktgeschäft in Koblenz](../testakten/steuer-ingenieurbuero-freiberuf-gewerbe-koblenz/README.md) | [Gesamt-PDF](../testakten/steuer-ingenieurbuero-freiberuf-gewerbe-koblenz/gesamt-pdf/steuer-ingenieurbuero-freiberuf-gewerbe-koblenz_gesamt.pdf) | [`testakte-steuer-ingenieurbuero-freiberuf-gewerbe-koblenz.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-steuer-ingenieurbuero-freiberuf-gewerbe-koblenz.zip) | [`testakte-steuer-ingenieurbuero-freiberuf-gewerbe-koblenz-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-steuer-ingenieurbuero-freiberuf-gewerbe-koblenz-einzelpdfs.zip) |
+| [Luise Falkenberg - Solo-Selbstständigkeit Designstudio Falkensee 2026](../testakten/solo-selbststaendige-designstudio-luise-falkensee-2026/README.md) | [Gesamt-PDF](../testakten/solo-selbststaendige-designstudio-luise-falkensee-2026/gesamt-pdf/solo-selbststaendige-designstudio-luise-falkensee-2026_gesamt.pdf) | [`testakte-solo-selbststaendige-designstudio-luise-falkensee-2026.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-solo-selbststaendige-designstudio-luise-falkensee-2026.zip) | [`testakte-solo-selbststaendige-designstudio-luise-falkensee-2026-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-solo-selbststaendige-designstudio-luise-falkensee-2026-einzelpdfs.zip) |
+| [Steuerrecht: Fahrradwerkstatt, Kassenführung und Privatnutzung in Erfurt](../testakten/steuer-fahrradwerkstatt-kasse-privatnutzung-erfurt/README.md) | [Gesamt-PDF](../testakten/steuer-fahrradwerkstatt-kasse-privatnutzung-erfurt/gesamt-pdf/steuer-fahrradwerkstatt-kasse-privatnutzung-erfurt_gesamt.pdf) | [`testakte-steuer-fahrradwerkstatt-kasse-privatnutzung-erfurt.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-steuer-fahrradwerkstatt-kasse-privatnutzung-erfurt.zip) | [`testakte-steuer-fahrradwerkstatt-kasse-privatnutzung-erfurt-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-steuer-fahrradwerkstatt-kasse-privatnutzung-erfurt-einzelpdfs.zip) |
+| [Steuerrecht: Ingenieurbüro zwischen Planung und Produktgeschäft in Koblenz](../testakten/steuer-ingenieurbuero-freiberuf-gewerbe-koblenz/README.md) | [Gesamt-PDF](../testakten/steuer-ingenieurbuero-freiberuf-gewerbe-koblenz/gesamt-pdf/steuer-ingenieurbuero-freiberuf-gewerbe-koblenz_gesamt.pdf) | [`testakte-steuer-ingenieurbuero-freiberuf-gewerbe-koblenz.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-steuer-ingenieurbuero-freiberuf-gewerbe-koblenz.zip) | [`testakte-steuer-ingenieurbuero-freiberuf-gewerbe-koblenz-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-steuer-ingenieurbuero-freiberuf-gewerbe-koblenz-einzelpdfs.zip) |
 
 [Alle Testakten und Fachzuordnungen](../testakten/README.md)
 <!-- END direkt-loslegen (autogen) -->
@@ -72,11 +72,11 @@ Jede Akte ist getrennt als lesbares Gesamt-PDF, ZIP mit Originaldateien und ZIP 
 Wenn du das hier öffnest, willst du deinen Fall strukturieren, die einschlägigen Normen prüfen und ein verwertbares Arbeitsprodukt erhalten.
 Ein Alltags-Cockpit für Menschen, die alleine selbstständig arbeiten und trotzdem mit Finanzamt, Kunden, Krankenkasse, DRV, KSK, Datenschutz, Verträgen, Rechnungen, Mahnungen und dem eigenen Kontostand klarkommen müssen.
 
-Das Plugin ist bewusst praktisch: Es fragt zuerst, ob die Person Anfängerin/Anfänger ist, ob es Haupt- oder Nebenerwerb ist, ob Gewerbe oder Freiberuf in Betracht kommt, ob gerade eine Frist läuft und ob ein Dokument vorliegt. Danach erzeugt es keine Wolke aus Ratschlägen, sondern ein konkretes Ergebnis: Mail, Checkliste, Rechnungstext, Vertragsbaustein, Statusmatrix, Fristenlog oder Entscheidungsmemo.
+Das Plugin arbeitet zuerst mit dem konkreten Auftrag und vorhandenen Dokumenten. Haupt- oder Nebenerwerb, Gewerbe oder Freiberuf sowie eine laufende Frist werden nur nachgefragt, soweit die Antwort für den nächsten Schritt fehlt. Ergebnis ist beispielsweise eine Mail, ein Rechnungstext, ein Vertragsbaustein, eine Statusprüfung oder ein Entscheidungsmemo.
 
 ## Kaltstart
 
-Starte mit `solo-allgemeiner-kaltstart`. Lade, wenn vorhanden, Behördenbriefe, Rechnungen, Vertragsentwürfe, E-Mails, Screenshots von Plattformen, ELSTER-/KSK-/DRV-Schreiben und eine einfache Umsatz-/Kostenübersicht hoch. Das Plugin sortiert erst die Lage und schlägt dann die passenden Spezialskills vor.
+Für eine offene Ausgangslage starte mit `kaltstart-routing`. Liegt der Auftrag schon fest, wähle direkt den passenden Fachskill und gib die verfügbaren Briefe, Rechnungen oder Verträge dazu. Fehlende Angaben werden gezielt ergänzt; Antworten führen denselben Entwurf fort, statt die Aufnahme neu zu beginnen.
 
 ## Typische Fragen
 
@@ -90,6 +90,8 @@ Starte mit `solo-allgemeiner-kaltstart`. Lade, wenn vorhanden, Behördenbriefe, 
 - Wie organisiere ich Datenschutz, Website, Newsletter und KI-Tools klein, aber ordentlich?
 
 ## Amtliche Startquellen
+
+Gezielte Aktualitätsprüfung am 16.10.2026 für Lehrtätigkeiten: [Paragraf 127 SGB IV](https://www.gesetze-im-internet.de/sgb_4/__127.html) wurde vollständig gelesen. Die Übergangsregel bis Ende 2027 setzt insbesondere die gemeinsame Annahme der Selbständigkeit und die erforderliche Zustimmung voraus. Sie erklärt Unterricht nicht generell zur selbständigen Tätigkeit und beseitigt nicht sämtliche Rentenversicherungs- oder KSVG-Pflichten. Andere Steuergrenzen, Förderbedingungen und Berufsgruppen wurden dabei nicht neu verifiziert.
 
 - GewO § 14 Gewerbeanzeige
 - ELSTER Fragebogen steuerliche Erfassung Einzelunternehmen
@@ -339,3 +341,11 @@ English: Complete list of all 202 skills in this plugin. Both links in each row 
 | [`zahlungsziel-und-skonto`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=solo-selbststaendige-praxis/skills/zahlungsziel-und-skonto/SKILL.md) | Für Rechnung und Umsatzsteuer: Formuliert zahlungsziel: ordnet Norm, Beweislast und Gegenargument; Ergebnis: Prüfprodukt mit Risiko und nächstem Schritt. | [MD herunterladen / Download MD](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=solo-selbststaendige-praxis/skills/zahlungsziel-und-skonto/SKILL.md) |
 
 <!-- END SKILLS-OVERVIEW (auto-generated) -->
+
+<a id="fachliche-ki-prüfung"></a>
+
+## 1. Fachliche KI-Prüfung
+
+[Normen, technische Nachweise, Rechtsprechungsgrenzen und Übungsakte](references/ki-normen-und-fallpruefung.md): Trennen Sie private Nutzung, betriebliche Dokumentenhilfe und öffentlich erreichbaren Kundenbot. Prüfen Sie die tatsächlich angebotene Leistung; geringe Betriebsgröße ist keine allgemeine Ausnahme.
+
+Aktuelle KI-Fachvertiefung: Komponentenfassung 445.35.2 im [KI-Verordnungsrelease](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/tag/ki-verordnung-v445.35.2). Ältere Sammelarchive enthalten diese Ergänzung noch nicht.

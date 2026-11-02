@@ -5,13 +5,13 @@
 
 Produkthaftung und Produktrecht: Produktsicherheit, GPSR, ProdHaftG, deliktische Produzentenhaftung, Right to Repair, Software-/OTA-Updates, digitale Produktlebenszyklen, Rückruf, Marktüberwachung und Launch-Review.
 
-Dieses Plugin gehört zum Marketplace mit 275 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
+Dieses Plugin gehört zum Marketplace mit 310 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
 
 ## Welche Datei wofür? / Which file should I use?
 
 | Bestandteil | Deutsch | English | Wo? / Where? |
 | --- | --- | --- | --- |
-| Plugin-ZIP | Installiert das vollständige Plugin mit Skills, Referenzen und Hilfsdateien. | Installs the complete plugin with its skills, references and supporting files. | [`produktrecht.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/produktrecht.zip) |
+| Plugin-ZIP | Installiert das vollständige Plugin mit Skills, Referenzen und Hilfsdateien. | Installs the complete plugin with its skills, references and supporting files. | [`produktrecht.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/ki-verordnung-v445.35.2/produktrecht.zip) |
 | Skills | Arbeitsabläufe für einzelne Aufgaben. Wähle bei einem klaren Auftrag den passenden Skill ausdrücklich; die automatische Auswahl ist nicht garantiert. Einzeldownloads enthalten nur die jeweilige Markdown-Datei. | Focused task workflows. Select a known skill explicitly; automatic selection is not guaranteed. An individual download contains only that Markdown file. | [Skill-Liste öffnen / Open skill list](../skills-index/produktrecht.md) |
 | Werkstatt-Prompt | Ausführliche eigenständige Markdown-Datei für komplexe oder mehrstufige Vorgänge. Sie ist kein Skill und nicht im Plugin-ZIP enthalten. | Detailed standalone Markdown file for complex or multi-step matters. It is not a skill and is not included in the plugin ZIP. | [MD herunterladen / Download MD](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=produktrecht/produktrecht-werkstatt.md) |
 | Schnellstart / Mini-Prompt | Kompakte eigenständige Markdown-Datei für einen schnellen ersten Arbeitsstand. Sie ist kein Skill und nicht im Plugin-ZIP enthalten. | Compact standalone Markdown file for a fast first work product. It is not a skill and is not included in the plugin ZIP. | [MD herunterladen / Download MD](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=produktrecht/produktrecht-schnellstart.md) |
@@ -45,12 +45,12 @@ Bei einem Folgewunsch den bisherigen Aktenstand fortführen. Bereits festgestell
 
 | Was | Format | Direkt-Download |
 | --- | --- | --- |
-| Plugin als Komplett-ZIP (Hauptweg) | ZIP | [`produktrecht.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/produktrecht.zip) |
+| Plugin als Komplett-ZIP (Hauptweg) | ZIP | [`produktrecht.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/ki-verordnung-v445.35.2/produktrecht.zip) |
 | Kompakter Prompt (Schnellstart) | Markdown | [`produktrecht-schnellstart.md`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=produktrecht/produktrecht-schnellstart.md) |
 | Großer Prompt (Werkstatt) | Markdown | [`produktrecht-werkstatt.md`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=produktrecht/produktrecht-werkstatt.md) |
 | Zugeordnete Testakten | PDF / ZIP | [7 zugeordnete Akten](#zugeordnete-testakten) mit Gesamt-PDF, Originaldateien und Einzel-PDFs |
 
-> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 275 Plugins. Wer alle Plugins auf einmal will, nimmt [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip). Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
+> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 310 Plugins. Das Sammelpaket [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip) enthält seinen veröffentlichten Stand, nicht zwingend spätere Einzelpakete. Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
 
 ## Zugeordnete Testakten
 
@@ -62,13 +62,13 @@ Jede Akte ist getrennt als lesbares Gesamt-PDF, ZIP mit Originaldateien und ZIP 
 
 | Akte | Gesamt-PDF | Originaldateien | Einzel-PDFs |
 | --- | --- | --- | --- |
-| [BGB BT — Smart-Kühlschrank, digitale Elemente und Reparaturblockade](../testakten/bgb-bt-smart-kuehlschrank-digital-repair-koeln/README.md) | [Gesamt-PDF](../testakten/bgb-bt-smart-kuehlschrank-digital-repair-koeln/gesamt-pdf/bgb-bt-smart-kuehlschrank-digital-repair-koeln_gesamt.pdf) | [`testakte-bgb-bt-smart-kuehlschrank-digital-repair-koeln.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-bgb-bt-smart-kuehlschrank-digital-repair-koeln.zip) | [`testakte-bgb-bt-smart-kuehlschrank-digital-repair-koeln-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-bgb-bt-smart-kuehlschrank-digital-repair-koeln-einzelpdfs.zip) |
-| [BGB: Mähroboter, Cloud-Zwang und fehlerhaftes Update in Münster](../testakten/bgb-maehroboter-cloud-update-muenster/README.md) | [Gesamt-PDF](../testakten/bgb-maehroboter-cloud-update-muenster/gesamt-pdf/bgb-maehroboter-cloud-update-muenster_gesamt.pdf) | [`testakte-bgb-maehroboter-cloud-update-muenster.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-bgb-maehroboter-cloud-update-muenster.zip) | [`testakte-bgb-maehroboter-cloud-update-muenster-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-bgb-maehroboter-cloud-update-muenster-einzelpdfs.zip) |
-| [Kaufrecht — Pflegebett, Sensorik und Cloud-Abo in Nürnberg](../testakten/kaufrecht-pflegebett-sensorik-cloud-abo-nuernberg/README.md) | [Gesamt-PDF](../testakten/kaufrecht-pflegebett-sensorik-cloud-abo-nuernberg/gesamt-pdf/kaufrecht-pflegebett-sensorik-cloud-abo-nuernberg_gesamt.pdf) | [`testakte-kaufrecht-pflegebett-sensorik-cloud-abo-nuernberg.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-kaufrecht-pflegebett-sensorik-cloud-abo-nuernberg.zip) | [`testakte-kaufrecht-pflegebett-sensorik-cloud-abo-nuernberg-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-kaufrecht-pflegebett-sensorik-cloud-abo-nuernberg-einzelpdfs.zip) |
-| [Kaufrecht — Smartwatch, Gesundheitsabo und Updatefehler in Hannover](../testakten/kaufrecht-smartwatch-gesundheitsabo-update-hannover/README.md) | [Gesamt-PDF](../testakten/kaufrecht-smartwatch-gesundheitsabo-update-hannover/gesamt-pdf/kaufrecht-smartwatch-gesundheitsabo-update-hannover_gesamt.pdf) | [`testakte-kaufrecht-smartwatch-gesundheitsabo-update-hannover.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-kaufrecht-smartwatch-gesundheitsabo-update-hannover.zip) | [`testakte-kaufrecht-smartwatch-gesundheitsabo-update-hannover-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-kaufrecht-smartwatch-gesundheitsabo-update-hannover-einzelpdfs.zip) |
-| [Kaufrecht — Wallbox, Firmware und Lastmanagement in Essen](../testakten/kaufrecht-wallbox-firmware-lastmanagement-essen/README.md) | [Gesamt-PDF](../testakten/kaufrecht-wallbox-firmware-lastmanagement-essen/gesamt-pdf/kaufrecht-wallbox-firmware-lastmanagement-essen_gesamt.pdf) | [`testakte-kaufrecht-wallbox-firmware-lastmanagement-essen.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-kaufrecht-wallbox-firmware-lastmanagement-essen.zip) | [`testakte-kaufrecht-wallbox-firmware-lastmanagement-essen-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-kaufrecht-wallbox-firmware-lastmanagement-essen-einzelpdfs.zip) |
-| [Projekt Isarlicht — Kernfusion und Transrapid am Starnberger See](../testakten/kernfusion-transrapid-starnberger-see/README.md) | [Gesamt-PDF](../testakten/kernfusion-transrapid-starnberger-see/gesamt-pdf/kernfusion-transrapid-starnberger-see_gesamt.pdf) | [`testakte-kernfusion-transrapid-starnberger-see.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-kernfusion-transrapid-starnberger-see.zip) | [`testakte-kernfusion-transrapid-starnberger-see-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-kernfusion-transrapid-starnberger-see-einzelpdfs.zip) |
-| [Produkthaftung Frischwind Mobility GmbH — Akku-Brände E-Bike Wind-X7, Produktrückruf, Strafverfahren](../testakten/produkthaftung-akku-brand-e-bike-frischwind-mobility-erfurt/README.md) | [Gesamt-PDF](../testakten/produkthaftung-akku-brand-e-bike-frischwind-mobility-erfurt/gesamt-pdf/produkthaftung-akku-brand-e-bike-frischwind-mobility-erfurt_gesamt.pdf) | [`testakte-produkthaftung-akku-brand-e-bike-frischwind-mobility-erfurt.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-produkthaftung-akku-brand-e-bike-frischwind-mobility-erfurt.zip) | [`testakte-produkthaftung-akku-brand-e-bike-frischwind-mobility-erfurt-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.31.1/testakte-produkthaftung-akku-brand-e-bike-frischwind-mobility-erfurt-einzelpdfs.zip) |
+| [BGB BT — Smart-Kühlschrank, digitale Elemente und Reparaturblockade](../testakten/bgb-bt-smart-kuehlschrank-digital-repair-koeln/README.md) | [Gesamt-PDF](../testakten/bgb-bt-smart-kuehlschrank-digital-repair-koeln/gesamt-pdf/bgb-bt-smart-kuehlschrank-digital-repair-koeln_gesamt.pdf) | [`testakte-bgb-bt-smart-kuehlschrank-digital-repair-koeln.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-bgb-bt-smart-kuehlschrank-digital-repair-koeln.zip) | [`testakte-bgb-bt-smart-kuehlschrank-digital-repair-koeln-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-bgb-bt-smart-kuehlschrank-digital-repair-koeln-einzelpdfs.zip) |
+| [BGB: Mähroboter, Cloud-Zwang und fehlerhaftes Update in Münster](../testakten/bgb-maehroboter-cloud-update-muenster/README.md) | [Gesamt-PDF](../testakten/bgb-maehroboter-cloud-update-muenster/gesamt-pdf/bgb-maehroboter-cloud-update-muenster_gesamt.pdf) | [`testakte-bgb-maehroboter-cloud-update-muenster.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-bgb-maehroboter-cloud-update-muenster.zip) | [`testakte-bgb-maehroboter-cloud-update-muenster-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-bgb-maehroboter-cloud-update-muenster-einzelpdfs.zip) |
+| [Kaufrecht — Pflegebett, Sensorik und Cloud-Abo in Nürnberg](../testakten/kaufrecht-pflegebett-sensorik-cloud-abo-nuernberg/README.md) | [Gesamt-PDF](../testakten/kaufrecht-pflegebett-sensorik-cloud-abo-nuernberg/gesamt-pdf/kaufrecht-pflegebett-sensorik-cloud-abo-nuernberg_gesamt.pdf) | [`testakte-kaufrecht-pflegebett-sensorik-cloud-abo-nuernberg.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-kaufrecht-pflegebett-sensorik-cloud-abo-nuernberg.zip) | [`testakte-kaufrecht-pflegebett-sensorik-cloud-abo-nuernberg-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-kaufrecht-pflegebett-sensorik-cloud-abo-nuernberg-einzelpdfs.zip) |
+| [Kaufrecht — Smartwatch, Gesundheitsabo und Updatefehler in Hannover](../testakten/kaufrecht-smartwatch-gesundheitsabo-update-hannover/README.md) | [Gesamt-PDF](../testakten/kaufrecht-smartwatch-gesundheitsabo-update-hannover/gesamt-pdf/kaufrecht-smartwatch-gesundheitsabo-update-hannover_gesamt.pdf) | [`testakte-kaufrecht-smartwatch-gesundheitsabo-update-hannover.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-kaufrecht-smartwatch-gesundheitsabo-update-hannover.zip) | [`testakte-kaufrecht-smartwatch-gesundheitsabo-update-hannover-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-kaufrecht-smartwatch-gesundheitsabo-update-hannover-einzelpdfs.zip) |
+| [Kaufrecht — Wallbox, Firmware und Lastmanagement in Essen](../testakten/kaufrecht-wallbox-firmware-lastmanagement-essen/README.md) | [Gesamt-PDF](../testakten/kaufrecht-wallbox-firmware-lastmanagement-essen/gesamt-pdf/kaufrecht-wallbox-firmware-lastmanagement-essen_gesamt.pdf) | [`testakte-kaufrecht-wallbox-firmware-lastmanagement-essen.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-kaufrecht-wallbox-firmware-lastmanagement-essen.zip) | [`testakte-kaufrecht-wallbox-firmware-lastmanagement-essen-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-kaufrecht-wallbox-firmware-lastmanagement-essen-einzelpdfs.zip) |
+| [Projekt Isarlicht — Kernfusion und Transrapid am Starnberger See](../testakten/kernfusion-transrapid-starnberger-see/README.md) | [Gesamt-PDF](../testakten/kernfusion-transrapid-starnberger-see/gesamt-pdf/kernfusion-transrapid-starnberger-see_gesamt.pdf) | [`testakte-kernfusion-transrapid-starnberger-see.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-kernfusion-transrapid-starnberger-see.zip) | [`testakte-kernfusion-transrapid-starnberger-see-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-kernfusion-transrapid-starnberger-see-einzelpdfs.zip) |
+| [Produkthaftung Frischwind Mobility GmbH — Akku-Brände E-Bike Wind-X7, Produktrückruf, Strafverfahren](../testakten/produkthaftung-akku-brand-e-bike-frischwind-mobility-erfurt/README.md) | [Gesamt-PDF](../testakten/produkthaftung-akku-brand-e-bike-frischwind-mobility-erfurt/gesamt-pdf/produkthaftung-akku-brand-e-bike-frischwind-mobility-erfurt_gesamt.pdf) | [`testakte-produkthaftung-akku-brand-e-bike-frischwind-mobility-erfurt.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-produkthaftung-akku-brand-e-bike-frischwind-mobility-erfurt.zip) | [`testakte-produkthaftung-akku-brand-e-bike-frischwind-mobility-erfurt-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/akten-v445.35.3/testakte-produkthaftung-akku-brand-e-bike-frischwind-mobility-erfurt-einzelpdfs.zip) |
 
 [Alle Testakten und Fachzuordnungen](../testakten/README.md)
 <!-- END direkt-loslegen (autogen) -->
@@ -92,7 +92,7 @@ Es trennt sauber zwischen Produktsicherheit/Behördenpflichten, verschuldensunab
 
 ## Erster Start: das Kaltstart-Interview
 
-Verbindet sich mit Ihrem Launch-Tracker (Jira/Linear), liest zehn vergangene Launch-Reviews, lernt was Sie tatsächlich blockieren vs. durchwinken. Erstellt eine Risikokalibrierungstabelle, auf die jeder andere Skill zurückgreift.
+Das optionale Interview richtet ein Praxisprofil für wiederkehrende Produktprüfungen ein. Vorhandene Launch-Reviews können dafür ausgewertet werden, wenn sie bereitgestellt wurden oder der Zugriff auf einen verbundenen Tracker erlaubt ist. Bei einem konkreten Prüfauftrag beginnt die Arbeit direkt mit dem Produktmaterial; ein Profil, zehn frühere Reviews oder eine neue Verbindung sind keine Voraussetzung.
 
 Ihre Konfiguration wird unter `~/.claude/plugins/config/claude-fuer-deutsches-recht/produktrecht/CLAUDE.md` gespeichert und überlebt Plugin-Updates.
 
@@ -128,7 +128,7 @@ Ihre Konfiguration wird unter `~/.claude/plugins/config/claude-fuer-deutsches-re
 
 ## Interaktive Befehle vs. geplante Agenten
 
-Die obigen Befehle laufen bei Aufruf – für laufende Arbeit an einem Mandat. Die Agenten unten laufen auf einem Zeitplan – für das, was sich bewegt während Sie nicht hinschauen:
+Die obigen Befehle laufen bei Aufruf. Eine wiederkehrende Überwachung setzt dagegen einen gesondert eingerichteten und freigegebenen Zeitplan sowie tatsächlich verfügbare Datenzugriffe voraus; die Installation allein startet keinen Hintergrundlauf. Die folgende Tabelle beschreibt den vorgesehenen Einsatz:
 
 | Agent | Was wird überwacht | Standard-Takt |
 |---|---|---|
@@ -136,7 +136,7 @@ Die obigen Befehle laufen bei Aufruf – für laufende Arbeit an einem Mandat. D
 
 ## Integrationen
 
-**Verbinden Sie zuerst ein Recherche-Tool – die Zitatschranken hängen davon ab.** Ohne eines wird jede Quellenangabe als `[prüfen]` markiert und der Prüfvermerk über jeder Ausgabe hält fest, dass Quellen nicht verifiziert wurden. Skills arbeiten beides; ein Recherche-Tool verschiebt Verifikationsarbeit von Ihrer Schulter.
+Maßgeblich ist die tatsächlich gelesene Quelle, nicht die bloße Verbindung eines Recherchewerkzeugs. Bereitgestellte Originaltexte können ebenso geprüft werden wie abrufbare amtliche Quellen. Modellwissen, Suchtreffer und ungelesene Fundstellen bleiben `[prüfen]`; der Prüfvermerk nennt Abruf, gelesene Passage und Grenzen. Fehlender Recherchezugang verhindert nicht die Arbeit am vorhandenen Produktmaterial.
 
 Ausgeliefert mit in `.mcp.json` konfigurierten Konnektoren:
 
@@ -146,9 +146,11 @@ Ausgeliefert mit in `.mcp.json` konfigurierten Konnektoren:
 - **Atlassian** – Jira-Issues und Confluence-Seiten
 - **Asana** – Aufgaben und Projekt-Tracking
 
-Mit verbundenem Tracker: Kaltstart liest Launch-Historie, launch-prüfung liest Ticket-Kontext, markteinführungs-monitor-Agent überwacht den Kalender.
+Ein freigegebener Tracker kann Launch-Historie und Ticket-Kontext liefern. Kalenderüberwachung braucht zusätzlich einen eingerichteten Zeitplan; ohne Zugriff wird mit bereitgestelltem Material gearbeitet.
 
 ## Schnellstart
+
+Die Profilerstellung ist optional. Für eine konkrete Frage oder einen vorhandenen Prüfauftrag kann unmittelbar einer der nachfolgenden Fachbefehle gewählt werden.
 
 ```
 /produktrecht:kaltstart-interview
@@ -177,7 +179,7 @@ Ihr Praxisprofil unter `~/.claude/plugins/config/claude-fuer-deutsches-recht/pro
 - **UWG** (§§ 3, 5, 5a, 5b, 7 – unlautere Werbung, Irreführung, Belästigung)
 - **PAngV 2022** (Preisangabenpflichten, Grundpreis § 4, Streichpreise § 11)
 - **BGB §§ 305 ff.** (AGB-Kontrolle, Einbeziehung, Inhaltskontrolle)
-- **DDG** (vormals TMG – Impressumspflicht §§ 5, 6, Haftung §§ 7 ff.)
+- **DDG** (Informationspflichten für digitale Dienste; eine frühere TMG-Haftungsprüfung nicht allein durch Austausch der Gesetzesabkürzung fortschreiben)
 - **TDDDG** (Cookie-Einwilligung, § 25 TDDDG)
 - **ProdHaftG / § 823 BGB** (verschuldensunabhängige Produkthaftung und deliktische Produzentenhaftung)
 - **ProdSG / GPSR VO (EU) 2023/988** (Produktsicherheit, Marktüberwachung, Rückverfolgbarkeit, Safety Business Gateway)
@@ -308,3 +310,11 @@ English: Complete list of all 70 skills in this plugin. Both links in each row d
 | [`workflow-unterlagen-lueckenliste`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=produktrecht/skills/workflow-unterlagen-lueckenliste/SKILL.md) | Für Unterlagen- und Lückenliste: ordnet Akte, Belege und Lücken; Ergebnis: Dokumentenmatrix mit Nachforderungsliste. Fachgebiet: Produkthaftung und Produktrecht. | [MD herunterladen / Download MD](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=produktrecht/skills/workflow-unterlagen-lueckenliste/SKILL.md) |
 
 <!-- END SKILLS-OVERVIEW (auto-generated) -->
+
+<a id="fachliche-ki-prüfung"></a>
+
+## 1. Fachliche KI-Prüfung
+
+[Normen, technische Nachweise, Rechtsprechungsgrenzen und Übungsakte](references/ki-normen-und-fallpruefung.md): Bestimmen Sie Produktrechtsakt, Sicherheitsfunktion und vorgeschriebenes Bewertungsverfahren. Ein CE-Zeichen nach einem Produktrechtsakt darf nicht ohne Prüfung als vollständiger Nachweis aller KI-Systemanforderungen erscheinen.
+
+Aktuelle KI-Fachvertiefung: Komponentenfassung 445.35.2 im [KI-Verordnungsrelease](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/tag/ki-verordnung-v445.35.2). Ältere Sammelarchive enthalten diese Ergänzung noch nicht.

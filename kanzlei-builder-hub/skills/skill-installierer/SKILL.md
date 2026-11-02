@@ -46,7 +46,7 @@ Dies dient zugleich der Einhaltung kanzleiinterner Informationssicherheitspflich
 - **§ 203 StGB** — Verletzung von Privatgeheimnissen; ein kompromittierter Skill kann Berufsgeheimnisse exfiltrieren.
 - **§ 50 BRAO** — Pflicht zur Aktenführung; Installationsprotokoll (`installations-protokoll.yaml`) ist Teil des Nachweises ordnungsgemäßer Kanzleiorganisation.
 - **Art. 32 DSGVO** — Pflicht zu technisch-organisatorischen Maßnahmen; Prüfung von Drittanbieter-Software vor Einsatz in mandatsbezogenen Prozessen.
-- **AI Act Art. 26** (Deployer-Pflichten, Hochrisiko-KI) — Kanzleien als Deployer von Hochrisiko-KI-Systemen haben Sorgfaltspflichten bei der Inbetriebnahme.
+- **Artikel 26 KI-Verordnung:** Zuerst einen erfassten Hochrisiko-Betrieb und zeitliche Anwendung begründen. Absatz 1 betrifft geeignete Maßnahmen zur Nutzung nach Betriebsanleitung, Absatz 2 die beauftragte menschliche Aufsicht, Absatz 5 Überwachung und gegebenenfalls Aussetzung/Information, Absatz 6 kontrollierte Logs. Kein allgemeines gesetzliches Installations- oder Deinstallationsprotokoll aus Artikel 26 erfinden. Interne Nachweise als Organisationsmaßnahme kennzeichnen. [amtlicher Text, geprüft 09.10.2026](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727)
 - **§ 11 BRAO i. V. m. BORA** — Berufsrechtliche Grundsätze für den Einsatz externer Dienstleister und technischer Hilfsmittel in der Kanzlei.
 
 ### Quellenregel
@@ -230,3 +230,4 @@ Hinweis: Dieser Skill ersetzt keine anwaltliche Beratung im konkreten Einzelfall
 ---
 
 > Quellenregel: Entscheidungen nur nach Prüfung einer amtlichen oder frei zugänglichen Quelle mit Gericht, Entscheidungsform, Datum, Aktenzeichen und tragender Aussage ausgeben.
+Für den KI-bezogenen Teil dieses Arbeitsschritts gilt die [fachbezogene Normen- und Fallprüfung](../../references/ki-normen-und-fallpruefung.md). Legen Sie für jeden Baustein fest, welche Daten er lesen, verändern und versenden darf. Prüfen Sie die tatsächliche Funktion und die nach außen behauptete Leistung; ein Agentenetikett ersetzt keine Einordnung. Dokumentieren Sie den Gegenbeleg und übernehmen Sie nur die tatsächlich tragfähige Rechtsfolge in das bestellte Arbeitsprodukt.

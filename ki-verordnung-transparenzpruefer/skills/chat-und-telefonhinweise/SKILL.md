@@ -32,7 +32,17 @@ Bei Agentenkommunikation künstlichen Gesprächspartner, tatsächlichen Auftragg
 
 Wenn die Nachricht eine erhebliche automatische Entscheidung mitteilt, Entscheidungskette und Artikel 22 zusätzlich prüfen. Der Hinweis „automatisch erstellt“ legitimiert keine unzulässige Ablehnung. Liefere neben dem Kanalhinweis nur die für diesen Fall erforderliche Dateninformation oder gezielte Nachforderung, keinen pauschalen Datenschutztext.
 
+Ein Agent ist keine eigene gesetzliche Risikokategorie. Prüfe tatsächliche Interaktion und zusätzliche Entscheidungsfunktionen. Ein ISO-Zertifikat belegt weder einen hörbaren Ersthinweis noch die tatsächliche menschliche Kontrolle vor Versand.
+
+### 3.2. Offensichtlichkeit vor Beginn und Ausnahme je Absatz prüfen
+
+Beurteilen Sie die Ausnahme nach Artikel 50 Absatz 1 aus dem Kontext, der beim Beginn der Interaktion bereits erkennbar ist. Erst später auftretende Fehler oder die spätere Antwort auf „Sind Sie KI?“ begründen keine rückwirkende Offensichtlichkeit. Ein angekündigter Wechsel von Mensch zu KI braucht eine eigenständige Betrachtung des neuen Kontakts. Halten Sie Wahrnehmung, Zielgruppe und Zeitpunkt im Abnahmevermerk fest.
+
+Die Strafverfolgungsausnahme des Absatzes 1 verlangt gesetzliche Zulassung und geeignete Schutzvorkehrungen. Ihre Rückausnahme greift, wenn das System der Öffentlichkeit zur Anzeige einer Straftat zur Verfügung steht. Diese Rückausnahme nicht aus anderen Absätzen übernehmen oder dort hineinlesen. Ein öffentliches polizeiliches Anzeigenportal ist deshalb ein anderer Fall als eine gesetzlich zugelassene verdeckte Interaktion; beide brauchen ihren eigenen begründeten Vermerk.
+
 ## 4. Quellenpflicht
+
+[Amtlicher Rechtsstandabgleich vom 9. Oktober 2026](../../references/rechtsstand-2026-10-09.md).
 
 Artikel 50 Absätze 1 und 5; [Rechtsstand](../../references/rechtsstand-artikel-50.md), Abschnitte 2, 3.1 und 3.5, sowie [Zitierweise](../../references/zitierweise.md). Anbieterpflicht, freiwillige Serviceinformation und Datenschutztext getrennt halten.
 
@@ -44,6 +54,8 @@ Ausformulierungspflicht: Endprodukte bestehen aus vollständigen, ausformulierte
 
 Einsetzbarer Wortlaut und knapp begründete Einbau- und Abnahmeanweisung in vollständigen Sätzen. Gewünschte DOCX-Ausgabe in Times New Roman 11 pt mit dezimaler Gliederung. Kein umfassendes Compliance-Handbuch, wenn nur die Begrüßung bestellt ist. Konfiguration oder Veröffentlichung erst nach ausdrücklichem Auftrag ausführen.
 
-## 6. Beispiel
+## 6. Beispiele
 
 Ein Anrufer fragt nach einem Termin, weil er „Lena“ für eine Mitarbeiterin hält. Erstelle eine neue Eröffnung und beschreibe die nötige Änderung vor Gesprächsbeginn. Eine Erläuterung erst auf die Nachfrage „Sind Sie ein Mensch?“ ist keine geeignete Erstinformation.
+
+Prüfen Sie die begründeten Fallvarianten in [Testanker 1 und 5](../../references/testanker.md).

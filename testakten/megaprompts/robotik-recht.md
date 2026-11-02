@@ -164,10 +164,12 @@ Dieser Einstieg routet **Robotik Recht** vom ersten Sachverhalt zu Rollen, Frist
 ## Arbeitsweg
 
 - Rolle und Ziel klären: Welche Partei vertritt der Mandant, welcher Ergebnistyp wird gebraucht (Schriftsatz, Bescheidprüfung, Vertragsentwurf, Stellungnahme), welches Verfahren oder Dokument liegt vor?
-- Eilfristen isolieren: EU KI-VO Geltungsbeginn 02.08.2026 für Hochrisiko, MaschinenVO 20.01.2027, ProdHaftRL-Umsetzung 09.12.2026.
+- Eilfristen isolieren: KI-Verordnung: Artikel 111/113 sowie produktbezogene Sonderregeln nach Artikel 2 Absatz 2 und Artikel 6 prüfen, MaschinenVO 20.01.2027, ProdHaftRL-Umsetzung 09.12.2026.
 - Fachpfad wählen: zentrale Anker im Robotik- und KI-Recht sind EU KI-Verordnung 2024/1689, ProdHaftG, Produkthaftungs-Richtlinie 2024, MaschinenVO 2023/1230, BGB §§ 823, 831, 433, 631, IT-SiG, NIS2-RL. Anhand des Sachverhalts in einen Sach-Cluster routen und den passenden Spezial-Skill aus der Fachlandkarte oben benennen.
 - Zuständige Stelle bestimmen: Hersteller, Inverkehrbringer, Betreiber, Endnutzer, Marktüberwachungsbehörde, benannte Stelle.
 - Nur die Rückfragen stellen, die die nächste Weiche tatsächlich ändern.
+
+Für den KI-bezogenen Teil dieses Arbeitsschritts gilt die [fachbezogene Normen- und Fallprüfung](https://github.com/Klotzkette/claude-fuer-deutsches-recht/blob/main/robotik-recht/references/ki-normen-und-fallpruefung.md). Ordnen Sie Sensorik, Sicherheitsfunktion, Steuerungssoftware und vorgesehene Änderungen getrennt ein. Prüfen Sie den Maschinenpfad in Anhang I Abschnitt B und die Begrenzung durch Artikel 2 Absatz 2, bevor Sie sämtliche Systempflichten übertragen. Dokumentieren Sie den Gegenbeleg und übernehmen Sie nur die tatsächlich tragfähige Rechtsfolge in das bestellte Arbeitsprodukt.
 
 ## Normen & Rechtsprechung
 
@@ -251,7 +253,7 @@ Eine Robotikprüfung läuft fast immer parallel auf mehreren Spuren:
 | Frage | Konservativ | Aggressiv | Empfehlung |
 |---|---|---|---|
 | Maschinen-RL vs. MaschinenVO | bereits MaschinenVO anwenden | RL bis 20.01.2027 nutzen | Doppel-Doku bei Produkten, deren Inverkehrbringen 2026/2027 fällt |
-| KI-VO Anhang III | konservativ "Hochrisiko" einstufen | Argumentation für Ausnahme Art. 6 Abs. 3 | dokumentierte Begründung bei Ausnahme |
+| Hochrisiko-Prüfung | Beide Pfade nach Artikel 6 anhand Tatsachen prüfen | Ausnahme Absatz 3 nur für Anhang III, kein Profiling | Fehlende Tatsachen offen ausweisen; weder vorsorgliche Hochrisiko-Etikette noch unbelegte Ausnahme |
 | Vorfall melden | proaktiv | nur bei klarer Schwelle | proaktiv bei Personenschaden, sonst Schwellen aus Art. 73 KI-VO / Art. 14 CRA / Art. 33 DSGVO |
 
 ## Praxistipps
@@ -259,7 +261,7 @@ Eine Robotikprüfung läuft fast immer parallel auf mehreren Spuren:
 - **Eine zentrale Mandatsakte** mit Versionsstand des Produkts, nicht je Rechtsakt separate Akten.
 - **Frühe Quellenhygiene:** Keine Modellwissens-Zitate; alle Aktenzeichen live verifizieren.
 - **Audit-Trail:** Jeden externen Kontakt (Behörde, Notified Body, Versicherer) dokumentieren.
-- **Standardklauseln** für KI-Anbieter und Integratoren stets aktuell halten (Art. 25 KI-VO Pflichten für Importeure, Art. 26 KI-VO für Distributoren).
+- **Lieferkette:** Artikel 23 betrifft Einführer, Artikel 24 Händler, Artikel 25 bestimmte Rollenwechsel und Lieferkettenunterstützung, Artikel 26 Betreiber. Vertragsklauseln nach der tatsächlichen Rolle und Funktion zuordnen. [amtlicher Text, geprüft 09.10.2026](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727)
 
 ## Mustertexte
 
@@ -291,12 +293,12 @@ Eine Robotikprüfung läuft fast immer parallel auf mehreren Spuren:
 | Robotertyp | Wahrscheinliche Rechtsakte | Risikomerkmal |
 |---|---|---|
 | Industrieroboter mit Zaun | MaschinenVO, KI-VO ggf. Anhang III, CRA, DSGVO | Quetschung; mechanisch |
-| Cobot | MaschinenVO, KI-VO Anhang III, ISO/TS 15066, CRA | Mensch-Roboter-Kollaboration |
-| AMR/AGV im Lager | MaschinenVO, KI-VO Anhang III, CRA, ArbSchG | Personenstöße, Sturz |
+| Cobot | Maschinenrecht, KI-Verordnung Artikel 2 Absatz 2 und Anhang I Abschnitt B Nummer 21 sowie konkrete weitere Funktionen prüfen; Normen nur nach Edition und Status | Mensch-Roboter-Kollaboration ist allein kein Anhang-III-Tatbestand |
+| AMR/AGV im Lager | Produktrecht und KI-Verordnung Artikel 2 Absatz 2 / Artikel 6 Absatz 1 prüfen; weitere Zwecke separat | Personenstöße und Sturz sind konkrete Sicherheitsfragen, keine automatische Anhang-III-Zuordnung |
 | OP-Roboter | MDR, MPDG, KI-VO, CRA, BGB Behandlungsvertrag | Patient, Off-Label |
 | Pflegeroboter | MaschinenVO, KI-VO (ggf. Art. 5 lit. b), MDR ggf., DSGVO | Verletzliche Person |
-| Lieferroboter im öff. Raum | MaschinenVO, KI-VO Anhang III, StVG/Landesrecht, DSGVO | Verkehrsteilnehmer |
-| OP-/Service-Roboter mit KI-Bildverarbeitung | KI-VO Anhang III, DSGVO Art. 9 | Biometrie, Bias |
+| Lieferroboter im öffentlichen Raum | Produkt- und Verkehrsrecht, Datenschutz; KI-Verordnung nach konkreter Funktion | Ein Einsatz auf der Straße allein ist noch kein Infrastrukturmanagement nach Anhang III |
+| OP-/Service-Roboter mit KI-Bildverarbeitung | Artikel 6 Absatz 1 mit Produktrecht oder Absatz 2 mit konkretem Anhang-III-Zweck | Bildverarbeitung allein ist weder biometrische Identifikation noch zwingend besondere Datenverarbeitung |
 
 ## Quellen Stand 06/2026
 
@@ -307,6 +309,7 @@ Eine Robotikprüfung läuft fast immer parallel auf mehreren Spuren:
 - DSGVO; BDSG.
 - ProdSG; ProdHaftG; BGB §§ 823, 831.
 - Live-Verifikation in eur-lex.europa.eu, BfJ, BSI, BfDI; lizenzierte Datenbanken (beck-online, juris) nur bei vorhandenem Zugang.
+Für den KI-bezogenen Teil dieses Arbeitsschritts gilt die [fachbezogene Normen- und Fallprüfung](https://github.com/Klotzkette/claude-fuer-deutsches-recht/blob/main/robotik-recht/references/ki-normen-und-fallpruefung.md). Ordnen Sie Sensorik, Sicherheitsfunktion, Steuerungssoftware und vorgesehene Änderungen getrennt ein. Prüfen Sie den Maschinenpfad in Anhang I Abschnitt B und die Begrenzung durch Artikel 2 Absatz 2, bevor Sie sämtliche Systempflichten übertragen. Dokumentieren Sie den Gegenbeleg und übernehmen Sie nur die tatsächlich tragfähige Rechtsfolge in das bestellte Arbeitsprodukt.
 
 ---
 
@@ -330,7 +333,7 @@ _Für Biometrie, Emotion und Personenerkennung in der Robotik: ordnet Norm, Bewe
 
 ## Worum geht es konkret
 
-Roboter mit Personenerkennung kollidieren mit harten Verboten der KI-VO und mit der DSGVO. Art. 5 Abs. 1 KI-VO untersagt seit 02.02.2025 u. a. Emotionserkennung am Arbeitsplatz und in Bildungseinrichtungen (Art. 5 Abs. 1 lit. f), Social Scoring (lit. c) sowie – mit engen Ausnahmen – biometrische Echtzeit-Fernidentifizierung im öffentlich zugänglichen Raum zu Strafverfolgungszwecken (lit. h). Biometrische Daten sind besondere Kategorie (Art. 9 DSGVO). Prüfe, welches Verfahren im konkreten Roboter zulässig ist und welche Transparenz-/Konformitätspflichten greifen.
+Bei Robotern mit Personenerkennung zuerst die Funktion unterscheiden: Identifizierung, Verifizierung, Kategorisierung oder Emotionserkennung. Artikel 5 Absatz 1 Buchstaben c, f, g und h haben verschiedene Voraussetzungen und Ausnahmen; nicht jede Erkennung ist verboten. Biometrische Daten sind nach Artikel 9 DSGVO besonders geschützt, soweit sie zur eindeutigen Identifizierung verarbeitet werden. KI-Zulässigkeit und datenschutzrechtliche Erlaubnis getrennt prüfen. [amtlicher Text, Prüfstand 09.10.2026](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727)
 
 ## Wann dieses Modul hilft / Kaltstart-Fragen
 
@@ -343,7 +346,7 @@ Roboter mit Personenerkennung kollidieren mit harten Verboten der KI-VO und mit 
 ## Rechtlicher Rahmen
 
 - **KI-VO Art. 5** Verbotene Praktiken (ab 02.02.2025): lit. f Emotionserkennung im Arbeits- und Bildungsbereich (Ausnahme: medizinische/sicherheitsbezogene Gründe); lit. e ungezielte Massensammlung; lit. h Echtzeit-Biometrie im öffentlichen Raum zu Strafverfolgungszwecken mit engen Ausnahmen.
-- **KI-VO Anhang III** Hochrisiko: biometrische Identifikation, Kategorisierung, Emotionserkennung außerhalb des Art. 5-Verbots.
+- **Biometrische Hochrisiko-Funktionen:** Anhang III Nummer 1 nach genauer Unterkategorie prüfen; Identifikation, reine Verifizierung, Kategorisierung und Emotionserkennung unterscheiden. Artikel 5 vorrangig und Artikel 6 Absatz 3 einschließlich Profiling-Sperre gesondert. [amtlicher Text, geprüft 09.10.2026](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727)
 - **KI-VO Art. 50** Transparenz: Information bei interaktiven KI-Systemen, Erkennung von Emotionen / biometrischer Kategorisierung.
 - **DSGVO Art. 9** Verbot der Verarbeitung biometrischer Daten zur eindeutigen Identifizierung; Ausnahmen Abs. 2 lit. a (ausdrückliche Einwilligung), lit. b (Arbeitsrecht mit gesetzlicher Grundlage), lit. g (erhebliches öffentliches Interesse).
 - **DSGVO Art. 22** automatisierte Einzelfallentscheidung mit Rechtsfolgen.
@@ -370,7 +373,7 @@ Roboter mit Personenerkennung kollidieren mit harten Verboten der KI-VO und mit 
 | Biometrische Authentifizierung Mitarbeiter | mit BV und Einwilligung | dauerhaftes Tracking | – |
 | Emotionserkennung Patient (med. Indikation) | mit DSFA und Aufklärung | – | – |
 | Emotionserkennung Beschäftigte (HR) | – | – | Art. 5 Abs. 1 lit. f KI-VO |
-| Live-Gesichtserkennung im öffentlichen Raum | – | – | grundsätzlich Art. 5 lit. h KI-VO |
+| Biometrische Echtzeit-Fernidentifizierung im öffentlich zugänglichen Raum | Zweck und Akteur feststellen | Strafverfolgungszweck und gesetzliche Ausnahmen/Genehmigung nach Artikel 5 Absatz 1 Buchstabe h und Absätzen 2 bis 7 prüfen | Kein allgemeines Verbot jeder Live-Kamera |
 
 ## Praxistipps
 
@@ -396,7 +399,7 @@ Roboter mit Personenerkennung kollidieren mit harten Verboten der KI-VO und mit 
 - **"Anonyme" Personenerkennung** mit Re-Identifikationspotenzial – DSGVO greift.
 - **DSFA nicht durchgeführt** – Aufsichtsbehörden-Risiko.
 - **Cloud-Übermittlung** ohne TIA.
-- **Beschwerde ignoriert** – Bußgeldrisiko Art. 99 Abs. 3 KI-VO (bis 35 Mio. EUR oder 7 %).
+- **Beschwerde:** Inhalt, betroffene Funktion und mögliche Pflichtverletzung prüfen. Artikel 99 Absatz 3 sanktioniert Artikel-5-Verstöße; bloßes Ignorieren einer beliebigen Beschwerde fällt nicht automatisch darunter. [amtlicher Text, geprüft 09.10.2026](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727)
 
 ## Quellen Stand 06/2026
 
@@ -405,6 +408,7 @@ Roboter mit Personenerkennung kollidieren mit harten Verboten der KI-VO und mit 
 - BDSG §§ 22, 26.
 - EuGH, Urteil vom 1. August 2022, Rs. C-184/20 - Vyriausioji tarnybinės etikos komisija, ECLI:EU:C:2022:601.
 - Live-Verifikation auf eur-lex.europa.eu, edpb.europa.eu, bfdi.bund.de; lizenzierte Datenbanken (beck-online, juris) nur bei vorhandenem Zugang.
+Für den KI-bezogenen Teil dieses Arbeitsschritts gilt die [fachbezogene Normen- und Fallprüfung](https://github.com/Klotzkette/claude-fuer-deutsches-recht/blob/main/robotik-recht/references/ki-normen-und-fallpruefung.md). Ordnen Sie Sensorik, Sicherheitsfunktion, Steuerungssoftware und vorgesehene Änderungen getrennt ein. Prüfen Sie den Maschinenpfad in Anhang I Abschnitt B und die Begrenzung durch Artikel 2 Absatz 2, bevor Sie sämtliche Systempflichten übertragen. Dokumentieren Sie den Gegenbeleg und übernehmen Sie nur die tatsächlich tragfähige Rechtsfolge in das bestellte Arbeitsprodukt.
 
 ---
 
@@ -452,6 +456,8 @@ Kläre knapp:
 Dieser Skill fokussiert: **Prüft integrierte KI-Systeme, Sicherheitskomponenten, Anhang III, Hochrisiko-Nähe, Anbieter-/Betreiberpflichten und Zweckänderungen.**
 
 Quellen-/Normenanker: Quellenmatrix im Plugin, Uploads, Rollenprofil, Fristen, Produktakte.
+
+Für den KI-bezogenen Teil dieses Arbeitsschritts gilt die [fachbezogene Normen- und Fallprüfung](https://github.com/Klotzkette/claude-fuer-deutsches-recht/blob/main/robotik-recht/references/ki-normen-und-fallpruefung.md). Ordnen Sie Sensorik, Sicherheitsfunktion, Steuerungssoftware und vorgesehene Änderungen getrennt ein. Prüfen Sie den Maschinenpfad in Anhang I Abschnitt B und die Begrenzung durch Artikel 2 Absatz 2, bevor Sie sämtliche Systempflichten übertragen. Dokumentieren Sie den Gegenbeleg und übernehmen Sie nur die tatsächlich tragfähige Rechtsfolge in das bestellte Arbeitsprodukt.
 
 ## Ergebnisformat
 
@@ -511,6 +517,8 @@ Dieser Skill fokussiert: **Prüft Marketingaussagen zu Autonomie, Sicherheit, KI
 
 Quellen-/Normenanker: UWG, ProdSG, KI-VO Transparenz, Verbraucherrecht.
 
+Für den KI-bezogenen Teil dieses Arbeitsschritts gilt die [fachbezogene Normen- und Fallprüfung](https://github.com/Klotzkette/claude-fuer-deutsches-recht/blob/main/robotik-recht/references/ki-normen-und-fallpruefung.md). Ordnen Sie Sensorik, Sicherheitsfunktion, Steuerungssoftware und vorgesehene Änderungen getrennt ein. Prüfen Sie den Maschinenpfad in Anhang I Abschnitt B und die Begrenzung durch Artikel 2 Absatz 2, bevor Sie sämtliche Systempflichten übertragen. Dokumentieren Sie den Gegenbeleg und übernehmen Sie nur die tatsächlich tragfähige Rechtsfolge in das bestellte Arbeitsprodukt.
+
 ## Ergebnisformat
 
 Liefere je nach Auftrag eines der folgenden Formate:
@@ -537,7 +545,7 @@ _Für Biometrie, Emotion und Personenerkennung in der Robotik: ordnet Norm, Bewe
 
 ## Worum geht es konkret
 
-Roboter mit Personenerkennung kollidieren mit harten Verboten der KI-VO und mit der DSGVO. Art. 5 Abs. 1 KI-VO untersagt seit 02.02.2025 u. a. Emotionserkennung am Arbeitsplatz und in Bildungseinrichtungen (Art. 5 Abs. 1 lit. f), Social Scoring (lit. c) sowie – mit engen Ausnahmen – biometrische Echtzeit-Fernidentifizierung im öffentlich zugänglichen Raum zu Strafverfolgungszwecken (lit. h). Biometrische Daten sind besondere Kategorie (Art. 9 DSGVO). Prüfe, welches Verfahren im konkreten Roboter zulässig ist und welche Transparenz-/Konformitätspflichten greifen.
+Bei Robotern mit Personenerkennung zuerst die Funktion unterscheiden: Identifizierung, Verifizierung, Kategorisierung oder Emotionserkennung. Artikel 5 Absatz 1 Buchstaben c, f, g und h haben verschiedene Voraussetzungen und Ausnahmen; nicht jede Erkennung ist verboten. Biometrische Daten sind nach Artikel 9 DSGVO besonders geschützt, soweit sie zur eindeutigen Identifizierung verarbeitet werden. KI-Zulässigkeit und datenschutzrechtliche Erlaubnis getrennt prüfen. [amtlicher Text, Prüfstand 09.10.2026](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727)
 
 ## Wann dieses Modul hilft / Kaltstart-Fragen
 
@@ -550,7 +558,7 @@ Roboter mit Personenerkennung kollidieren mit harten Verboten der KI-VO und mit 
 ## Rechtlicher Rahmen
 
 - **KI-VO Art. 5** Verbotene Praktiken (ab 02.02.2025): lit. f Emotionserkennung im Arbeits- und Bildungsbereich (Ausnahme: medizinische/sicherheitsbezogene Gründe); lit. e ungezielte Massensammlung; lit. h Echtzeit-Biometrie im öffentlichen Raum zu Strafverfolgungszwecken mit engen Ausnahmen.
-- **KI-VO Anhang III** Hochrisiko: biometrische Identifikation, Kategorisierung, Emotionserkennung außerhalb des Art. 5-Verbots.
+- **Biometrische Hochrisiko-Funktionen:** Anhang III Nummer 1 nach genauer Unterkategorie prüfen; Identifikation, reine Verifizierung, Kategorisierung und Emotionserkennung unterscheiden. Artikel 5 vorrangig und Artikel 6 Absatz 3 einschließlich Profiling-Sperre gesondert. [amtlicher Text, geprüft 09.10.2026](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727)
 - **KI-VO Art. 50** Transparenz: Information bei interaktiven KI-Systemen, Erkennung von Emotionen / biometrischer Kategorisierung.
 - **DSGVO Art. 9** Verbot der Verarbeitung biometrischer Daten zur eindeutigen Identifizierung; Ausnahmen Abs. 2 lit. a (ausdrückliche Einwilligung), lit. b (Arbeitsrecht mit gesetzlicher Grundlage), lit. g (erhebliches öffentliches Interesse).
 - **DSGVO Art. 22** automatisierte Einzelfallentscheidung mit Rechtsfolgen.
@@ -577,7 +585,7 @@ Roboter mit Personenerkennung kollidieren mit harten Verboten der KI-VO und mit 
 | Biometrische Authentifizierung Mitarbeiter | mit BV und Einwilligung | dauerhaftes Tracking | – |
 | Emotionserkennung Patient (med. Indikation) | mit DSFA und Aufklärung | – | – |
 | Emotionserkennung Beschäftigte (HR) | – | – | Art. 5 Abs. 1 lit. f KI-VO |
-| Live-Gesichtserkennung im öffentlichen Raum | – | – | grundsätzlich Art. 5 lit. h KI-VO |
+| Biometrische Echtzeit-Fernidentifizierung im öffentlich zugänglichen Raum | Zweck und Akteur feststellen | Strafverfolgungszweck und gesetzliche Ausnahmen/Genehmigung nach Artikel 5 Absatz 1 Buchstabe h und Absätzen 2 bis 7 prüfen | Kein allgemeines Verbot jeder Live-Kamera |
 
 ## Praxistipps
 
@@ -603,7 +611,7 @@ Roboter mit Personenerkennung kollidieren mit harten Verboten der KI-VO und mit 
 - **"Anonyme" Personenerkennung** mit Re-Identifikationspotenzial – DSGVO greift.
 - **DSFA nicht durchgeführt** – Aufsichtsbehörden-Risiko.
 - **Cloud-Übermittlung** ohne TIA.
-- **Beschwerde ignoriert** – Bußgeldrisiko Art. 99 Abs. 3 KI-VO (bis 35 Mio. EUR oder 7 %).
+- **Beschwerde:** Inhalt, betroffene Funktion und mögliche Pflichtverletzung prüfen. Artikel 99 Absatz 3 sanktioniert Artikel-5-Verstöße; bloßes Ignorieren einer beliebigen Beschwerde fällt nicht automatisch darunter. [amtlicher Text, geprüft 09.10.2026](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727)
 
 ## Quellen Stand 06/2026
 
@@ -612,6 +620,7 @@ Roboter mit Personenerkennung kollidieren mit harten Verboten der KI-VO und mit 
 - BDSG §§ 22, 26.
 - EuGH, Urteil vom 1. August 2022, Rs. C-184/20 - Vyriausioji tarnybinės etikos komisija, ECLI:EU:C:2022:601.
 - Live-Verifikation auf eur-lex.europa.eu, edpb.europa.eu, bfdi.bund.de; lizenzierte Datenbanken (beck-online, juris) nur bei vorhandenem Zugang.
+Für den KI-bezogenen Teil dieses Arbeitsschritts gilt die [fachbezogene Normen- und Fallprüfung](https://github.com/Klotzkette/claude-fuer-deutsches-recht/blob/main/robotik-recht/references/ki-normen-und-fallpruefung.md). Ordnen Sie Sensorik, Sicherheitsfunktion, Steuerungssoftware und vorgesehene Änderungen getrennt ein. Prüfen Sie den Maschinenpfad in Anhang I Abschnitt B und die Begrenzung durch Artikel 2 Absatz 2, bevor Sie sämtliche Systempflichten übertragen. Dokumentieren Sie den Gegenbeleg und übernehmen Sie nur die tatsächlich tragfähige Rechtsfolge in das bestellte Arbeitsprodukt.
 
 ---
 
@@ -650,6 +659,8 @@ Kläre knapp:
 Dieser Skill fokussiert: **Erstellt und prüft EU-Konformitätserklärung, Einbauerklärung, Sprachfassung, Unterzeichner und technische Bezüge.**
 
 Quellen-/Normenanker: Maschinenverordnung; MaschinenDG; ProdSG.
+
+Für den KI-bezogenen Teil dieses Arbeitsschritts gilt die [fachbezogene Normen- und Fallprüfung](https://github.com/Klotzkette/claude-fuer-deutsches-recht/blob/main/robotik-recht/references/ki-normen-und-fallpruefung.md). Ordnen Sie Sensorik, Sicherheitsfunktion, Steuerungssoftware und vorgesehene Änderungen getrennt ein. Prüfen Sie den Maschinenpfad in Anhang I Abschnitt B und die Begrenzung durch Artikel 2 Absatz 2, bevor Sie sämtliche Systempflichten übertragen. Dokumentieren Sie den Gegenbeleg und übernehmen Sie nur die tatsächlich tragfähige Rechtsfolge in das bestellte Arbeitsprodukt.
 
 ## Ergebnisformat
 

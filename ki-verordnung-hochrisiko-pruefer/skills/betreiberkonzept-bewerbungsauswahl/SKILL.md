@@ -33,6 +33,20 @@ Legen mehrere Agenten Bewerberdaten ab, bewerten sie und versenden Absagen, müs
 
 Für Störungen festlegen, wie laufende und delegierte Aufträge angehalten, ihr Vollzug geprüft und doppelte Absagen verhindert werden. Eine sichere Testprobe muss auch manipulierte Dokumentinhalte und unerwartete Werkzeugantworten abdecken. Keine generelle Speicherung jeder internen Modellüberlegung verlangen: nachvollziehbare Ereignisse, Versionen, Freigaben und relevante Ergebnisse mit Datenminimierung dokumentieren. Fehlende technische Kontrolle führt zum Nachforderungsschreiben, nicht zu einer unbelegten Freigabe.
 
+### 3.5 Aufsicht von anderen Instrumenten abgrenzen
+
+Artikel 14 beschreibt die Ausgestaltung menschlicher Aufsicht am Hochrisikosystem, Artikel 26 Absatz 2 deren kompetente und befugte Umsetzung beim Betreiber. Im Arbeitsablauf muss stehen, welche Originale vorliegen, wann eingegriffen wird und wer übersteuert. Die bloße Ernennung eines KI-Beauftragten löst diese Fragen nicht. Artikel 9 ist System-Risikomanagement, Artikel 17 Anbieter-Qualitätsmanagement; ein privater Arbeitgeber übernimmt nicht durch eine Betriebsanweisung sämtliche Anbieterpflichten.
+
+Eine Grundrechte-Folgenabschätzung nach Artikel 27 folgt nicht pauschal aus jedem HR-Einsatz. Den dort genannten Betreiberkreis und gegebenenfalls öffentliche Dienstleistung gesondert subsumieren. Eine Datenschutz-Folgenabschätzung besitzt andere Voraussetzungen; vorhandene Unterlagen dürfen integriert werden, aber nicht einfach umbenannt. In einer Personalakte keine umfangreiche Datensammlung allein mit „Bias-Prüfung“ legitimieren. Artikel 4a und dessen kumulative Voraussetzungen gehören in eine eigenständige Datenprüfung.
+
+### 3.6 Erklärung und wirksame Beanstandung umsetzen
+
+Bei einer angegriffenen Rangfolge konkrete Daten, angewandte Bewertungskriterien, Ergebnis und tatsächlichen Entscheidungseinfluss rekonstruieren. C-203/22, Rn. 58–62 und 66, verlangt im Anwendungsbereich von Artikel 15 Absatz 1 Buchstabe h DSGVO eine verständliche konkrete Erklärung; weder Formelsammlung noch pauschales Geschäftsgeheimnis genügen. Rn. 70–76 verlangen bei Konflikten eine Abwägung durch Aufsicht oder Gericht. Das bedeutet weder öffentliche Quellcodefreigabe noch Anspruch auf sämtliche Trainingsdaten. Artikel 86 KI-Verordnung mit seinem eigenen Tatbestand, Empfänger und Zeitrecht gesondert prüfen.
+
+C-817/19, Rn. 194–211, betrifft PNR-Kontrollen. Als ausdrücklich begrenzte Gegenprobe lässt sich daraus fragen, ob Kriterienänderungen, Fehlertreffer und mittelbar diskriminierende Auswahl überprüfbar sind; ein generelles Verbot lernender Recruiting-KI folgt daraus nicht. Für HR stehen die einschlägigen Artikel 9, 10, 14 und 26 sowie das Gleichbehandlungsrecht im Vordergrund. Die Anweisung bindet erlaubte Versionen, Prüfzeitpunkt, tatsächliche Übersteuerung, Einspruchsweg und Testbefunde zusammen.
+
+Die [verifizierten Rechtsprechungsanker](../../references/rechtsprechung-und-argumentation.md) enthalten Volltext, Randnummern und Anwendungsgrenzen; die [Testanker](../../references/testanker.md) geben konkrete Gegenproben vor.
+
 ## 4 Quellenpflicht
 
 Artikel 26, ergänzend Artikel 14 und 111/113 in geltender Fassung amtlich prüfen. [Rechtsstand und Quellen](../../references/rechtsstand-und-quellen.md) und [Zitierweise](../../references/zitierweise.md) beachten. Gesetzliche Pflicht, vertragliche Vorgabe und eigene organisatorische Empfehlung kenntlich trennen. Datenschutz und Mitbestimmung nicht als durch KI-Einstufung erledigt behandeln.

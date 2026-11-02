@@ -5,7 +5,7 @@
 
 Prüft deutsche Bauträgerverträge: MaBV-Ratenplan und Sicherheiten, Paragrafen 650u und 650v BGB, AGB-Kontrolle, Baubeschreibung, Abnahme Gemeinschaftseigentum, Bauzeit, Preisanpassung, Teilungserklärung. Liefert Mandantengutachten und Aufforderungsschreiben an Bauträger und Notar.
 
-Dieses Plugin gehört zum Marketplace mit 275 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
+Dieses Plugin gehört zum Marketplace mit 310 Plugins. Für die Installation nimm das Einzel-ZIP. Ohne Installation genügt zum Einstieg einer der beiden eigenständigen Markdown-Prompts: Schnellstart für den Kernvorgang, Werkstatt für die ausführliche Bearbeitung. Die Prompts ersetzen nicht sämtliche Spezialskills und Hilfsdateien des Plugins.
 
 ## Welche Datei wofür? / Which file should I use?
 
@@ -43,28 +43,18 @@ Bei einem Folgewunsch den bisherigen Aktenstand fortführen. Bereits festgestell
 
 ## Downloads
 
+> Diese Testakte wurde mit KI generiert und ist ein Experiment. Benutzung auf eigene Verantwortung und eigene Gefahr.
+>
+> This test case file was generated with AI and is an experiment. Use at your own responsibility and risk.
+
 | Was | Format | Direkt-Download |
 | --- | --- | --- |
 | Plugin als Komplett-ZIP (Hauptweg) | ZIP | [`bautraegervertragspruefer.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/bautraegervertragspruefer.zip) |
 | Kompakter Prompt (Schnellstart) | Markdown | [`bautraegervertragspruefer-schnellstart.md`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=bautraegervertragspruefer/bautraegervertragspruefer-schnellstart.md) |
 | Großer Prompt (Werkstatt) | Markdown | [`bautraegervertragspruefer-werkstatt.md`](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=bautraegervertragspruefer/bautraegervertragspruefer-werkstatt.md) |
-| Zugeordnete Testakten | PDF / ZIP | [eine zugeordnete Akte](#zugeordnete-testakten) mit Gesamt-PDF, Originaldateien und Einzel-PDFs |
+| Zugeordnete Testakten | PDF / ZIP | [`alle-testakten.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-testakten.zip) und [`alle-testakten-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-testakten-einzelpdfs.zip) (zentrale Sammlung) |
 
-> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 275 Plugins. Wer alle Plugins auf einmal will, nimmt [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip). Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
-
-## Zugeordnete Testakten
-
-Jede Akte ist getrennt als lesbares Gesamt-PDF, ZIP mit Originaldateien und ZIP mit einzelnen PDFs erreichbar.
-
-> Diese Testakte wurde mit KI generiert und ist ein Experiment. Benutzung auf eigene Verantwortung und eigene Gefahr.
->
-> This test case file was generated with AI and is an experiment. Use at your own responsibility and risk.
-
-| Akte | Gesamt-PDF | Originaldateien | Einzel-PDFs |
-| --- | --- | --- | --- |
-| Pluginlokale Akte | [Gesamt-PDF](testakte/gesamt-pdf/testakte_gesamt.pdf) | [`bautraegervertragspruefer-testakte.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/bautraegervertragspruefer-testakte.zip) | [`bautraegervertragspruefer-testakte-einzelpdfs.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/bautraegervertragspruefer-testakte-einzelpdfs.zip) |
-
-[Alle Testakten und Fachzuordnungen](../testakten/README.md)
+> Marketplace-Hinweis: Dieses Plugin gehört zum Marketplace mit 310 Plugins. Das Sammelpaket [`alle-plugins-megazip.zip`](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/latest/download/alle-plugins-megazip.zip) enthält seinen veröffentlichten Stand, nicht zwingend spätere Einzelpakete. Alle Einzeldateien stehen im [Download-Index](../ASSET_INDEX.md); Werkstatt und Schnellstart bleiben direkte Markdown-Downloads.
 <!-- END direkt-loslegen (autogen) -->
 
 Wenn du das hier öffnest, willst du einen deutschen Bauträgervertrag verbraucherseitig prüfen: Ratenplan, Sicherheiten, Baubeschreibung, Abnahme, Bauzeit, Preisanpassung, Teilungserklärung — und am Ende ein Gutachten plus ein Aufforderungsschreiben an Bauträger und Notar in der Hand haben.
@@ -96,23 +86,25 @@ Drei Modi zur Wahl:
 
 ## Was dich aufhält
 
-- **MaBV-Ratenplan**: Überhöhte Vorleistungen, falsche Verteilung der Raten auf Bauabschnitte, fehlende Sicherheit nach Paragraf 7 MaBV.
-- **Verbraucherbauvertrag**: Paragrafen 650u und 650v BGB, Baubeschreibung als Pflichtinhalt, verbindliche Angabe zum Bauzeitende.
+- **MaBV-Ratenplan**: Überhöhte Vorleistungen, falsche Verteilung der Raten auf Bauabschnitte, fehlende Voraussetzungen des Zahlungsmodells; eine Sicherheit nach Paragraf 7 MaBV nur beim entsprechenden Ausnahmemodell verlangen.
+- Bauträgervertrag: Paragraf 650u BGB bestimmt das anwendbare Recht, Paragraf 650v die Abschlagszahlungen. Baubeschreibung und Bauzeit nach den jeweils anwendbaren Informations- und Vertragsregeln gesondert prüfen.
 - **AGB-Kontrolle**: Notarielle Beurkundung schliesst AGB-Kontrolle nicht aus; geltungserhaltende Reduktion findet bei unwirksamen Verbraucher-AGB nicht statt.
 - **Abnahme Gemeinschaftseigentum**: Verklammerung der Abnahme mit der Schlussrate gefährdet die werthaltige Sicherung.
 - **Baubeschreibung**: Pauschale Verweise auf anerkannte Regeln der Technik ohne konkrete Spezifikation lassen das Bausoll offen.
 
 ## Rechtlicher Anker
 
-- Paragrafen 650u und 650v BGB (Bauträgervertrag, Baubeschreibung)
+- Paragrafen 650u und 650v BGB (Bauträgervertrag und Abschlagszahlungen); Baubeschreibung nach Paragraf 650j BGB und Artikel 249 EGBGB unter Beachtung von Paragraf 650u Absatz 2 BGB
 - Paragrafen 305 bis 310 BGB (AGB-Kontrolle)
 - Makler- und Bauträgerverordnung (MaBV), insbesondere Paragrafen 3, 7
-- Paragraf 14 BNotO (Belehrungspflichten Notar)
+- Paragraf 14 BNotO (allgemeine Amtspflichten des Notars)
 - Wohnungseigentumsgesetz (Teilungserklärung, Abnahme Gemeinschaftseigentum)
 - HOAI (Leistungsphasen Objektüberwachung)
 - BGH-Leitentscheidungen zu Bauträgervertrag, MaBV und Abnahmeklauseln (im Werkstatt-Prompt ausführlich)
 
 ## Hinweise
+
+Gezielter Normcheck am 16.10.2026: [650u BGB](https://www.gesetze-im-internet.de/bgb/__650u.html), [650v BGB](https://www.gesetze-im-internet.de/bgb/__650v.html), [650j BGB](https://www.gesetze-im-internet.de/bgb/__650j.html) und [7 MaBV](https://www.gesetze-im-internet.de/gewo_34cdv/__7.html) gelesen. Die Normen trennen Vertragsregime, Abschlagszahlung, Verbraucherinformation und Sicherungsalternative. Daraus folgt weder eine zusätzliche Bürgschaftspflicht in jedem Ratenmodell noch die vollständige Übernahme des Verbraucherbauvertragsrechts. Übriger Prüfstand unverändert, keine neue Vollprüfung der Rechtsprechung.
 
 Generischer Prüfstand, alle Angaben ohne Gewähr. Jede Nutzerin und jeder Nutzer prüft den Prüfbericht auf Plausibilität und Eignung im konkreten Einzelfall. Keine Rechtsberatung. Keine Garantie für Vollständigkeit oder Aktualität der Rechtsprechung. Bei streitigen Fällen Fachanwalt für Bau- und Architektenrecht oder Notar hinzuziehen.
 

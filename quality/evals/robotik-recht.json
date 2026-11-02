@@ -31,29 +31,33 @@
   ],
   "mini_review": {
     "verdict": "revised",
-    "reason": "Individuelle Lektüre und Workflow-Vertiefung: UTC-Antwort -> gekennzeichnete Arbeitschronologie ändern; Resetwunsch -> Sicherungsschreiben und fachkundige Untersuchung abstimmen. Desk review, keine Live-Client-Ausführung.",
+    "reason": "Individuelle Lektüre und Workflow-Vertiefung: UTC-Antwort -> gekennzeichnete Arbeitschronologie ändern; Resetwunsch -> Sicherungsschreiben und fachkundige Untersuchung abstimmen. Desk review, keine Live-Client-Ausführung. 2026-10-16, redaktioneller Einstiegsreview: Robotervorfall und Arbeitsprodukt statt Startmenü eröffnet; vorhandenen frühen Sicherheitsanker im Mini erhalten. Lektüre des Einstiegs, der zugeordneten Anker und der geänderten Stellen; keine neue fachliche Ganztextprüfung oder Live-Modelltests.",
     "changes": [
       "VI ZR 107/08 auf konstruktive Robotersicherheit übertragen und als Airbag-Ausgangsfall begrenzt.",
       "Paragraf 3 BetrSichV für betriebliche Gefährdungsbeurteilung und Aktualisierung ergänzt.",
       "UTC-Antwort -> gekennzeichnete Arbeitschronologie ändern; Resetwunsch -> Sicherungsschreiben und fachkundige Untersuchung abstimmen.",
-      "Gefahrenabwehr versus Beweiserhalt, Versionskausalität, überprüfbare Abnahmekriterien und fachkundige Wiederfreigabe nach Gefährdungsbeurteilung."
+      "Gefahrenabwehr versus Beweiserhalt, Versionskausalität, überprüfbare Abnahmekriterien und fachkundige Wiederfreigabe nach Gefährdungsbeurteilung.",
+      "2026-10-16, redaktioneller Einstiegsreview: Robotervorfall und Arbeitsprodukt statt Startmenü eröffnet; vorhandenen frühen Sicherheitsanker im Mini erhalten. Lektüre des Einstiegs, der zugeordneten Anker und der geänderten Stellen; keine neue fachliche Ganztextprüfung oder Live-Modelltests."
     ],
-    "sha256": "358d6e1b2a0c635b3f0cbd86a5a93c583702b630f4b547e9e1431ca79bffb5d7",
-    "reviewed_on": "2026-09-23",
-    "method": "desk_review"
+    "sha256": "3ff23297831ff5372c36829d6ae23fcb3cfb9b1b7e9c53ab99dccc00fe543fd7",
+    "reviewed_on": "2026-10-16",
+    "method": "desk_review",
+    "review_scope": "Redaktioneller Einstieg und Änderungsabgleich; übriger fachlicher Hauptteil nicht vollständig neu geprüft."
   },
   "workshop_review": {
     "verdict": "revised",
-    "reason": "Individuelle Lektüre und Workflow-Vertiefung: Gefahrenabwehr versus Beweiserhalt, Versionskausalität, überprüfbare Abnahmekriterien und fachkundige Wiederfreigabe nach Gefährdungsbeurteilung. Desk review, keine Live-Client-Ausführung.",
+    "reason": "Individuelle Lektüre und Workflow-Vertiefung: Gefahrenabwehr versus Beweiserhalt, Versionskausalität, überprüfbare Abnahmekriterien und fachkundige Wiederfreigabe nach Gefährdungsbeurteilung. Desk review, keine Live-Client-Ausführung. 2026-10-16, redaktioneller Einstiegsreview: Robotervorfall und Arbeitsprodukt statt Startmenü eröffnet; vorhandenen frühen Sicherheitsanker im Mini erhalten. Lektüre des Einstiegs, der zugeordneten Anker und der geänderten Stellen; keine neue fachliche Ganztextprüfung oder Live-Modelltests.",
     "changes": [
       "VI ZR 107/08 auf konstruktive Robotersicherheit übertragen und als Airbag-Ausgangsfall begrenzt.",
       "Paragraf 3 BetrSichV für betriebliche Gefährdungsbeurteilung und Aktualisierung ergänzt.",
       "UTC-Antwort -> gekennzeichnete Arbeitschronologie ändern; Resetwunsch -> Sicherungsschreiben und fachkundige Untersuchung abstimmen.",
-      "Gefahrenabwehr versus Beweiserhalt, Versionskausalität, überprüfbare Abnahmekriterien und fachkundige Wiederfreigabe nach Gefährdungsbeurteilung."
+      "Gefahrenabwehr versus Beweiserhalt, Versionskausalität, überprüfbare Abnahmekriterien und fachkundige Wiederfreigabe nach Gefährdungsbeurteilung.",
+      "2026-10-16, redaktioneller Einstiegsreview: Robotervorfall und Arbeitsprodukt statt Startmenü eröffnet; vorhandenen frühen Sicherheitsanker im Mini erhalten. Lektüre des Einstiegs, der zugeordneten Anker und der geänderten Stellen; keine neue fachliche Ganztextprüfung oder Live-Modelltests."
     ],
-    "sha256": "dd9d72ac70c3711aeeafa733a145112dddaef415e917c6c31386b60683d20529",
-    "reviewed_on": "2026-09-23",
-    "method": "desk_review"
+    "sha256": "c39e062d14acb2e2c581b47b2cec30f679325401022cdfc6370eea6b10de3b87",
+    "reviewed_on": "2026-10-16",
+    "method": "desk_review",
+    "review_scope": "Redaktioneller Einstieg und Änderungsabgleich; übriger fachlicher Hauptteil nicht vollständig neu geprüft."
   },
   "selection": {
     "positive": [
@@ -140,5 +144,12 @@
     "continuation": "UTC-Antwort -> gekennzeichnete Arbeitschronologie ändern; Resetwunsch -> Sicherungsschreiben und fachkundige Untersuchung abstimmen.",
     "enrichment": "Gefahrenabwehr versus Beweiserhalt, Versionskausalität, überprüfbare Abnahmekriterien und fachkundige Wiederfreigabe nach Gefährdungsbeurteilung.",
     "limits": "desk review; no live client execution"
+  },
+  "ki_normen_vertiefung": {
+    "date": "2026-10-09",
+    "method": "desk_review",
+    "reference": "robotik-recht/references/ki-normen-und-fallpruefung.md",
+    "focus": "Ordnen Sie Sensorik, Sicherheitsfunktion, Steuerungssoftware und vorgesehene Änderungen getrennt ein. Prüfen Sie den Maschinenpfad in Anhang I Abschnitt B und die Begrenzung durch Artikel 2 Absatz 2, bevor Sie sämtliche Systempflichten übertragen.",
+    "limits": "Keine vollständige Prüfung nicht KI-bezogener Inhalte; kein Live-Client-Test."
   }
 }

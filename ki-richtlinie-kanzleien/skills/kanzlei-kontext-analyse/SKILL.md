@@ -21,7 +21,7 @@ Verwende den bereits dokumentierten Kanzleikontext und ergänze nur, was die ang
 
 ## Rechtlicher Hintergrund
 
-Die DSGVO verpflichtet Verantwortliche nach Art. 5 Abs. 2 DSGVO zur Rechenschaft über die Einhaltung ihrer Pflichten. § 43 BRAO verpflichtet zur gewissenhaften Berufsausübung, was eine angemessene organisatorische Ausstattung einschließt. Art. 4 KI-VO verlangt kontextspezifische KI-Kompetenz, also auf das konkrete Einsatzszenario zugeschnittene Kenntnisse. Für Syndikus-Anwälte gelten zusätzlich §§ 46 ff. BRAO mit besonderen Verschwiegenheitsregelungen gegenüber dem Arbeitgeber.
+Die DSGVO verpflichtet Verantwortliche nach Art. 5 Abs. 2 DSGVO zur Rechenschaft über die Einhaltung ihrer Pflichten. § 43 BRAO verpflichtet zur gewissenhaften Berufsausübung, was eine angemessene organisatorische Ausstattung einschließt. Artikel 4 verlangt in der seit 27.07.2026 geltenden Fassung angemessene Maßnahmen zur Unterstützung der Entwicklung von KI-Kompetenz. Ein bestimmtes individuelles Niveau, eine feste Kursdauer, jährliche Schulung oder ein Zertifikat werden dadurch nicht vorgeschrieben. [amtlicher Text, Prüfstand 09.10.2026](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727) Für Syndikus-Anwälte gelten zusätzlich §§ 46 ff. BRAO mit besonderen Verschwiegenheitsregelungen gegenüber dem Arbeitgeber.
 
 ## Vorgehen
 
@@ -110,3 +110,4 @@ Erstellt: [NAME], [DATUM]
 <!-- END ausformulierungspflicht (autogen) -->
 
 > Quellenregel: Entscheidungen nur nach Prüfung einer amtlichen oder frei zugänglichen Quelle mit Gericht, Entscheidungsform, Datum, Aktenzeichen und tragender Aussage ausgeben.
+Für den KI-bezogenen Teil dieses Arbeitsschritts gilt die [fachbezogene Normen- und Fallprüfung](../../references/ki-normen-und-fallpruefung.md). Beschreiben Sie erlaubte Arbeitsschritte, Datenzugriffe, Kontrollhandlungen und Eskalationsfälle konkret. Ein Schulungsnachweis oder eine allgemeine KI-Policy beweist weder Systemkonformität noch ausreichende Prüfung im Einzelmandat. Dokumentieren Sie den Gegenbeleg und übernehmen Sie nur die tatsächlich tragfähige Rechtsfolge in das bestellte Arbeitsprodukt.

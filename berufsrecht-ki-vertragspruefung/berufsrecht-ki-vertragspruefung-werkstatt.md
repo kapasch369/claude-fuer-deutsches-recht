@@ -1,6 +1,8 @@
-# 1. Anbietervertrag für den konkreten Kanzleieinsatz prüfen
+# 1. KI-Vertrag für den konkreten Kanzleieinsatz prüfen
 
-Prüfe, ob der Anbieter Mandatsinhalte nur zur beauftragten Verarbeitung verwenden darf und ob Support, Protokolle und Unterauftragnehmer einen unzulässigen Geheimniszugang eröffnen. Lies dazu Vertrag, Leistungsbeschreibung, Datenschutzvereinbarung, Unterauftragnehmerliste, Konfiguration und bisherige Antworten. Formuliere die erforderlichen Klauseländerungen oder das bestellte Einsatzgutachten; ein Beschaffungsauftrag führt nicht ungefragt zu einem Aufsichtsverfahren.
+Darf der Anbieter Mandatsinhalte für die vereinbarte Verarbeitung nutzen, und wer erhält über Support, Protokolle oder Unterauftragnehmer Zugang? Lies Vertrag, Leistungsbeschreibung, Datenschutzvereinbarung, Konfiguration und bisherige Antworten. Liefere Klauseländerungen oder das bestellte Einsatzgutachten; kein ungefragtes Aufsichtsverfahren.
+
+Paragraf 43e BRAO verlangt die eigenständige Prüfung des Geheimniszugangs. Bei Drittlandtransfer über Standarddatenschutzklauseln kommt Artikel 46 DSGVO hinzu. EuGH, Urteil vom 16.07.2020, C-311/18, Rn. 125 bis 135, verlangt den Abgleich von Empfängerrecht und zusätzlichen Maßnahmen; unzureichend geschützte Übermittlung ist auszusetzen oder zu beenden. Kein allgemeines Cloud-Verbot, keine Entscheidung über Paragraf 43e BRAO oder spätere Angemessenheitsbeschlüsse. Den vorhandenen Passagennachweis unten nicht zur neuen Vollprüfung erklären.
 
 ## 1.1. Berufsrolle und Datenweg
 
@@ -107,3 +109,7 @@ Wechselt ein Unterauftragnehmer während der Verhandlung, ist die frühere Liste
 Ein Pilot mit öffentlichen Mustertexten kann von vertraulichen Mandatsdaten getrennt freigegeben werden, wenn die Nutzung so begrenzt ist. Die Entscheidung benennt zulässige Daten, ausgeschlossene Uploads und die konkrete Bedingung für den Übergang in den Mandatsbetrieb. Keine pauschale Freigabe nach bloßem Ablauf einer Testwoche. Ein erfolgreicher Funktionstest beweist weder berufsrechtliche Eignung noch das Fehlen von Supportzugriffen.
 
 Nach belegter Behebung einer Lücke ersetze die betreffende Sperre durch die nun tragfähige Regelung. Bleiben andere Datenwege ungeklärt, beschränke nur deren Nutzung. Liefere Ersatzklauseln als zusammenhängende verhandlungsfähige Fassung und daneben die noch entscheidenden Anbieterfragen. Maßgebliche gesetzliche Anwendungsdaten aus Abschnitt 4 von vertraglichen Nachweis- und Aktivierungsterminen unterscheiden. Kein Vertragsabschluss, Test mit Mandatsdaten oder Anbieteranschreiben ohne Freigabe; eine reine Textprüfung bleibt auch ohne technische Werkzeuge möglich.
+
+KI-Prüfung: Vergleichen Sie beworbene vollautomatische Rechtsberatung mit vertraglich zugesagter bloßer Entwurfshilfe. Ermitteln Sie, wer Zwecke und Änderungen bestimmt; Gewährleistung, Verschwiegenheit und Anbieterrolle werden nicht durch eine gemeinsame Vertragsüberschrift ersetzt. Nutzen Sie die fachbezogene Normen- und Fallprüfung in den Referenzen; übertragen Sie Datenschutzurteile und ISO-Nachweise nur innerhalb ihres belegten Gegenstands.
+
+[Normen, technische Nachweise und begrenzte Rechtsprechungsargumente](references/ki-normen-und-fallpruefung.md).

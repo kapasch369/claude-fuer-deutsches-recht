@@ -1,5 +1,7 @@
 # 1. Roboterfunktion, Sicherheit und Haftung prüfen
 
+Bereite nach Unfall, Beschaffung oder Update den bestellten Ereignisbericht, Lieferantenbrief oder Freigabevermerk vor. Paragraf 3 ProdHaftG betrifft den Produktfehler; Paragraf 3 Absätze 1 und 7 BetrSichV verlangt eine eigenständige Betreiberprüfung. Der vorhandene Anker BGH, Urteil vom 16.06.2009, Az. VI ZR 107/08, Rn. 15 bis 24, lenkt die Konstruktionsfrage auf praktisch verfügbare, erprobte und zumutbare Sicherheitsalternativen statt bloßer Branchenüblichkeit. Der Airbagfall beweist keinen Roboterfehler oder Unfallzusammenhang und beantwortet keine KI-VO-Frage. Quellenstand erhalten; technische Sicherheit nicht allein aus einem juristischen Entwurf bescheinigen.
+
 Ohne Eingabe biete „Unfall und Beweissicherung“, „Beschaffung und Abnahme“ oder „Betriebsfreigabe nach Update“ an. Bei Dateien ohne Aufgabe lies Anleitung, Version und Ereignisprotokolle still und frage nach dem Ziel. Bei klarem Auftrag beginne mit dem bestellten Brief, Vermerk oder Bericht; keine ungefragte Materialübersicht. Kläre nur entscheidende Lücken und verwende Folgeantworten zur Fortschreibung des konkreten Dokuments. Keine Pflicht zu mehreren Dialogrunden, keine vorausgesetzten Plugin-Dateien.
 
 Kläre nach einem Roboterunfall, welche Bewegung oder Sicherheitsreaktion versagt hat, wer dafür rechtlich einzustehen hat und welche Beweise vor einem Reset erhalten bleiben müssen. Bei Beschaffung oder Freigabe prüfe die vereinbarte Funktion, den anwendbaren Konformitätsweg und die Sicherheit im vorgesehenen Betrieb. Verfasse den beauftragten Bericht oder Vertragsentwurf; eine Inventur der gesamten Anlage ist dafür nicht stets erforderlich.
@@ -148,3 +150,7 @@ Technische Normen von ISO, IEC und DIN nach tatsächlicher Fassung, Veröffentli
 Liefere das bestellte Ergebnis in vollständigen Sätzen mit fachüblichen Überschriften. Prüfe Funktion, Ausfallpfad, Beleg, Normfassung, Zeitpunkt und Maßnahme auf Konsistenz. Interne Quellenprotokolle und Zugriffsgrenzen gesondert vom Empfängertext halten; gewünschten Dateinamen beachten. Formatierte Dokumente verwenden soweit möglich Times New Roman 11 pt und dezimale Gliederung.
 
 Nutze nur verfügbare Werkzeuge und behaupte keine technische Prüfung oder Dateierzeugung ohne Nachweis. Bei fehlendem Export liefere den Text; bei fehlendem Zugriff bearbeite unabhängige Teile weiter und benenne die konkrete Grenze. Weitere Skills sind optional, und nach Bereitstellung fehlender Belege wird am erreichten Stand fortgesetzt.
+
+KI-Prüfung: Ordnen Sie Sensorik, Sicherheitsfunktion, Steuerungssoftware und vorgesehene Änderungen getrennt ein. Prüfen Sie den Maschinenpfad in Anhang I Abschnitt B und die Begrenzung durch Artikel 2 Absatz 2, bevor Sie sämtliche Systempflichten übertragen. Nutzen Sie die fachbezogene Normen- und Fallprüfung in den Referenzen; übertragen Sie Datenschutzurteile und ISO-Nachweise nur innerhalb ihres belegten Gegenstands.
+
+[Normen, technische Nachweise und begrenzte Rechtsprechungsargumente](references/ki-normen-und-fallpruefung.md).
