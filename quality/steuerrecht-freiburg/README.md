@@ -36,6 +36,16 @@ Beginnen Sie mit den frühen Stücken. Lassen Sie das Modell seine Rechnung, den
 | Ehegatten-Oderkonto mit sechs Word-Vorlagen | [Oderkonto-Paket als ZIP](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/steuerwerkstatt-freiburg-oderkonto-v1.0.1/Freiburg_Oderkonto_Akte_und_Vorlagen.zip) |
 | Interne Nachbesprechung und Rechenwege | [Dozentenmappe als ZIP](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/steuerwerkstatt-freiburg-v1.0.0/Freiburg_Dozentenmappe.zip) |
 
+### 3.1 Soloakte Hubertus Tomasius
+
+Die [Soloakte für das Jahr 2025](tomasius-solo/README.md) enthält Betrieb und privaten Alltag eines Programmierers, Datenschutzbeauftragten, Musiklehrers und Autors. Die Materialien gehören zum gemeinsamen Steuerrechts-Plugin.
+
+> Diese Testakte wurde mit KI generiert und ist ein Experiment. Benutzung auf eigene Verantwortung und eigene Gefahr.
+>
+> This test case file was generated with AI and is an experiment. Use at your own responsibility and risk.
+
+[Originalakte Tomasius mit UStVA-Verfahren als ZIP herunterladen](https://github.com/Klotzkette/claude-fuer-deutsches-recht/releases/download/steuerrecht-ustva-v445.35.5/Testakte_Tomasius_UStVA_Einspruch_2025_v3.zip)
+
 ## 4 Word-Vorlagen
 
 - [Arbeitsbogen zur Steuererklärung](vorlagen/Arbeitsbogen_Steuererklaerung.docx)
