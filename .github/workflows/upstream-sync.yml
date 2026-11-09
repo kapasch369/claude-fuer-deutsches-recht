@@ -122,21 +122,25 @@ jobs:
         cat "$REPORT" >> "$GITHUB_STEP_SUMMARY"
 
   # Zweiter Job: Release-Tags von Upstream übernehmen.
-  # Bewusst mit dem Standard-Token (github.token) statt SYNC_PAT: Tag-Pushes mit dem Standard-Token
-  # starten keine Workflows, so laufen die Release-Pipelines von Upstream (z. B. release-plugin-zips,
-  # ki-native-kanzlei-release) nicht ungewollt im Fork an.
   # Es werden nur fehlende Tags angelegt. Bereits vorhandene Tags werden nie überschrieben;
   # Abweichungen werden nur gemeldet. Release-Dateien (ZIPs) werden nicht gespiegelt, nur die Tags.
+  # Der Push läuft mit SYNC_PAT: Das Standard-Token darf Tags nicht anlegen, deren Commits
+  # Workflow-Dateien ändern (GitHub lehnt das ohne "workflows"-Recht ab).
+  # Folge: Tag-Pushes mit dem PAT können tag-getriggerte Workflows von Upstream im Fork starten
+  # (release-plugin-zips bei v*, ki-native-kanzlei-release, vergaberecht-werkstatt). Bei mehr als
+  # drei Tags auf einmal (z. B. beim ersten Lauf) erzeugt GitHub dafür keine Ereignisse.
+  # Wer das nicht möchte, deaktiviert diese Workflows im Fork unter Actions.
   mirror_tags:
     runs-on: ubuntu-latest
     name: Tags von Klotz-Kette spiegeln
     needs: sync_latest_from_upstream
     steps:
-    - name: Checkout Fork (Standard-Token)
+    - name: Checkout Fork
       uses: actions/checkout@v4
       with:
         ref: main
         fetch-depth: 0
+        token: ${{ secrets.SYNC_PAT }}
 
     - name: Tags abgleichen und fehlende anlegen
       env:
