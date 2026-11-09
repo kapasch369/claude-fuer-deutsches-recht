@@ -151,8 +151,9 @@ jobs:
         git ls-remote --tags --refs origin | awk '{ sub("refs/tags/", "", $2); print $2, $1 }' | LC_ALL=C sort > "$WORK/fork.txt"
 
         # neu = Name fehlt im Fork; abweichend = Name vorhanden, zeigt aber auf ein anderes Objekt
-        awk 'NR==FNR { f[$1]=$2; next } !($1 in f) { print $1 }' "$WORK/fork.txt" "$WORK/up.txt" > "$WORK/new.txt"
-        awk 'NR==FNR { f[$1]=$2; next } ($1 in f) && f[$1] != $2 { print $1 }' "$WORK/fork.txt" "$WORK/up.txt" > "$WORK/changed.txt"
+        # (FILENAME statt NR==FNR, damit der Abgleich auch bei leerer Fork-Tagliste funktioniert)
+        awk 'FILENAME == ARGV[1] { f[$1]=$2; next } !($1 in f) { print $1 }' "$WORK/fork.txt" "$WORK/up.txt" > "$WORK/new.txt"
+        awk 'FILENAME == ARGV[1] { f[$1]=$2; next } ($1 in f) && f[$1] != $2 { print $1 }' "$WORK/fork.txt" "$WORK/up.txt" > "$WORK/changed.txt"
 
         UP_COUNT="$(wc -l < "$WORK/up.txt")"
         NEW_COUNT="$(wc -l < "$WORK/new.txt")"
