@@ -120,3 +120,71 @@ jobs:
         # Ausgabe im Job-Log und als Zusammenfassung auf der Run-Seite
         cat "$REPORT"
         cat "$REPORT" >> "$GITHUB_STEP_SUMMARY"
+
+  # Zweiter Job: Release-Tags von Upstream übernehmen.
+  # Bewusst mit dem Standard-Token (github.token) statt SYNC_PAT: Tag-Pushes mit dem Standard-Token
+  # starten keine Workflows, so laufen die Release-Pipelines von Upstream (z. B. release-plugin-zips,
+  # ki-native-kanzlei-release) nicht ungewollt im Fork an.
+  # Es werden nur fehlende Tags angelegt. Bereits vorhandene Tags werden nie überschrieben;
+  # Abweichungen werden nur gemeldet. Release-Dateien (ZIPs) werden nicht gespiegelt, nur die Tags.
+  mirror_tags:
+    runs-on: ubuntu-latest
+    name: Tags von Klotz-Kette spiegeln
+    needs: sync_latest_from_upstream
+    steps:
+    - name: Checkout Fork (Standard-Token)
+      uses: actions/checkout@v4
+      with:
+        ref: main
+        fetch-depth: 0
+
+    - name: Tags abgleichen und fehlende anlegen
+      env:
+        UPSTREAM_URL: https://github.com/Klotzkette/claude-fuer-deutsches-recht.git
+      run: |
+        set -uo pipefail
+        WORK="$(mktemp -d)"
+
+        # Upstream-Tags in einen eigenen Namensraum holen, damit lokale Tags nie überschrieben werden
+        git fetch --no-tags "$UPSTREAM_URL" '+refs/tags/*:refs/upstream-tags/*'
+        git for-each-ref --format='%(refname:strip=2) %(objectname)' refs/upstream-tags | LC_ALL=C sort > "$WORK/up.txt"
+        git ls-remote --tags --refs origin | awk '{ sub("refs/tags/", "", $2); print $2, $1 }' | LC_ALL=C sort > "$WORK/fork.txt"
+
+        # neu = Name fehlt im Fork; abweichend = Name vorhanden, zeigt aber auf ein anderes Objekt
+        awk 'NR==FNR { f[$1]=$2; next } !($1 in f) { print $1 }' "$WORK/fork.txt" "$WORK/up.txt" > "$WORK/new.txt"
+        awk 'NR==FNR { f[$1]=$2; next } ($1 in f) && f[$1] != $2 { print $1 }' "$WORK/fork.txt" "$WORK/up.txt" > "$WORK/changed.txt"
+
+        UP_COUNT="$(wc -l < "$WORK/up.txt")"
+        NEW_COUNT="$(wc -l < "$WORK/new.txt")"
+        CHANGED_COUNT="$(wc -l < "$WORK/changed.txt")"
+        FAILED=0
+
+        if [ "$NEW_COUNT" -gt 0 ]; then
+          awk '{ printf "refs/upstream-tags/%s:refs/tags/%s\n", $1, $1 }' "$WORK/new.txt" | xargs -r -n 100 git push origin || FAILED=1
+        fi
+
+        {
+          echo "## Tag-Spiegelung"
+          echo
+          echo "| | |"
+          echo "|---|---|"
+          echo "| Tags bei Upstream | ${UP_COUNT} |"
+          echo "| Neu im Fork angelegt | ${NEW_COUNT} |"
+          echo "| Abweichend, nicht überschrieben | ${CHANGED_COUNT} |"
+          echo "| Push-Fehler | $([ "$FAILED" -eq 0 ] && echo nein || echo ja) |"
+          if [ "$NEW_COUNT" -gt 0 ] && [ "$NEW_COUNT" -le 40 ]; then
+            echo
+            echo "Neu: $(paste -sd ' ' "$WORK/new.txt")"
+          fi
+          if [ "$CHANGED_COUNT" -gt 0 ]; then
+            echo
+            echo "Abweichende Tags (bitte prüfen): $(head -n 20 "$WORK/changed.txt" | paste -sd ' ' -)"
+          fi
+          echo
+          echo "_Hinweis: Gespiegelt werden nur die Tags, nicht die Release-Dateien (ZIPs). Diese liegen weiter bei Klotzkette/claude-fuer-deutsches-recht unter Releases._"
+        } | tee -a "$GITHUB_STEP_SUMMARY"
+
+        if [ "$FAILED" -ne 0 ]; then
+          echo "::error title=Tag-Push fehlgeschlagen::Mindestens ein Tag konnte nicht angelegt werden. Details im Log dieses Schritts."
+          exit 1
+        fi
