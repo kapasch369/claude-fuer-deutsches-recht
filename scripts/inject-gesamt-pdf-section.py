@@ -23,6 +23,7 @@ from pathlib import Path
 from release_routing import case_asset_url, companion_cases, rewrite_case_asset_urls
 from testakte_einzelpdf_common import expected_arcnames
 from testakte_disclaimer import NOTICE_MARKDOWN
+from testakte_grundakte import selection
 from testakte_download_notices import ensure_download_notices, update_download_readmes
 from testakte_zip_common import preserves_directories, source_zip_includes_gesamt_pdf
 
@@ -91,17 +92,43 @@ def section_block(slug: str, pdf_rel: str | None, has_einzelpdf: bool = False) -
             intro += ' Im Einzel-PDF-ZIP bleibt dieselbe Ordnerstruktur erhalten; jede Originalunterlage liegt als eigene A4-Lesefassung vor.'
         english = ('English: This project-file edition preserves its subfolders in both ZIP formats. '
                    'The original-format ZIP contains editable working documents and supporting records, without Markdown.')
-        if slug == 'bauunternehmer-einkauf-brandschutztueren-krimpfort':
-            intro = ('Beide ZIPs enthalten den Ordner `00_LV_Entstehung` mit Planung, Markterkundung und '
-                     'LV-Freigabe. Die Unterlagen zur Angebotsphase und Verhandlung liegen auf der Wurzelebene. '
-                     'Das Originalformat-ZIP enthält die Arbeitsdateien einschließlich GAEB. Das Einzel-PDF-ZIP '
-                     'liefert die Aktenstücke jeweils als PDF. Die Lesezeichen im Gesamt-PDF führen zu den einzelnen Unterlagen.')
+        if slug == 'compliance-hameln-schokolade-charge-k17':
+            intro = ('Öffnen Sie im Originalformat-ZIP zuerst `Grundakte`. Dort liegt der Stand der Entdeckung '
+                     'vom 6. November 2026, 09:25 Uhr. Die späteren Arbeitsstücke stehen in den Ordnern '
+                     '`Interne_Untersuchung`, `Zeugenbefragungen` und `Massnahmen_und_Auswertung`. '
+                     'Das Einzel-PDF-ZIP verwendet dieselbe Ordnerstruktur.')
+            trailer = ('Die Gesamt-PDF mit Lesezeichen führt durch alle Phasen. Für die erste Bearbeitung '
+                       'laden Sie nur die Grundakte aus einem der ZIPs.')
+            english = ('English: Both ZIPs preserve the four case folders. For the first exercise, open only '
+                       '`Grundakte`, which contains the intake records as of 09:25 on 6 November 2026.')
         if slug == 'fintech-darlehen-vertragsuebernahme-bremen':
             intro = ('Die Verfahrensakte gibt es in drei Formaten. Beide ZIPs erhalten die getrennten Ordner '
                      'für Eingang, Klageerwiderung und Korrespondenz. Das Originalformat-ZIP enthält PDF, Word, '
                      'E-Mail, Text und CSV, aber kein Markdown. Das Einzel-PDF-ZIP enthält jede Unterlage als '
                      'eigenes PDF. Das Gesamt-PDF enthält auch die Klageerwiderung; sein Register und seine '
                      'Lesezeichen führen zu den getrennten Arbeitsbereichen.')
+    if slug in selection()["central"]:
+        intro = ("Entpacken Sie das Akten-ZIP und laden Sie für den ersten Arbeitsauftrag nur den Ordner "
+                 "`Grundakte`. Dort stehen die ausgewählten Eingangsunterlagen und Belege. Falls ein "
+                 "Rechtsbehelf vorzubereiten ist, kann der zugrunde liegende Ausgangsbescheid dazugehören. "
+                 "Die weiteren Aktenstücke liegen außerhalb der Grundakte. Die vollständige Lesefassung "
+                 "ist separat abrufbar.")
+        if has_einzelpdf:
+            intro += " Das Einzel-PDF-ZIP dient der Durchsicht der vollständigen Akte."
+        trailer = ("Die ZIP-Links führen zu den veröffentlichten Aktenfassungen. Die Gesamt-PDF steht "
+                   "für die Nachbesprechung getrennt bereit.")
+        english = ("English: Start with the `Grundakte` folder in the original-format ZIP. It contains "
+                   "the selected intake records. Later procedural documents are outside that folder.")
+    if slug == 'bauunternehmer-einkauf-brandschutztueren-krimpfort':
+        intro = ('Öffnen Sie im Originalformat-ZIP zuerst `Grundakte`. Unter `00_LV_Entstehung` liegen '
+                 'Planung, Markterkundung und LV-Freigabe. In der Grundakte finden Sie außerdem das gemeinsame '
+                 'LV und die vier ersten Angebote mit GAEB-Dateien. Spätere Rückfragen, Nachträge und '
+                 'Verhandlungsunterlagen folgen außerhalb der Grundakte.')
+        trailer = ('Das Einzel-PDF-ZIP enthält die Lesefassungen der einzelnen Dokumente. '
+                   'Die Lesezeichen im Gesamt-PDF führen zu den Aktenstücken.')
+        english = ('English: The original-format ZIP starts with the initial records under `Grundakte`. '
+                   'They include planning, market research, the final bill of quantities and the first four bids. '
+                   'Later correspondence is available outside that folder.')
     if pdf_rel is not None:
         if source_zip_includes_gesamt_pdf(TESTAKTEN_DIR / slug):
             english += " Choose the combined PDF for reading; it is also included in that ZIP."
@@ -109,7 +136,8 @@ def section_block(slug: str, pdf_rel: str | None, has_einzelpdf: bool = False) -
             english += " Choose the combined PDF for reading; it is deliberately excluded from the original-format ZIP."
     if has_einzelpdf:
         english += " Choose the individual-PDF ZIP to review each document separately."
-    english += " These are practice documents, not an installable plugin. ZIP links refer to the latest published release."
+    if slug not in selection()["central"]:
+        english += " These are practice documents, not an installable plugin. ZIP links refer to the latest published release."
     if slug in companion_cases():
         trailer = trailer.replace(
             "Die ZIP-Links laden den zuletzt veröffentlichten Release.",
