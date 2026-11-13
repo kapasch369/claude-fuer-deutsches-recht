@@ -41,7 +41,7 @@ Kategorien sind alphabetisch nach Titel sortiert, Einträge innerhalb jeder Kate
 | [Gerichtliche Spruchpraxis (experimentell)](#gerichtliche-spruchpraxis-experimentell) | 13 |
 | [Gewerblicher Rechtsschutz](#gewerblicher-rechtsschutz) | 8 |
 | [Handels- und Gesellschaftsrecht](#handels--und-gesellschaftsrecht) | 24 |
-| [Insolvenz- und Sanierungsrecht](#insolvenz--und-sanierungsrecht) | 13 |
+| [Insolvenz- und Sanierungsrecht](#insolvenz--und-sanierungsrecht) | 14 |
 | [Internationales Wirtschaftsrecht](#internationales-wirtschaftsrecht) | 6 |
 | [IT-Recht](#it-recht) | 20 |
 | [Kartell- und Wettbewerbsrecht](#kartell--und-wettbewerbsrecht) | 1 |
@@ -63,7 +63,7 @@ Kategorien sind alphabetisch nach Titel sortiert, Einträge innerhalb jeder Kate
 | [Versicherungsrecht](#versicherungsrecht) | 4 |
 | [Verwaltungsrecht](#verwaltungsrecht) | 39 |
 
-277 kuratierte Plugins in 34 Kategorien, aus insgesamt 314 Marketplace-Plugins (Abgleich: 9. November 2026). Gezählt werden Plugins, nicht einzelne Skills oder Prompt-Dateien. Die [Grundstücksrecherche](./grundstuecksrecherche/README.md) ist eine lokale App ohne eigenständige Begleitprompts und gehört deshalb nicht zu dieser kuratierten Promptauswahl.
+278 kuratierte Plugins in 34 Kategorien, aus insgesamt 315 Marketplace-Plugins (Abgleich: 13. November 2026). Gezählt werden Plugins, nicht einzelne Skills oder Prompt-Dateien. Die [Grundstücksrecherche](./grundstuecksrecherche/README.md) ist eine lokale App ohne eigenständige Begleitprompts und gehört deshalb nicht zu dieser kuratierten Promptauswahl.
 
 ## Agrarrecht
 
@@ -230,6 +230,7 @@ Kategorien sind alphabetisch nach Titel sortiert, Einträge innerhalb jeder Kate
 - [liquiditaetsplanung](https://github.com/Klotzkette/claude-fuer-deutsches-recht/tree/main/liquiditaetsplanung): Liquiditätsplanung nach deutschem Recht: 3-Wochen-Vorschau, 13/26/52-Wochen-Forecast, Excel-Export, Quote/Lücken-Ampel… · [Schnellstart: MD herunterladen](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=liquiditaetsplanung/liquiditaetsplanung-schnellstart.md) · [Werkstatt: MD herunterladen](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=liquiditaetsplanung/liquiditaetsplanung-werkstatt.md)
 - [us-bankruptcy-code](https://github.com/Klotzkette/claude-fuer-deutsches-recht/tree/main/us-bankruptcy-code): US Bankruptcy Code Title 11: Chapters 7/9/11/12/13/15, Automatic Stay, Claims, DIP, 363 Sales, Plans und Cross-Border · [Schnellstart: MD herunterladen](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=us-bankruptcy-code/us-bankruptcy-code-schnellstart.md) · [Werkstatt: MD herunterladen](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=us-bankruptcy-code/us-bankruptcy-code-werkstatt.md)
 - [verbraucherinsolvenz-schuldenbereinigung](https://github.com/Klotzkette/claude-fuer-deutsches-recht/tree/main/verbraucherinsolvenz-schuldenbereinigung): Verbraucherinsolvenz und Schuldenbereinigung nach InsO: außergerichtlicher Einigungsversuch, Schuldenbereinigungsplan, Antrag, Restschuldbefreiung, P-Konto… · [Schnellstart: MD herunterladen](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=verbraucherinsolvenz-schuldenbereinigung/verbraucherinsolvenz-schuldenbereinigung-schnellstart.md) · [Werkstatt: MD herunterladen](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=verbraucherinsolvenz-schuldenbereinigung/verbraucherinsolvenz-schuldenbereinigung-werkstatt.md)
+- [zahlungsunfaehigkeits-und-ueberschuldungspruefer](https://github.com/Klotzkette/claude-fuer-deutsches-recht/tree/main/zahlungsunfaehigkeits-und-ueberschuldungspruefer): Insolvenzreife stichtagsbezogen aus Kontoauszügen, Fälligkeiten, Fortbestehensprognose und Verwertungswerten prüfen · [Schnellstart: MD herunterladen](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=zahlungsunfaehigkeits-und-ueberschuldungspruefer/zahlungsunfaehigkeits-und-ueberschuldungspruefer-schnellstart.md) · [Werkstatt: MD herunterladen](https://klotzkette.github.io/claude-fuer-deutsches-recht/download.html?path=zahlungsunfaehigkeits-und-ueberschuldungspruefer/zahlungsunfaehigkeits-und-ueberschuldungspruefer-werkstatt.md)
 
 ## Internationales Wirtschaftsrecht
 
