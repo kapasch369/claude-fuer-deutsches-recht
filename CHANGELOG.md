@@ -1,3 +1,17 @@
+# Visuelle Werkstattführung und eigenständige PR-Prüfung – 13. November 2026
+
+Alle 315 Plugins erhalten eine ausdrückliche Zuordnung ihrer fachlichen Einstiegsskills und geeigneter Fallansichten. Die großen Werkstatt-Prompts, Hauptskills und vorhandenen Vollprüfungen führen bei passender Aufgabe direkt zu einer Visualisierung oder einem verfügbaren Applet. Belegstellen, Annahmen, lesbare Auswahlübergabe und die Fortsetzung bis zum ausformulierten Dokument bleiben verbunden. Die beiden Angebote ohne eigenständige Prompts behalten ihren Anwendungs- beziehungsweise Dateiworkflow. Es entstehen keine zusätzlichen Skills; die Kurz- und Schwerpunktprompts behalten ihr Größenbudget.
+
+Die Ergänzungen werden aus einer gemeinsamen Quelle synchronisiert; Fachtexte außerhalb des markierten Zusatzes bleiben bytegleich. Bestehende redaktionelle Hashbindungen werden nur bei passendem Ausgangsstand fortgeschrieben. Das ist eine Prüfung der Anweisungen und ihrer Integration, keine Live-Ausführung aller Plugins in ChatGPT oder Cowork. [Arbeitsweise und Prüfgrenzen](docs/werkstatt-visualisierung.md).
+
+Die elf offenen Verbesserungsvorschläge wurden am aktuellen Bestand und anhand der maßgeblichen Quellen unabhängig beurteilt. Berechtigte verbleibende Korrekturen wurden eigenständig umgesetzt; fremde Branches wurden nicht übernommen. [Prüfergebnisse und Quellen](docs/pr-pruefung-2026-11-13.md). Die Überarbeitung betrifft den Repository-Quellstand. Bestehende Versionstags und veröffentlichte ZIP-Dateien bleiben unverändert.
+
+Die Einbindung berücksichtigt besondere Skillgrößen und Klartextstile, erhält vorhandene TXT-Kopien und prüft importierte Fachtexte weiter gegen ihren unveränderten Herkunftsbestand. Außenhandel, CISG und Sanktionen erhalten Ansichten für ihre tatsächlichen Liefer-, Vertrags- und Zahlungsbeziehungen. Eine zuvor nicht erfasste Einzelprüfliste des Notariats wird nur bei nachgewiesen identischem Fachtext und kanonischem Oberflächenanhang fortgeschrieben.
+
+# Zahlungsunfähigkeits- und Überschuldungsprüfer 1.2.0 vom 13. November 2026
+
+Ausfüllbare Wordvorlagen für Anfechtungsschreiben und Klage verbinden die Zahlungsauswertung mit einer fallbezogenen Anspruchsbegründung. Die drei Akten erhalten eigene Zahlungskomplexe für Darlehenszinsen, Verrechnung zwischen verschiedenen Gesellschaften und Lieferantenzahlungen mit Kenntnis- und Bargeschäftsfragen. Eingangsbelege, Verfahrensstücke und Blankovorlagen bleiben getrennt. [Umfang und Prüfgrenzen](docs/releases/zahlungsunfaehigkeits-und-ueberschuldungspruefer-v1.2.0.md).
+
 # Zahlungsunfähigkeits- und Überschuldungsprüfer 1.1.0 vom 13. November 2026
 
 Alle elf Skills und beide Prompts sind an 20 amtlichen BGH-Entscheidungen überprüft. Der Rechner trennt Zahlungseinstellung, Rechenbefund und Beleglücken und behandelt historische Prognosezeiträume gesondert.
