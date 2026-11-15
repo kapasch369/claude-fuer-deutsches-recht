@@ -33,6 +33,7 @@ import re
 from pathlib import Path
 
 from prompt_profiles import enabled
+from skill_sources import original_skill_sources, replacements
 from werkstatt_visualisierung import block as visual_block, remove_block as remove_visual_block
 from urllib.parse import quote
 
@@ -81,16 +82,11 @@ def collect_skills(plugin_dir: Path) -> list[tuple[str, Path, str, str]]:
                       'orientierung', 'mandat-intake-und-konfliktpruefung',
                       'erstgespraech-mandatsannahme', 'erstpruefung-und-mandatsziel']
     skills = []
-    for sd in sorted(skills_dir.iterdir()):
-        if not sd.is_dir():
-            continue
-        skill_md = sd / 'SKILL.md'
-        if not skill_md.is_file():
-            continue
+    for skill_md in original_skill_sources(plugin_dir):
         text = skill_md.read_text(encoding='utf-8', errors='ignore')
         fm, body = extract_frontmatter_and_body(text)
         desc = get_description(fm)
-        skills.append((sd.name, skill_md, desc, body))
+        skills.append((skill_md.parent.name, skill_md, desc, body))
 
     # Sortierung: Prioritaeten zuerst, dann Description-Laenge (= Substanz-Proxy)
     def keyfn(item):
@@ -188,6 +184,15 @@ def build_megaprompt(plugin_dir: Path) -> str | None:
         lines.append('')
         lines.append('---')
         lines.append('')
+
+    replacement = replacements().get(plugin)
+    if replacement and plugin_dir.resolve() == (REPO / replacement['source']).resolve():
+        for relative in replacement['chapters']:
+            chapter = plugin_dir / relative
+            if not chapter.is_file() or not chapter.resolve().is_relative_to(plugin_dir.resolve()):
+                raise ValueError(f'Fachkapitel fehlt oder liegt außerhalb des Plugins: {relative}')
+            lines.append(rewrite_relative_links(chapter.read_text(encoding='utf-8').strip(), chapter))
+            lines.extend(['', '---', ''])
 
     lines.append('## Anwendungshinweise')
     lines.append('')
