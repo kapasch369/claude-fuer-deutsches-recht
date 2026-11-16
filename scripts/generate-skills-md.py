@@ -32,6 +32,7 @@ from prompt_profiles import enabled, formats, standalone_kinds
 from urllib.parse import quote
 
 from readme_display import display_prose
+from werkstatt_visualisierung import load_profiles as load_workflow_profiles
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 GH_OWNER = "Klotzkette"
@@ -337,7 +338,7 @@ def write_detail_index(plugins: list[tuple[str, list[str]]], version: str) -> st
         "",
         "English: Each plugin has one lightweight detail page containing its complete skill list, descriptions and direct Markdown downloads. Open a plugin page to choose a skill; links labelled `Download MD` save the file instead of opening a source preview.",
         "",
-        "[Repository-Start](../README.md) · [Skill-Gesamtübersicht](../SKILLS.md) · [Download-Index](../ASSET_INDEX.md) · [Werkstatt und Schnellstart](../docs/werkstatt-und-schnellstart-coverage.md) · [Testakten](../testakten/README.md)",
+        "[Hauptskills](#hauptskills) · [Repository-Start](../README.md) · [Skill-Gesamtübersicht](../SKILLS.md) · [Download-Index](../ASSET_INDEX.md) · [Werkstatt und Schnellstart](../docs/werkstatt-und-schnellstart-coverage.md) · [Testakten](../testakten/README.md)",
         "",
         "## Alle Detailseiten",
         "",
@@ -349,6 +350,22 @@ def write_detail_index(plugins: list[tuple[str, list[str]]], version: str) -> st
         for name, skills in items:
             lines.append(f"- [{name}](./{name}.md) ({len(skills)} Skills)")
         lines.append("")
+    workflow_profiles = load_workflow_profiles()
+    lines.extend([
+        "## Hauptskills",
+        "",
+        "Beginne einen Vorgang mit dem Hauptskill des passenden Plugins. Gib den Auftrag und die vorhandenen Unterlagen mit. Für eine einzelne Teilfrage findest du die Fachskills auf der Plugin-Detailseite.",
+        "",
+        "| Plugin | Hauptskill als Markdown |",
+        "| --- | --- |",
+    ])
+    for name, skills in plugins:
+        entry_skill = workflow_profiles[name]["entry_skills"][0]
+        if entry_skill not in skills:
+            raise ValueError(f"{name}: Hauptskill {entry_skill} ist nicht installierbar")
+        download = markdown_download_url(f"{_source_rel_for(name)}/skills/{entry_skill}/SKILL.md")
+        lines.append(f"| [{name}](./{name}.md) | [`{entry_skill}` herunterladen]({download}) |")
+    lines.append("")
     return "\n".join(lines)
 
 
@@ -373,13 +390,25 @@ def main() -> int:
     SKILLS_INDEX_DIR.mkdir(exist_ok=True)
     # Alte Detailseiten loeschen, falls Plugins entfernt wurden
     # Die veröffentlichte Weiterleitungsseite hält alte Direktlinks funktionsfähig.
-    current_names = {name for name, _ in plugins} | {"README", "si-native-kanzlei"}
+    archive_registry = REPO_ROOT / "scripts/plugin-consolidations.json"
+    consolidations = json.loads(archive_registry.read_text())["consolidations"] if archive_registry.is_file() else []
+    current_names = {name for name, _ in plugins} | {"README", "si-native-kanzlei"} | {item["legacy"] for item in consolidations}
     for old in SKILLS_INDEX_DIR.glob("*.md"):
         if old.stem not in current_names:
             old.unlink()
     for name, skills in plugins:
         page = plugin_detail_page(name, skills, component_versions[name])
         (SKILLS_INDEX_DIR / f"{name}.md").write_text(page.rstrip() + "\n", encoding="utf-8")
+    # Historische Direktlinks bleiben als ausdrückliche Wegweiser erhalten.
+    for item in consolidations:
+        legacy, canonical = item["legacy"], item["canonical"]
+        if canonical not in {name for name, _ in plugins}:
+            raise ValueError(f"Gemeinsames Plugin fehlt: {canonical}")
+        (SKILLS_INDEX_DIR / f"{legacy}.md").write_text(
+            f"# Fachwege: {canonical}\n\n"
+            f"Die gemeinsamen Skills stehen im [Skill-Verzeichnis {canonical}](./{canonical}.md). "
+            f"[Anleitung und sämtliche bisherigen Testakten](../{canonical}/README.md).\n\n"
+            f"Der [frühere Quellbestand](../{legacy}/README-bestand.md) bleibt nachvollziehbar.\n", encoding="utf-8")
     # Index der Detailseiten
     idx = write_detail_index(plugins, version)
     (SKILLS_INDEX_DIR / "README.md").write_text(idx.rstrip() + "\n", encoding="utf-8")

@@ -6,7 +6,7 @@ on:
       tag:
         description: 'Unbenutzter Komponententag aus dem Release-Scope'
         required: true
-        default: qualitaetsrunde-v445.36.2
+        default: qualitaetsrunde-v445.36.6
       expected_commit:
         description: 'Vollständiger geprüfter Main-Commit (40 Hexadezimalzeichen)'
         required: true
@@ -53,7 +53,7 @@ jobs:
           git merge-base --is-ancestor HEAD origin/main
           test "$TAG" = "$(python3 -c 'import json; print(json.load(open("scripts/data/skill-quality-release-scope.json"))["tag"])')"
           test -s "docs/releases/$TAG.md"
-          python3 -m pip install PyYAML jsonschema pypdf openpyxl 'markdown-it-py>=3,<5' 'linkify-it-py>=2,<3'
+          python3 -m pip install -r requirements.txt
       - name: Struktur, Auswahl und Quellenbindung prüfen
         run: |
           node scripts/validate-plugin-structure.mjs
@@ -75,8 +75,13 @@ jobs:
         run: |
           python3 scripts/test-skill-cap-migration.py
           python3 scripts/test-skill-cap-integration.py
+          python3 scripts/test-plugin-consolidation.py
+          python3 scripts/test-skill-activation.py
+          python3 scripts/test-skill-source-replacements.py
+          python3 scripts/test-marketplace-import.py
           python3 scripts/test-skill-quality-release.py
           python3 scripts/test-anfechtung-werkstattprompts.py
+          python3 scripts/test-insolvenzanfechtung.py
           python3 scripts/test-quality-lab.py
           python3 scripts/test-skill-package-links.py
           python3 scripts/test-runtime-performance.py
@@ -93,6 +98,9 @@ jobs:
           python3 scripts/test-release-assets.py
           python3 scripts/test-release-rate-limits.py
           python3 scripts/test-scoped-release-routing.py
+      - name: Akten-Erhalt für die Zusammenführungsrunde prüfen
+        if: inputs.tag == 'qualitaetsrunde-v445.36.5'
+        run: python3 scripts/validate-plugin-consolidation.py
       - name: Vollständige Pakete aus dem freigegebenen Commit bauen
         run: |
           python3 scripts/build-skill-quality-release.py --dist "$RUNNER_TEMP/quality-dist" --expected-commit "$EXPECTED_COMMIT"

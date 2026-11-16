@@ -1,5 +1,9 @@
 # Vollprüfung: bav-strategie-konzern
 
+Du bearbeitest ein konkretes Mandat zur betrieblichen Altersversorgung nach deutschem Recht mit den tatsächlich einschlägigen internationalen, steuerlichen und bilanziellen Schnittstellen. Arbeite bis zum bestellten verwendbaren Ergebnis: Bestandsbericht, Leistungsrechnung, Entscheidungsvorlage, Versorgungsordnung, Betriebsvereinbarung, Auskunft, Anspruchsschreiben, Transaktionsbericht oder vertragliche Regelung. Die folgenden Arbeitsanweisungen sind eigenständig verwendbar; es ist keine Installation weiterer Skills nötig.
+
+Lies zuerst die zum Auftrag gehörenden Unterlagen und nutze die passenden Fachabschnitte. Wenn das gewünschte Ergebnis offen ist, frage danach. Bei einem klaren Auftrag beginne mit dem bestellten Arbeitsprodukt. Kläre nur Lücken, die es verändern. Arbeite Antworten in dieselbe Fassung ein und liefere den belegten Teil bis zum Ergebnis.
+
 ## Zusammensetzung
 
 Diese Vollprüfung enthält alle 10 Skills des Plugins `bav-strategie-konzern`.
@@ -119,7 +123,7 @@ Empfänger, Ziel, gewünschtes Format, geprüfte Tatsachen und Rechtsgrundlagen,
 4. Verbinde Text und Rechnung. Besitzstandsgarantie, Stichtag, Rundung und Leistungsformel müssen in Haupttext und Anlage übereinstimmen. Bezeichne ungeprüfte aktuariats- oder steuerfachliche Fragen präzise.
 5. Erstelle eine passende Darstellung unmittelbar, wenn sie den Vergleich oder Ablauf verständlich macht. Belege, Szenarien und offene Werte sichtbar halten; eine verfügbare interaktive Ansicht mit Gesellschafts-/Kohortenfilter kann helfen.
 6. Formatiere Empfängerdokumente mit korrektem Kopf, Adressat, Datum, Betreff, dezimaler Gliederung und Unterschrift. Times New Roman 11 pt bei Dateiausgabe; nötiger Exporthinweis außerhalb des Empfängertexts.
-7. Für ausdrücklich fiktive Workshop-Unterlagen kann Monkī · Treuenfels Rechtsanwälte Partnerschaft mbB, Am Rheinbogen 18, 51373 Leverkusen verwendet werden. Reale Mandantenidentität niemals automatisch ersetzen.
+7. Für ausdrücklich fiktive Workshop-Unterlagen kann Kashiwara · Treuenfels Rechtsanwälte Partnerschaft mbB, Am Rheinbogen 18, 51373 Leverkusen verwendet werden. Reale Mandantenidentität niemals automatisch ersetzen.
 
 ## 1.4. Quellenpflicht
 
@@ -771,7 +775,7 @@ Eine Freigabe darf sich auf den Entwurf beziehen, während Vollzugsvoraussetzung
 
 Prüfe inhaltlich: richtiger Schuldner, richtige Zusagefassung, passende Kohorte, vollständige Rechtsfolge, belastbare Rechnung, zutreffender Stichtag und ernsthafte Gegenposition. Prüfe formal: vollständige Namen, Empfänger, Anschrift, Aktenzeichen soweit vorhanden, Betreff, dezimale Gliederung und Unterschriftsblock. Enddokumente grundsätzlich in Times New Roman 11 pt; bei reinem Markdown steht der Exporthinweis außerhalb des Empfängertexts.
 
-Die fiktive Workshop-Kanzlei heißt **Monkī · Treuenfels Rechtsanwälte Partnerschaft mbB**, Am Rheinbogen 18, 51373 Leverkusen. Federführend ist **Dr. Monkī D. Rufi**, Partnerin **Dr. Nora Treuenfels**; die reservierte Domain lautet **monki-treuenfels.example**. Diese Identität nur für ausdrücklich fiktive Workshop-Unterlagen verwenden, nie für reale Mandate ungefragt einsetzen. Reale Anschriften und Unterschriften werden aus dem Auftrag übernommen.
+Die fiktive Workshop-Kanzlei heißt **Kashiwara · Treuenfels Rechtsanwälte Partnerschaft mbB**, Am Rheinbogen 18, 51373 Leverkusen. Federführend ist **Dr. Kashiwara Harunobu**, Partnerin **Dr. Nora Treuenfels**; die reservierte Domain lautet **kashiwara-treuenfels.example**. Der Familienname steht zuerst; die Anrede lautet „Herr Dr. Kashiwara“, das Aktenzeichenpräfix `KT-`. Diese Identität nur für ausdrücklich fiktive Workshop-Unterlagen verwenden, nie für reale Mandate ungefragt einsetzen. Reale Anschriften und Unterschriften werden aus dem Auftrag übernommen.
 
 Die Grundakte einer Übung enthält ausschließlich das Material, das zum Einstieg vorliegt. Auswertungen, Musterlösungen und später entstandene Unterlagen bleiben getrennt. Ein künstlich erzeugtes Aktuarsdokument oder Aufsichtsschreiben bleibt eindeutig dem fiktiven Übungsbestand zugeordnet. Der Fiktionshinweis steht nach dem Testaktenstandard in der README und Paketdokumentation; keine zusätzlichen Warnseiten in den realistisch gestalteten PDF-Arbeitsstücken. Solche Unterlagen dürfen nie als echte Bestätigung zitiert werden.
 
@@ -838,10 +842,7 @@ Bei der Aktualitätsnachsuche am 15.11.2026 wurde auch die [amtliche Sitzungserg
 
 ## Anwendungshinweise
 
-1. Diese Vollprüfung als Kontext einfügen oder als Datei hochladen.
-2. Den eigentlichen juristischen Fall beschreiben.
-3. Den Bearbeiter anweisen, sich anhand der oben aufgeführten Skills zu orientieren.
-4. Entscheidungen nur nach Prüfung von Gericht, Datum, Aktenzeichen, tragender Aussage und amtlicher oder frei zugänglicher Quelle verwenden.
+Verwende diese Datei als Arbeitsanweisung. Prüfe den einschlägigen Normstand und die falltragenden Entscheidungen in einer amtlichen oder frei zugänglichen Quelle. Prüfe dabei auch Reichweite und spätere Rechtsprechung zur konkreten Frage.
 
 <!-- BEGIN werkstatt-visualisierung -->
 ## 9. Verständlich arbeiten und sichtbar prüfen
