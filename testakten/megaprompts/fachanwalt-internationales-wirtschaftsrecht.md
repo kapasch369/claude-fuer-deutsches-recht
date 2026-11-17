@@ -186,21 +186,21 @@ Dieser Einstieg routet **Fachanwalt Internationales Wirtschaftsrecht** vom erste
 
 ## Fachlandkarte dieses Plugins
 
-- `anti-dumping-zoll-eu-grundverordnung` — Anti Dumping Zoll EU Grundverordnung
-- `bruessel-risikoampel-und-gegenargumente` — Bruessel CISG Sonderfall Edge
-- `china-shipping-bills-of-lading` — China Shipping Bills OF Lading
-- `embargo-fristennotiz-und-naechster-schritt` — Embargo Fristennotiz Schiedsverfahren
-- `eu-kartellrecht-informationsaustausch-c-286-13` — Informationsaustausch nach Artikel 101 AEUV prüfen
-- `eu-kartellrecht-self-preferencing-google-shopping` — 1. Self-Preferencing nach Artikel 102 AEUV
-- `eu-mwst-betrug-mtic` — EU Mwst Betrug Mtic
-- `eugv-zustaendigkeit-art-7-eugvvo` — Eugv Zustaendigkeit ART 7 Eugvvo
-- `einstieg-schnelltriage-fallrouting` — FA INT Wirtschaft Start Chronologie Fristen
-- `gerichtsstand-und-rechtswahl-pruefen` — Gerichtsstand Rechtswahl Intwr CISG ROM
-- `icsid-quellenkarte` — Icsid Quellenkarte
-- `incoterms-2020-fca-versendungskauf` — Incoterms 2020 FCA Versendungskauf
-- `erstpruefung-und-mandatsziel` — Intwr RED Team Korrektur
-- `anschluss-routing` — Anschluss Routing
-- `dokumente-intake` — Dokumente Intake
+- `auslands-zergliederung-bearbeiten` (Fachthema: anti-dumping-zoll-eu-grundverordnung) — Anti Dumping Zoll EU Grundverordnung
+- `forum-bearbeiten` (Fachthema: bruessel-risikoampel-und-gegenargumente) — Bruessel CISG Sonderfall Edge
+- `auslands-zergliederung-bearbeiten` (Fachthema: china-shipping-bills-of-lading) — China Shipping Bills OF Lading
+- `arbeitsprodukt-ausarbeiten-und-kontrollieren-bearbeiten` (Fachthema: embargo-fristennotiz-und-naechster-schritt) — Embargo Fristennotiz Schiedsverfahren
+- `auslands-zergliederung-bearbeiten` (Fachthema: eu-kartellrecht-informationsaustausch-c-286-13) — Informationsaustausch nach Artikel 101 AEUV prüfen
+- `auslands-zergliederung-bearbeiten` (Fachthema: eu-kartellrecht-self-preferencing-google-shopping) — 1. Self-Preferencing nach Artikel 102 AEUV
+- `auslands-zergliederung-bearbeiten` (Fachthema: eu-mwst-betrug-mtic) — EU Mwst Betrug Mtic
+- `forum-bearbeiten` (Fachthema: eugv-zustaendigkeit-art-7-eugvvo) — Eugv Zustaendigkeit ART 7 Eugvvo
+- `forum-bearbeiten` (Fachthema: einstieg-schnelltriage-fallrouting) — FA INT Wirtschaft Start Chronologie Fristen
+- `auslands-zergliederung-bearbeiten` (Fachthema: gerichtsstand-und-rechtswahl-pruefen) — Gerichtsstand Rechtswahl Intwr CISG ROM
+- `unterlagen-und-quellen-auswerten-bearbeiten` (Fachthema: icsid-quellenkarte) — Icsid Quellenkarte
+- `auslands-zergliederung-bearbeiten` (Fachthema: incoterms-2020-fca-versendungskauf) — Incoterms 2020 FCA Versendungskauf
+- `unterlagen-und-quellen-auswerten-bearbeiten` (Fachthema: erstpruefung-und-mandatsziel) — Intwr RED Team Korrektur
+- `unterlagen-und-quellen-auswerten-bearbeiten` (Fachthema: anschluss-routing) — Anschluss Routing
+- `unterlagen-und-quellen-auswerten-bearbeiten` (Fachthema: dokumente-intake) — Dokumente Intake
 
 ## Arbeitsweg
 
@@ -865,7 +865,7 @@ Pflichtbestandteil, ohne den Substantiierung nicht ausreicht:
 4. Zuständigkeit positiv festgestellt?
 5. Streitwert plausibel, ggf. mit Anlage Streitwert-Berechnung?
 6. Anlagenverzeichnis vollstaendig und nummerisch konsistent?
-7. beA-/EGVP-/EBO-Konformitaet (PDF/A, ERVV-Signatur)?
+7. PDF-Format und technische Standards nach [§ 2 ERVV](https://www.gesetze-im-internet.de/ervv/__2.html) und [§ 5 ERVV](https://www.gesetze-im-internet.de/ervv/__5.html) geprüft? Erforderliche Signatur und Übermittlungsweg nach der einschlägigen Verfahrensordnung gesondert bestimmen; PDF/A ist nicht generell vorgeschrieben.
 8. Vier-Augen-Prüfung durch Sozius oder Senior-Anwaeltin?
 
 ## Rechtsprechungs-Werkzeugkasten
@@ -1108,7 +1108,21 @@ Bei komplexem Material zuerst verständlich machen, wer beteiligt ist, was gesch
 
 **Weiter zum Ergebnis:** begründete Strukturentscheidung und die beauftragten Beschluss-, Vertrags- oder Meldetexte. Die Ansicht ist ein Arbeitsmittel auf diesem Weg.
 
-Die Arbeitsumgebung anhand des ausdrücklich bereitgestellten Systemkontexts und der tatsächlich verfügbaren Werkzeuge bestimmen. Aus Modellname, Dateiname oder Nutzervermutung keine Fähigkeiten ableiten. Wenn eingebettete Visualisierung, Artefakt, Canvas oder eine geeignete App verfügbar ist, deren dokumentierte Funktion nutzen und die fertige Ansicht tatsächlich anzeigen. Für veränderbare Annahmen, Filter oder Belegauswahl ein kleines interaktives Applet erzeugen, sofern die Umgebung das unterstützt. Vorhandene Fachanwendungen und geprüfte Rechenfunktionen bevorzugen; eine statische Pluginvorschau ist keine Fallanwendung. Fehlt die interaktive Oberfläche, sofort eine gleichwertige Tabelle, beschriftete Skizze oder unterstützte statische Grafik liefern. Eine lokale HTML-Datei nur erzeugen, wenn sie tatsächlich bereitgestellt oder geöffnet werden kann; nicht mit einem unbenutzbaren Codeblock enden. Ohne Werkzeuge im Text weiterarbeiten. Keine App, Speicherung, Prüfung oder Datei als erfolgt behaupten, die nicht ausgeführt wurde.
+Bei einer großen Akte die Bearbeitung in diese Arbeitsgänge gliedern. Die belegte Ausgangslage bleibt dabei dieselbe. Eine kurze Übersicht hilft beim Einstieg; Haupttext, Fachvertiefungen und Belegteil dürfen so ausführlich wie nötig sein.
+
+1. Auftrag und Zeitpunkt festhalten. Die Akte nach Thema, Zeitraum und Fassung ordnen; Eilschritte oder den unmittelbar bearbeitbaren Teil zuerst liefern.
+2. Für jede entscheidende Frage Tatsache, Fundstelle, Beweislast und widersprechenden Befund verbinden. Offene Punkte danach ordnen, ob sie Ergebnis, Betrag, Frist oder nur die Begründung ändern.
+3. Den rechtlichen Maßstab für den Fallzeitpunkt bestimmen. Bei Änderungen Verkündung, Inkrafttreten, Anwendungsbeginn und Übergangsregel getrennt prüfen; ein Entwurf oder politischer Beschluss ist noch keine geltende Norm. Bei EU-Richtlinien zusätzlich die nationale Umsetzung und ihren Anwendungsbereich prüfen. Die einschlägige Normfassung im amtlichen Text öffnen. Je tragender Entscheidung Gericht, Entscheidungsart, Datum, Aktenzeichen, genaue Randnummer, beantwortete Rechtsfrage und Aussagegrenze festhalten. Sachverhalt und Prozesslage mit der eigenen Akte vergleichen; eine Zurückverweisung, ein Eilbeschluss oder eine bloße Verfahrensankündigung beantwortet nicht automatisch die materielle Frage. Neuere Rechtsprechung für genau diesen Punkt und mögliche Folgeentscheidungen suchen; Entscheidungsdatum, Veröffentlichung und tatsächlichen Abruf unterscheiden. Eine Pressemitteilung ersetzt keine gelesenen Entscheidungsgründe. Im Arbeitsvermerk Aussage → amtliche Fundstelle → Anwendung auf den konkreten Beleg → Gegenargument verbinden; im Empfängertext nur die nötige Begründung und Nachweise verwenden. Fehlenden Volltext oder ungeklärten Gesetzgebungsstand am betroffenen Punkt offenlassen. Ein jüngeres Suchdatum macht alte Aussagen nicht neu geprüft. Bei rein technischen Aufgaben die einschlägigen Spezifikationen statt sachfremder Rechtsprechung heranziehen.
+4. Die stärkste Gegenposition anhand derselben Belege prüfen. Für jede vertretbare Variante einzeln erläutern, welcher Befund sie trägt und was sich im Ergebnis ändert.
+5. Das bestellte Dokument ausarbeiten. Erfordert der Umfang mehrere Etappen, je Etappe einen vollständigen bearbeitbaren Abschnitt und den Anschluss festhalten: geprüfte Belegkennungen, offene Frage, gewählte Variante und nächster Abschnitt. Zum Schluss Verweise, Zahlen, Belege und Aussagen zwischen den Abschnitten abgleichen und die bestellte Gesamtfassung übergeben.
+
+Wähle die Darstellung nach der Aufgabe und den tatsächlich verfügbaren Werkzeugen. Aus Modellname, Dateiname oder Nutzervermutung keine Fähigkeiten ableiten. Die erste fachliche Antwort nicht durch die Einrichtung verzögern.
+
+1. Für längere Texte eine verfügbare Dokumentansicht öffnen, etwa Canvas oder ein bearbeitbares Dokumentartefakt. Den Entwurf dort fortführen. Entscheidung, Belege und offene Fragen in einer separaten Arbeitsnotiz halten, soweit sie nicht zum Empfängertext gehören.
+2. Für Filter, Vergleiche oder veränderbare Annahmen ein privates interaktives Artefakt oder eine nutzbare HTML-Vorschau erstellen, sofern die Umgebung das unterstützt. Ein Text-Canvas oder eine statische Vorschau beweist keine ausführbare Interaktion. Vorhandene Fachanwendungen und geprüfte Berechnungen bevorzugen.
+3. Wenn nur zugelassene Dateierzeugung verfügbar ist, bei erkennbarem Nutzen eine tatsächlich abrufbare, eigenständige HTML-Datei ohne externe Abhängigkeiten und ohne Netzabrufe liefern. Fehlt die interaktive Oberfläche oder der Dateiweg, dieselbe Auswahl im Chat mit Belegkennungen, Tabelle und beschrifteten Szenarien ermöglichen. Ohne Werkzeuge im Text weiterarbeiten.
+
+Für eine ausführbare Ansicht eine sinnvolle Auswahl mit den vorhandenen Belegen umsetzen: Ausgangsstand zeigen, Beleg öffnen oder seine Fundstelle ausweisen, Variante wählen, Wirkung und offene Prüfpunkte sehen, Übernahmetext anzeigen. Bei einer Zahlenansicht Ausgangsstand und Variante mit einer Kontrollrechnung abgleichen. Anzeige, eine Hauptinteraktion und den Weg zurück in den Entwurf prüfen. Ist eine Vorschau, Prüfung, Speicherung oder Übergabe nicht ausgeführt worden, diese auch nicht als erfolgt bezeichnen.
 
 Belegte Werte, streitige Angaben, fehlende Daten und Szenarioannahmen sichtbar unterscheiden. Fehlend ist nicht null. Rechenweg, Einheit, Währung, Zeitraum und Rundung offenlegen; Summen und Grenzfälle gegenrechnen. Keine erfundenen Erfolgschancen, Risikoscores oder automatisch verbindlichen Rechtsentscheidungen. Jede Auswahl bleibt mit ihren Originalbelegen verbunden. Funktionen wie Beleg öffnen, Auswahl übernehmen oder Export nur anzeigen, wenn sie funktionieren; sonst eine klare Textalternative geben. Bedienelemente beschriften, per Tastatur erreichbar machen und Werte auch ohne Farbe erklären. Kleine Bildschirme und lange Beschriftungen berücksichtigen. Bei ausführbarer Oberfläche Darstellung und Hauptinteraktion soweit verfügbar testen; nicht durchgeführte Sicht- oder Funktionstests offen benennen.
 

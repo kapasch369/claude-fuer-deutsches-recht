@@ -11,7 +11,7 @@ Diese Vollprüfung enthält top-8 von 109 Skills (gekürzt für das Arbeitsfenst
 ## Inhaltsverzeichnis
 
 1. **juristischer-argumentationskern** — Schaltet sich ein, wenn in Normenkontrolle Bauleitplanung ein juristisches Arbeitsprodukt tragfähig begründet werden mus…
-2. **einstieg-routing** — Für Einstieg und Routing: routet Rolle, Frist, Unterlagen und Fachschritt; Ergebnis: Prüfprodukt mit Risiko und nächstem…
+2. **einstieg-routing** — Für einen Normenkontrollauftrag: prüft zulässigen Antrag, planungsrechtliche Fehler und deren Beachtlichkeit und erstell…
 3. **kaltstart-triage** — Für Kaltstart Triage: routet Rolle, Frist, Unterlagen und Fachschritt; Ergebnis: Prüfprodukt mit Risiko und nächstem Sch…
 4. **pruefung-erstpruefung-und-mandatsziel** — Für Prüfung: Erstprüfung, Rollenklärung und Mandatsziel: routet Rolle, Frist, Unterlagen und Fachschritt; Ergebnis: Tatb…
 5. **planerhaltung-internationaler-bezug-und-schnittstellen** — Für Planerhaltung: Internationaler Bezug und Schnittstellen: ordnet Norm, Beweislast und Gegenargument; Ergebnis: Schnit…
@@ -148,39 +148,38 @@ Ausgangspunkt für dieses Plugin: Planer für Leistungsstand, Koordination und H
 
 ## Skill: `einstieg-routing`
 
-_Für Einstieg und Routing: routet Rolle, Frist, Unterlagen und Fachschritt; Ergebnis: Prüfprodukt mit Risiko und nächstem Schritt. Fachgebiet: Normenkontrolle Bauleitplanung — Paragraf 47 VwGO._
+_Für einen Normenkontrollauftrag: prüft zulässigen Antrag, planungsrechtliche Fehler und deren Beachtlichkeit und erstellt den beauftragten Hauptsache- oder Eilrechtsschutzentwurf._
 
-# Einstieg und Routing
+# Normenkontrolle gegen den Bebauungsplan vorbereiten
 
 ## Einsatzlage
 
-Dieser Einstieg routet **Normenkontrolle Bauleitplanung** vom ersten Sachverhalt zu Rollen, Fristen, zuständiger Stelle, passendem Spezialpfad und nächstem Arbeitsprodukt.
-
-## Fachlandkarte dieses Plugins
-
-- `abwaegung-formular-portal` — Abwaegung Formular Portal
-- `abwaegung-formular-portal-und-einreichung` — Abwaegung Formular Portal und Einreichung
-- `abwaegungsgebot-1-abs-7-baugb` — Abwaegungsgebot 1 ABS 7 Baugb
-- `anfechtung-antragsbefugnis-red-team-korrektur` — Anfechtung Antragsbefugnis RED Team Korrektur
-- `anfechtung-tatbestandsmerkmale` — Anfechtung Tatbestandsmerkmale
-- `anpassungsgebot-flaechennutzungsplan` — Anpassungsgebot Flaechennutzungsplan
-- `antragsbefugnis-eigentuemer-nachbar` — Antragsbefugnis Eigentümer Nachbar
-- `antragsbefugnis-fehlerkatalog` — Antragsbefugnis Fehlerkatalog
-- `antragsbefugnis-red-team-und-qualitaetskontrolle` — Antragsbefugnis RED Team und Qualitaetskontrolle
-- `antragstellervertretung-zahlen-schwellen-und-berechnung` — Antragstellervertretung Zahlen Schwellen und Berechnung
-- `artenschutz-naturschutz-aufstellungsbeschluss` — Artenschutz Naturschutz Aufstellungsbeschluss
-- `artenschutz-naturschutz-planung` — Artenschutz Naturschutz Planung
-- `aufstellungsbeschluss-bekanntmachung` — Aufstellungsbeschluss Bekanntmachung
-- `anschluss-routing` — Anschluss Routing
-- `dokumente-intake` — Dokumente Intake
+Prüfe den beauftragten Angriff auf den Bebauungsplan anhand der vollständigen Planungsakte. Verbinde Zulässigkeit, einzelne Planfehler und ihre Beachtlichkeit mit dem gewünschten Gutachten oder Antrag.
 
 ## Arbeitsweg
 
-- Rolle und Ziel klären: Welche Partei vertritt der Mandant, welcher Ergebnistyp wird gebraucht (Schriftsatz, Bescheidprüfung, Vertragsentwurf, Stellungnahme), welches Verfahren oder Dokument liegt vor?
-- Eilfristen isolieren: die im Fachgebiet einschlägigen Verfahrens- und materiellen Fristen pflichtmäßig vorab markieren und nicht aus Modellwissen finalisieren.
-- Fachpfad wählen: zentrale Anker im Normenkontrolle Bauleitplanung sind § 47 VwGO vor BayVGH und OVG. Anhand des Sachverhalts in einen Sach-Cluster routen und den passenden Spezial-Skill aus der Fachlandkarte oben benennen.
-- Zuständige Stelle bestimmen: Mandant, Gegner, zuständiges Gericht oder Behörde, etwaige Sachverständige oder beauftragte Stellen.
-- Nur die Rückfragen stellen, die die nächste Weiche tatsächlich ändern.
+1. Erfasse angegriffenen Plan, Gemeinde, Bekanntmachung und Mandantenbetroffenheit. Verwechsle den Planangriff nicht mit dem Vorgehen gegen eine Baugenehmigung.
+2. Ordne Planzeichnung, textliche Festsetzungen, Begründung, Umweltunterlagen, Beteiligung und Abwägung. Weise fehlende Fassungen oder Bekanntmachungsbelege konkret aus.
+3. Prüfe Verfahrensweg und Fristen, dann den einzelnen Fehler mit Aktenbeleg, Gegenargument und seiner Bedeutung für die Wirksamkeit des Plans.
+4. Liefere den bestellten Antrag oder das Gutachten. Behandle vorläufigen Rechtsschutz gesondert, wenn eine aktuelle Vollzugslage ihn zum Gegenstand des Auftrags macht.
+
+## Fachlandkarte dieses Plugins
+
+- `abwaegung-und-planerhaltung-bearbeiten` (Fachthema: abwaegung-formular-portal) — Abwaegung Formular Portal
+- `abwaegung-und-planerhaltung-bearbeiten` (Fachthema: abwaegung-formular-portal-und-einreichung) — Abwaegung Formular Portal und Einreichung
+- `abwaegung-und-planerhaltung-bearbeiten` (Fachthema: abwaegungsgebot-1-abs-7-baugb) — Abwaegungsgebot 1 ABS 7 Baugb
+- `arbeitsprodukt-ausarbeiten-und-kontrollieren-bearbeiten` (Fachthema: anfechtung-antragsbefugnis-red-team-korrektur) — Anfechtung Antragsbefugnis RED Team Korrektur
+- `unterlagen-und-quellen-auswerten-bearbeiten` (Fachthema: anfechtung-tatbestandsmerkmale) — Anfechtung Tatbestandsmerkmale
+- `festsetzungen-bearbeiten` (Fachthema: anpassungsgebot-flaechennutzungsplan) — Anpassungsgebot Flaechennutzungsplan
+- `planangriff-und-verfahrensstand-bearbeiten` (Fachthema: antragsbefugnis-eigentuemer-nachbar) — Antragsbefugnis Eigentümer Nachbar
+- `arbeitsprodukt-ausarbeiten-und-kontrollieren-bearbeiten` (Fachthema: antragsbefugnis-fehlerkatalog) — Antragsbefugnis Fehlerkatalog
+- `arbeitsprodukt-ausarbeiten-und-kontrollieren-bearbeiten` (Fachthema: antragsbefugnis-red-team-und-qualitaetskontrolle) — Antragsbefugnis RED Team und Qualitaetskontrolle
+- `arbeitsprodukt-ausarbeiten-und-kontrollieren-bearbeiten` (Fachthema: antragstellervertretung-zahlen-schwellen-und-berechnung) — Antragstellervertretung Zahlen Schwellen und Berechnung
+- `festsetzungen-bearbeiten` (Fachthema: artenschutz-naturschutz-aufstellungsbeschluss) — Artenschutz Naturschutz Aufstellungsbeschluss
+- `festsetzungen-bearbeiten` (Fachthema: artenschutz-naturschutz-planung) — Artenschutz Naturschutz Planung
+- `planangriff-und-verfahrensstand-bearbeiten` (Fachthema: aufstellungsbeschluss-bekanntmachung) — Aufstellungsbeschluss Bekanntmachung
+- `unterlagen-und-quellen-auswerten-bearbeiten` (Fachthema: anschluss-routing) — Anschluss Routing
+- `unterlagen-und-quellen-auswerten-bearbeiten` (Fachthema: dokumente-intake) — Dokumente Intake
 
 ## Qualitätsanker
 
@@ -635,7 +634,21 @@ Bei komplexem Material zuerst verständlich machen, wer beteiligt ist, was gesch
 
 **Weiter zum Ergebnis:** nachvollziehbarer Projektvermerk mit dem bestellten Leistungs-, Nachtrags-, Anzeige- oder Abstimmungstext. Die Ansicht ist ein Arbeitsmittel auf diesem Weg.
 
-Die Arbeitsumgebung anhand des ausdrücklich bereitgestellten Systemkontexts und der tatsächlich verfügbaren Werkzeuge bestimmen. Aus Modellname, Dateiname oder Nutzervermutung keine Fähigkeiten ableiten. Wenn eingebettete Visualisierung, Artefakt, Canvas oder eine geeignete App verfügbar ist, deren dokumentierte Funktion nutzen und die fertige Ansicht tatsächlich anzeigen. Für veränderbare Annahmen, Filter oder Belegauswahl ein kleines interaktives Applet erzeugen, sofern die Umgebung das unterstützt. Vorhandene Fachanwendungen und geprüfte Rechenfunktionen bevorzugen; eine statische Pluginvorschau ist keine Fallanwendung. Fehlt die interaktive Oberfläche, sofort eine gleichwertige Tabelle, beschriftete Skizze oder unterstützte statische Grafik liefern. Eine lokale HTML-Datei nur erzeugen, wenn sie tatsächlich bereitgestellt oder geöffnet werden kann; nicht mit einem unbenutzbaren Codeblock enden. Ohne Werkzeuge im Text weiterarbeiten. Keine App, Speicherung, Prüfung oder Datei als erfolgt behaupten, die nicht ausgeführt wurde.
+Bei einer großen Akte die Bearbeitung in diese Arbeitsgänge gliedern. Die belegte Ausgangslage bleibt dabei dieselbe. Eine kurze Übersicht hilft beim Einstieg; Haupttext, Fachvertiefungen und Belegteil dürfen so ausführlich wie nötig sein.
+
+1. Auftrag und Zeitpunkt festhalten. Die Akte nach Thema, Zeitraum und Fassung ordnen; Eilschritte oder den unmittelbar bearbeitbaren Teil zuerst liefern.
+2. Für jede entscheidende Frage Tatsache, Fundstelle, Beweislast und widersprechenden Befund verbinden. Offene Punkte danach ordnen, ob sie Ergebnis, Betrag, Frist oder nur die Begründung ändern.
+3. Den rechtlichen Maßstab für den Fallzeitpunkt bestimmen. Bei Änderungen Verkündung, Inkrafttreten, Anwendungsbeginn und Übergangsregel getrennt prüfen; ein Entwurf oder politischer Beschluss ist noch keine geltende Norm. Bei EU-Richtlinien zusätzlich die nationale Umsetzung und ihren Anwendungsbereich prüfen. Die einschlägige Normfassung im amtlichen Text öffnen. Je tragender Entscheidung Gericht, Entscheidungsart, Datum, Aktenzeichen, genaue Randnummer, beantwortete Rechtsfrage und Aussagegrenze festhalten. Sachverhalt und Prozesslage mit der eigenen Akte vergleichen; eine Zurückverweisung, ein Eilbeschluss oder eine bloße Verfahrensankündigung beantwortet nicht automatisch die materielle Frage. Neuere Rechtsprechung für genau diesen Punkt und mögliche Folgeentscheidungen suchen; Entscheidungsdatum, Veröffentlichung und tatsächlichen Abruf unterscheiden. Eine Pressemitteilung ersetzt keine gelesenen Entscheidungsgründe. Im Arbeitsvermerk Aussage → amtliche Fundstelle → Anwendung auf den konkreten Beleg → Gegenargument verbinden; im Empfängertext nur die nötige Begründung und Nachweise verwenden. Fehlenden Volltext oder ungeklärten Gesetzgebungsstand am betroffenen Punkt offenlassen. Ein jüngeres Suchdatum macht alte Aussagen nicht neu geprüft. Bei rein technischen Aufgaben die einschlägigen Spezifikationen statt sachfremder Rechtsprechung heranziehen.
+4. Die stärkste Gegenposition anhand derselben Belege prüfen. Für jede vertretbare Variante einzeln erläutern, welcher Befund sie trägt und was sich im Ergebnis ändert.
+5. Das bestellte Dokument ausarbeiten. Erfordert der Umfang mehrere Etappen, je Etappe einen vollständigen bearbeitbaren Abschnitt und den Anschluss festhalten: geprüfte Belegkennungen, offene Frage, gewählte Variante und nächster Abschnitt. Zum Schluss Verweise, Zahlen, Belege und Aussagen zwischen den Abschnitten abgleichen und die bestellte Gesamtfassung übergeben.
+
+Wähle die Darstellung nach der Aufgabe und den tatsächlich verfügbaren Werkzeugen. Aus Modellname, Dateiname oder Nutzervermutung keine Fähigkeiten ableiten. Die erste fachliche Antwort nicht durch die Einrichtung verzögern.
+
+1. Für längere Texte eine verfügbare Dokumentansicht öffnen, etwa Canvas oder ein bearbeitbares Dokumentartefakt. Den Entwurf dort fortführen. Entscheidung, Belege und offene Fragen in einer separaten Arbeitsnotiz halten, soweit sie nicht zum Empfängertext gehören.
+2. Für Filter, Vergleiche oder veränderbare Annahmen ein privates interaktives Artefakt oder eine nutzbare HTML-Vorschau erstellen, sofern die Umgebung das unterstützt. Ein Text-Canvas oder eine statische Vorschau beweist keine ausführbare Interaktion. Vorhandene Fachanwendungen und geprüfte Berechnungen bevorzugen.
+3. Wenn nur zugelassene Dateierzeugung verfügbar ist, bei erkennbarem Nutzen eine tatsächlich abrufbare, eigenständige HTML-Datei ohne externe Abhängigkeiten und ohne Netzabrufe liefern. Fehlt die interaktive Oberfläche oder der Dateiweg, dieselbe Auswahl im Chat mit Belegkennungen, Tabelle und beschrifteten Szenarien ermöglichen. Ohne Werkzeuge im Text weiterarbeiten.
+
+Für eine ausführbare Ansicht eine sinnvolle Auswahl mit den vorhandenen Belegen umsetzen: Ausgangsstand zeigen, Beleg öffnen oder seine Fundstelle ausweisen, Variante wählen, Wirkung und offene Prüfpunkte sehen, Übernahmetext anzeigen. Bei einer Zahlenansicht Ausgangsstand und Variante mit einer Kontrollrechnung abgleichen. Anzeige, eine Hauptinteraktion und den Weg zurück in den Entwurf prüfen. Ist eine Vorschau, Prüfung, Speicherung oder Übergabe nicht ausgeführt worden, diese auch nicht als erfolgt bezeichnen.
 
 Belegte Werte, streitige Angaben, fehlende Daten und Szenarioannahmen sichtbar unterscheiden. Fehlend ist nicht null. Rechenweg, Einheit, Währung, Zeitraum und Rundung offenlegen; Summen und Grenzfälle gegenrechnen. Keine erfundenen Erfolgschancen, Risikoscores oder automatisch verbindlichen Rechtsentscheidungen. Jede Auswahl bleibt mit ihren Originalbelegen verbunden. Funktionen wie Beleg öffnen, Auswahl übernehmen oder Export nur anzeigen, wenn sie funktionieren; sonst eine klare Textalternative geben. Bedienelemente beschriften, per Tastatur erreichbar machen und Werte auch ohne Farbe erklären. Kleine Bildschirme und lange Beschriftungen berücksichtigen. Bei ausführbarer Oberfläche Darstellung und Hauptinteraktion soweit verfügbar testen; nicht durchgeführte Sicht- oder Funktionstests offen benennen.
 
